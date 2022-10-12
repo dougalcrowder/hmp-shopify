@@ -49,14 +49,11 @@ html {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   @media screen and (min-width: 768px) {
-    gap: 16px;
+    gap: 56px;
     grid-template-columns: repeat(3, 1fr);
   }
   @media screen and (min-width: 1024px) {
-    gap: 24px;
-  }
-  @media screen and (min-width: 1320px) {
-    gap: 32px;
+    gap: 64px;
   }
 }
 

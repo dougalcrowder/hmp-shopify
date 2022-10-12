@@ -1,13 +1,17 @@
 {{ 'styles-collections.css' | asset_url | stylesheet_tag }}
+{% if collection.image != blank %}
 <header class="collection-header inner flex">
   <div class="title">
     <h1>{{ collection.title }}</h1>
     <div class="rte">{{ collection.description }}</div>
   </div>
 </header>
+{% else %}
+<h1 class="visibility-hidden">{{ collection.title }}</h1>
+{% endif %}
 <div id="shopify-section-collection-template">
 
-<div data-section-id="{{ section.id }}" data-section-type="collection-template" class="collection inner">
+<div data-section-id="{{ section.id }}" data-section-type="collection-template" class="collectionpage grid inner">
   <div class="filters">
     
     <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
@@ -59,7 +63,7 @@
   <div class="product-grid-container" id="ProductGridContainer">
     {% paginate collection.products by 40 %}
     <div class="collection">
-      <div class="collection_grid grid product-grid" id="product-grid" data-id="{{ section.id }}"> 
+      <div class="collection_grid product-grid" id="product-grid" data-id="{{ section.id }}"> 
         {% for product in collection.products %}
             {% include 'product-card-grid' %}
         {% endfor %}
