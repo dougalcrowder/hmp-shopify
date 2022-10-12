@@ -20,3 +20,18 @@
 html.is-animating .transition-fade {
   opacity: 0;
 }
+
+@keyframes noticefade2 {
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }
+  50%  { opacity: 1; }
+  52%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes noticefade3 {
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }
+  31%  { opacity: 1; }
+  33%  { opacity: 0; }
+  100% { opacity: 0; }
+}

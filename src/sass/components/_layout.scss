@@ -71,6 +71,19 @@ html {
   align-content: stretch;
 }
 
+.justify-between {
+  justify-content: space-between; 
+}
+.items-center {
+  align-items: center;
+}
+.content-center {
+  align-content: center;
+}
+.nowrap {
+  flex-wrap: nowrap; 
+}
+
 //margins
 .mt-s {
   margin-top: 8px;

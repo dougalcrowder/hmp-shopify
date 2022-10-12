@@ -1,37 +1,5 @@
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section class="page-header">
-  {% if section.settings.message %}
-
-  <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement_bar_label' | t }}">
-    <div class="flex inner no-max">
-    {%- unless section.settings.message_text == blank -%}
-    <div class="announcement-bar__message">
-      {%- if section.settings.message_link == blank -%}
-        <p>{{ section.settings.message_text | escape }}</p>
-      {%- else -%}
-        <a href="{{ section.settings.message_link }}" class="announcement-bar__link">
-          {{ section.settings.message_text | escape }}
-        </a>
-      {%- endif -%}
-    </div>
-    {%- endunless -%}
-    
-    {%- unless section.settings.message_text_two == blank -%}
-    <div class="announcement-bar__message">
-      {%- if section.settings.message_link_two == blank -%}
-        <p>{{ section.settings.message_text_two | escape }}</p>
-      {%- else -%}
-        <a href="{{ section.settings.message_link_two }}" class="announcement-bar__link">
-          {{ section.settings.message_text_two | escape }}
-        </a>
-      {%- endif -%}  
-    </div>
-    {%- endunless -%}
-  
-    </div>
-  </div>
-
-  {% endif %}
-  <header class="site-header flex inner no-max" role="banner">
+  <header class="site-header flex justify-between items-center inner no-max" role="banner">
     <span class="logo flex">
       <a href="/">
         <span class="visually-hidden">{{ shop.name }}</span>
@@ -41,10 +9,14 @@
     <nav class="navigation" id="accessibleNav" role="navigation">
       {% include 'site-nav' %}
       <div class="menu_toggle">
-        <button id="menuTrigger" class="button nude menutrigger"><span class="line1"></span><span class="line2"></span></button>
+        <button id="menuTrigger" class="button nude menuburger flex">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
       </div>
     </nav>
-    <div class="customer_actions flex">
+    <div class="customer_actions flex nowrap">
       {% if shop.customer_accounts_enabled %}
         {% if customer %}
           <a href="{{ routes.account_url }}" class="site-header_icon site-header_account">
@@ -58,11 +30,21 @@
           </a>
         {% endif %}
       {% endif %}
-      {%- include "go-cart-button" -%}
+      
+      <button class="site-header_icon button nude toggle-search">
+        {% include 'icon-search' %}
+        <span class="icon_fallback-text">Search</span>
+      </button>
+      
+      <a href="{{ routes.cart_url }}" alt="Your Shopping Cart">
+        {% include 'icon-cart' %}
+        <div data-ajax-cart-bind-state="cart.item_count" class="cart_number">
+          {{ cart.item_count }}
+        </div>
+      </a>
     </div>
   </header>
 </div>
-
 
 <script type="application/ld+json">
 {
@@ -127,213 +109,7 @@
     "zh-TW": "標頭"
   },
   "settings": [
-    {
-      "type": "header",
-      "content": {
-        "da": "Meddelelseslinje",
-        "de": "Ankündigungsbereich",
-        "en": "Announcement bar",
-        "es": "Barra de anuncios",
-        "fi": "Ilmoituspalkki",
-        "fr": "Barre d'annonces",
-        "hi": "घोषणा बार",
-        "it": "Barra degli annunci",
-        "ja": "告知バー",
-        "ko": "공지 표시줄",
-        "nb": "Kunngjøringslinje",
-        "nl": "Aankondigingsbalk",
-        "pt-BR": "Barra de avisos",
-        "pt-PT": "Barra de comunicado",
-        "sv": "Meddelandefält",
-        "th": "แถบประกาศ",
-        "zh-CN": "公告栏",
-        "zh-TW": "公告列"
-      }
-    },
-    {
-      "type": "checkbox",
-      "id": "message",
-      "label": {
-        "da": "Vis meddelelse",
-        "de": "Ankündigung anzeigen",
-        "en": "Show announcement",
-        "es": "Mostrar anuncio",
-        "fi": "Näytä ilmoitus",
-        "fr": "Afficher l'annonce",
-        "hi": "घोषणा दिखाएं",
-        "it": "Mostra annuncio",
-        "ja": "告知を表示する",
-        "ko": "공지 표시",
-        "nb": "Vis kunngjøring",
-        "nl": "Aankondiging weergeven",
-        "pt-BR": "Exibir anúncio",
-        "pt-PT": "Mostrar comunicado",
-        "sv": "Visa tillkännagivande",
-        "th": "แสดงประกาศ",
-        "zh-CN": "显示公告",
-        "zh-TW": "顯示公告"
-      },
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "message_text",
-      "label": {
-        "da": "Tekst",
-        "de": "Text",
-        "en": "Text",
-        "es": "Texto",
-        "fi": "Teksti",
-        "fr": "Texte",
-        "hi": "टेक्स्ट",
-        "it": "Testo",
-        "ja": "テキスト",
-        "ko": "텍스트",
-        "nb": "Tekst",
-        "nl": "Tekst",
-        "pt-BR": "Texto",
-        "pt-PT": "Texto",
-        "sv": "Text",
-        "th": "ข้อความ",
-        "zh-CN": "文本",
-        "zh-TW": "文字"
-      },
-      "default": {
-        "da": "Meddel noget her",
-        "de": "Hier etwas ankündigen",
-        "en": "Announce something here",
-        "es": "Anuncia algo aquí",
-        "fi": "Ilmoita jotakin tässä",
-        "fr": "Annoncez quelque chose ici",
-        "hi": "यहां कुछ घोषित करें",
-        "it": "Annuncia qualcosa qui",
-        "ja": "ここで告知してください",
-        "ko": "여기에 공지하십시오",
-        "nb": "Kunngjør noe her",
-        "nl": "Kondig hier iets aan",
-        "pt-BR": "Anuncie algo aqui",
-        "pt-PT": "Anunciar algo aqui",
-        "sv": "Meddela något här",
-        "th": "ประกาศข้อความที่นี่",
-        "zh-CN": "在此处进行公告",
-        "zh-TW": "在此公告資訊"
-      }
-    },
-    {
-    "type": "url",
-    "id": "message_link",
-      "label": {
-      "da": "Link",
-      "de": "Erste Link",
-      "en": "Text 1 Link",
-      "es": "Enlace",
-      "fi": "Linkki",
-      "fr": "Lien",
-      "hi": "लिंक",
-      "it": "Link",
-      "ja": "リンク",
-      "ko": "링크",
-      "nb": "Kobling",
-      "nl": "Link",
-      "pt-BR": "Link",
-      "pt-PT": "Ligação",
-      "sv": "Länk",
-      "th": "ลิงก์",
-      "zh-CN": "链接",
-      "zh-TW": "連結"
-      },
-      "info": {
-      "da": "Valgfri",
-      "de": "Optional",
-      "en": "Optional",
-      "es": "Opcional",
-      "fi": "Valinnainen",
-      "fr": "Facultatif",
-      "hi": "वैकल्पिक",
-      "it": "Facoltativo",
-      "ja": "オプション",
-      "ko": "선택 사항",
-      "nb": "Valgfritt",
-      "nl": "Optioneel",
-      "pt-BR": "Opcional",
-      "pt-PT": "Opcional",
-      "sv": "Valfritt",
-      "th": "ไม่จำเป็น",
-      "zh-CN": "可选",
-      "zh-TW": "(選填)"
-      }
-    },
-    {
-    "type": "text",
-    "id": "message_text_two",
-      "label": {
-        "en": "Text 2"
-      },
-      "default": {
-        "da": "Meddel noget her",
-        "de": "Hier etwas ankündigen",
-        "en": "Announce something here",
-        "es": "Anuncia algo aquí",
-        "fi": "Ilmoita jotakin tässä",
-        "fr": "Annoncez quelque chose ici",
-        "hi": "यहां कुछ घोषित करें",
-        "it": "Annuncia qualcosa qui",
-        "ja": "ここで告知してください",
-        "ko": "여기에 공지하십시오",
-        "nb": "Kunngjør noe her",
-        "nl": "Kondig hier iets aan",
-        "pt-BR": "Anuncie algo aqui",
-        "pt-PT": "Anunciar algo aqui",
-        "sv": "Meddela något här",
-        "th": "ประกาศข้อความที่นี่",
-        "zh-CN": "在此处进行公告",
-        "zh-TW": "在此公告資訊"
-      }
-    },
-    {
-    "type": "url",
-    "id": "message_link_two",
-    "label": {
-    "da": "Link",
-    "de": "Erste Link",
-    "en": "Text 2 Link",
-    "es": "Enlace",
-    "fi": "Linkki",
-    "fr": "Lien",
-    "hi": "लिंक",
-    "it": "Link",
-    "ja": "リンク",
-    "ko": "링크",
-    "nb": "Kobling",
-    "nl": "Link",
-    "pt-BR": "Link",
-    "pt-PT": "Ligação",
-    "sv": "Länk",
-    "th": "ลิงก์",
-    "zh-CN": "链接",
-    "zh-TW": "連結"
-    },
-    "info": {
-    "da": "Valgfri",
-    "de": "Optional",
-    "en": "Optional",
-    "es": "Opcional",
-    "fi": "Valinnainen",
-    "fr": "Facultatif",
-    "hi": "वैकल्पिक",
-    "it": "Facoltativo",
-    "ja": "オプション",
-    "ko": "선택 사항",
-    "nb": "Valgfritt",
-    "nl": "Optioneel",
-    "pt-BR": "Opcional",
-    "pt-PT": "Opcional",
-    "sv": "Valfritt",
-    "th": "ไม่จำเป็น",
-    "zh-CN": "可选",
-    "zh-TW": "(選填)"
-    }
-    }
+
   ]
 }
 {% endschema %}

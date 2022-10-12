@@ -1,0 +1,15 @@
+.site-nav {
+  gap: 32px;
+  a {
+    text-transform: uppercase;
+    font-family: var(--font-heading-family);
+    font-size: 87.5%;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-lightgrey);
+    &.site-nav--active {
+      font-weight: 600;
+      color: var(--color-black);
+    }
+  }
+}
