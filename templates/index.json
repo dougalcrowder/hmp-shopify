@@ -3,12 +3,16 @@
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/mens-anchor-bracelet.jpg",
+        "image": "shopify:\/\/shop_images\/hmp-header.jpg",
         "mobimage": "shopify:\/\/shop_images\/fashionable-man-by-textured-wall.jpg",
-        "title": "New Collection\nSaints are a low-waist, drop crotch relaxed boyfriend jean. Straight fit across the hips, bow shape legs, with knee.",
+        "title": "New Collection",
+        "text": "<p>Saints are a low-waist, drop crotch relaxed boyfriend jean. Straight fit across the hips, bow shape legs, with knee.<\/p>",
+        "button_label": "View Collection",
+        "button_link": "shopify:\/\/collections",
         "header_tag": "h2",
+        "text_color": "white",
         "fullscreen": true,
-        "arrow_down": true
+        "lightheader": false
       }
     },
     "1663238973837d4d2b": {
