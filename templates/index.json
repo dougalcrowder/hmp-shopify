@@ -102,11 +102,18 @@
         "section_height": "medium"
       }
     },
+    "bb386705-e11f-4d44-a176-b860b833fbb9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "collection": "latest-products"
+      }
+    },
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
       "type": "hero",
       "settings": {
         "image": "shopify:\/\/shop_images\/hmp-banner-02.jpg",
-        "title": "ready-to-be-pierce",
+        "title": "ready-to-be-pierced",
         "text": "<p>Saints are a low-waist, drop crotch relaxed boyfriend jean. Straight fit across the hips, bow shape legs, with knee.<\/p>",
         "button_label": "View Collection",
         "button_link": "shopify:\/\/collections\/frontpage",
@@ -114,6 +121,13 @@
         "text_color": "white",
         "fullscreen": true,
         "lightheader": false
+      }
+    },
+    "04882820-bbb5-4c1d-8e70-332d15d2a180": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop by type",
+        "collection": "frontpage"
       }
     },
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
@@ -129,24 +143,15 @@
         "fullscreen": false,
         "lightheader": false
       }
-    },
-    "268efbc9-ee41-4e21-906c-be95018720aa": {
-      "type": "main-collection",
-      "settings": {
-        "title": "New Arrivals",
-        "text": "",
-        "collection": "latest-products",
-        "grid": 3,
-        "link_label": "See all new arrivals"
-      }
     }
   },
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
+    "bb386705-e11f-4d44-a176-b860b833fbb9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
-    "829022b1-793e-45d9-bbf8-37458d13e2ab",
-    "268efbc9-ee41-4e21-906c-be95018720aa"
+    "04882820-bbb5-4c1d-8e70-332d15d2a180",
+    "829022b1-793e-45d9-bbf8-37458d13e2ab"
   ]
 }
