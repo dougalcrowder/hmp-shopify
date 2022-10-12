@@ -53,6 +53,7 @@
         "blocks": {
           "3c6d44fd-628d-4b90-a971-10ddde9e6889": {
             "type": "notice",
+            "disabled": true,
             "settings": {
               "title": "<p>Testing the water <a href=\"\/collections\" title=\"All collections\">here<\/a><\/p>"
             }
