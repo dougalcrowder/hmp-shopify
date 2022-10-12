@@ -10,3 +10,9 @@ section[hidden] {
 html.no-js .no-js-hidden, .no-js:not(html) {
   display: none!important;
 }
+.text-white {
+  color: var(--color-white);
+}
+.text-black {
+  color: var(--color-black);
+}

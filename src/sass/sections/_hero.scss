@@ -1,10 +1,7 @@
 .hero-section {
   z-index: 1;
   h1, h2, h3 {
-    color: var(--color-black);
-    .lightheader & {
-      color: var(--color-white);
-    }
+    color: currentcolor;
   }
   .flex {
     position: absolute;
@@ -30,12 +27,10 @@
     max-width: 400px;
     align-self: flex-start;
     text-align: left;
-    color: var(--color-black);
-    .lightheader & {
-      color: var(--color-white);
-    }
+    color: currentcolor;
   }
   .cta {
+    color: currentcolor;
     flex: 1 1 100%;
     padding-bottom: 4px;
     @media screen and (min-width: 768px) {

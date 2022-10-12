@@ -1,0 +1,27 @@
+.collection_list-grid {
+  .grid {
+    gap: 0;
+  }
+  .collection_item {
+    grid-column: span 12;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      grid-column: span 4;
+    }
+  }
+  .text {
+    position: absolute;
+    width: calc(100% - 64px);
+    left: 32px;
+    bottom: 32px;
+    z-index: 2;
+    color: currentcolor;
+    h1, h2, h3 {
+      color: currentcolor;
+    }
+  }
+  picture {
+    position: relative;
+    z-index: 1;
+  }
+}

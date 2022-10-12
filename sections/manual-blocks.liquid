@@ -1,0 +1,229 @@
+ <div class="collection_list-grid mininner manual pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
+    <ul class="grid">
+      {% for block in section.blocks limit: section.blocks.size %}
+        <li class="collection_item">
+          {%- assign collection = collections[block.settings.collection] -%}
+          
+          {% if block.settings.image != blank %}
+            {%- assign collection_image = block.settings.image -%}
+          {% else %}
+            {% assign collection_image = blank %}
+          {% endif %}
+          
+          <div class="collection-grid-item">
+            <a href="{{ collection.url }}">
+              {% unless collection_image == blank %}
+              <picture class="collection_img">
+                  <source 
+                    srcset="{{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 1440px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '480x756', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '480x756', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 1260px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '427x673', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '427x673', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 768px)"
+                  />
+                  <source 
+                  srcset="{{ collection_image | img_url: '767x525', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '767x525', crop: 'center', format: 'pjpg'}}" 
+                  media="(min-width: 620px)"
+                  />
+                  <source 
+                  srcset="{{ collection_image | img_url: '620x425', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '620x425', crop: 'center', format: 'pjpg'}}" 
+                  media="(min-width: 560px)"
+                  />
+                  <source 
+                  srcset="{{ collection_image | img_url: '559x383', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '559x383', crop: 'center', format: 'pjpg'}}" 
+                  media="(min-width: 444px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '443x304', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '443x304', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 360px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '359x246', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '359x246', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 321px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '320x219', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '320x219', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 300px)"
+                  />
+                <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
+              </picture>
+              {% endunless %}
+              <div class="text text-{{ block.settings.colour }}">
+                <{{block.settings.header_tag}}>
+                    {% if block.settings.title_image != blank %}
+                    {{ block.settings.title_image }}
+                    {% else %}
+                    {{ collection.title }}
+                    {% endif %}
+                </{{block.settings.header_tag}}>
+                {% if block.settings.description != blank %}
+                  <p>{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Manual Blocks"
+  },
+  "class": "index-section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_top",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "X Large"
+        }
+      ],
+      "default": "m",
+      "label": "spacing above",
+      "info": "Top Margin"
+    },
+    {
+      "type": "select",
+      "id": "margin_bot",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "X Large"
+        }
+      ],
+      "default": "m",
+      "label": "spacing below",
+      "info": "Bottom Margin"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "manual_block",
+      "name": {
+        "en": "Manual Block"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+           "type": "text",
+           "id": "title_image",
+           "label": "Title"
+        },
+        {
+         "type": "textarea",
+           "id": "description",
+           "label": "Introductory Text"
+        },
+        {
+          "id": "block_url",
+          "type": "url",
+          "label": {
+            "en": "Block link url"
+          }
+        },
+        {
+           "type": "select",
+           "id": "colour",
+           "options": [
+              { "value": "white", "label": "White"},
+              { "value": "black", "label": "Black"}
+           ],
+           "label": "Text Colour",
+           "default": "white"
+        },
+        {
+           "type": "select",
+           "id": "header_tag",
+           "label": "Heading Type",
+           "options": [
+             {
+               "value": "h1",
+               "label": "H1"
+             },
+             {
+               "value": "h2",
+               "label": "H2"
+             },
+              {
+                "value": "h3",
+                "label": "H3"
+              }
+           ],
+           "default": "h2",
+           "info": "Choose a header tag, leave as is if unsure"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Manual Blocks"
+      }
+    }
+  ]
+}
+{% endschema %}
