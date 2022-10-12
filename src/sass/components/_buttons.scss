@@ -21,7 +21,13 @@ button, input[type="submit"],.btn, .button {
   font-weight: 400;
   color: var(--color-white);
   text-transform: uppercase;
-  
+  font-style: normal;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  font-size: 87.5%;
+  @media screen and (min-width: 1024px) {
+    padding: 10px 40px;
+  }
   &:not([disabled]):hover,
   &:focus {
     color: var(--color-white);
@@ -43,9 +49,20 @@ button, input[type="submit"],.btn, .button {
     &:not([disabled]):hover,
     &:focus {
       color: var(--color-black);
-      transform: translateY(0);
       background-color: transparent;
       border-color: transparent;
+    }
+  }
+  &.alt {
+    color: currentcolor;
+    border-color: currentcolor;
+    background-color: transparent;
+    box-shadow: none;
+    &:not([disabled]):hover,
+    &:focus {
+      color: currentcolor;
+      background-color: transparent;
+      border-color: currentcolor;
     }
   }
 }

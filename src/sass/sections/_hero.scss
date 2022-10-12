@@ -1,7 +1,10 @@
 .hero-section {
   z-index: 1;
   h1, h2, h3 {
-    color: var(--color-white);
+    color: var(--color-black);
+    .lightheader & {
+      color: var(--color-white);
+    }
   }
   .flex {
     position: absolute;
@@ -24,9 +27,13 @@
   }
   .text {
     flex: 1 1 100%;
-    max-width: 500px;
+    max-width: 400px;
     align-self: flex-start;
     text-align: left;
+    color: var(--color-black);
+    .lightheader & {
+      color: var(--color-white);
+    }
   }
   .cta {
     flex: 1 1 100%;

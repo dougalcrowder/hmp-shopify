@@ -1,5 +1,5 @@
 <div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.fullscreen != blank %} expand{%- else -%} border{%- endif -%}">
-    <div class="flex {{ block.settings.text_align }}">
+    <div class="flex {{ block.settings.text_align }} text-{{ block.settings.text_color }}">
       <div class="text">
         {%- if section.settings.title != blank -%}
         <{{section.settings.header_tag}} class="h1">{{ section.settings.title | escape }} </{{section.settings.header_tag}}>
@@ -131,6 +131,23 @@
       ],
       "default": "h2",
       "info": "Choose a header tag, leave as is if unsure"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "Text Colour",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ],
+      "default": "white",
+      "info": "Choose a colour for text"
     },
     {
       "type": "checkbox",
