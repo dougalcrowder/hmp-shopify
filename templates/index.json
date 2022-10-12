@@ -2,10 +2,10 @@
   "sections": {
     "1663238973837d4d2b": {
       "type": "video-home",
+      "disabled": true,
       "settings": {
         "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/63f29e3b51214856a403d4ef77559bbb.mp4",
         "slide_title": "High-Performance Sportswear, Inspired by Boxers",
-        "poster_image": "shopify:\/\/shop_images\/campaign_vid_poster.jpg",
         "text_shade": "dark",
         "header_tag": "h2",
         "fullscreen": true,
@@ -14,26 +14,6 @@
     },
     "custom": {
       "type": "custom_content",
-      "blocks": {
-        "f9063dff-88da-4f47-b188-929ac43d9949": {
-          "type": "textonly",
-          "settings": {
-            "spacing": "xlarge",
-            "spacing_bottom": "xlarge",
-            "text_align": "centre",
-            "title": "",
-            "titletype": "h2",
-            "text": "<p>Welcome to REAL, where premium and technical fabrics combine with advanced functionality to deal with whatever comes your way. Whether you’re a seasoned boxer or new to the sport, REAL will empower you to seek your limits.<\/p>",
-            "buttonlabel": "Explore the Range",
-            "buttonurl": "shopify:\/\/collections\/the-range",
-            "background": "black",
-            "class": ""
-          }
-        }
-      },
-      "block_order": [
-        "f9063dff-88da-4f47-b188-929ac43d9949"
-      ],
       "settings": {
       }
     }
