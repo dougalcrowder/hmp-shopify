@@ -1,9 +1,10 @@
-<div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.fullscreen != blank %} expand{%- else -%} inner{%- endif -%}">
+<div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.fullscreen != blank %} expand{%- else -%} border{%- endif -%}">
     <div class="flex {{ block.settings.text_align }}">
       <div class="text">
         {%- if section.settings.title != blank -%}
         <{{section.settings.header_tag}} class="h1">{{ section.settings.title | escape }} </{{section.settings.header_tag}}>
         {%- endif -%}
+        {{ section.settings.text }}
       </div>
       
       {%- if section.settings.arrow_down != blank -%}
@@ -55,7 +56,9 @@
   {%- endif -%}
   
 </div>
-
+{%- if section.settings.lightheader -%}
+<script>document.body.classList.add("lightheader");</script>
+{%- endif -%}
 {% schema %}
 {
   "name": {
@@ -74,17 +77,38 @@
       "type": "image_picker",
       "id": "mobimage",
       "label": {
-        "en": "Mobile Image"
+        "en": "Mobile Image ie portrait"
       }
     },
     {
-      "type": "textarea",
+      "type": "text",
       "id": "title",
       "label": {
         "en": "Heading"
       },
       "default": {
-        "en": "Image with text overlay"
+        "en": "Title here"
+      }
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": {
+        "en": "Text"
+      }
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": {
+        "en": "Button Label"
+      }
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": {
+        "en": "Button Link"
       }
     },
     {
@@ -117,9 +141,9 @@
     },
     {
       "type": "checkbox",
-      "id": "arrow_down",
+      "id": "lightheader",
       "label": {
-        "en": "Show down Arrow link"
+        "en": "Make header text white"
       }
     }
   ],
