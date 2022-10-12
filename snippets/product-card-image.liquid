@@ -1,17 +1,19 @@
  <div class="featured {% if product.metafields.my_fields.hover_image != blank %} hover_image{% endif %}">
     {% for image in product.images limit:1 %}
     <picture>
-      <source srcset="{{ image.src | img_url: '440x414', crop: 'center', scale: 2 }} 2x, {{ image.src | img_url: '440x414', crop: 'center' }} 1x" media="(min-width: 321px)" />
-      <source srcset="{{ image.src | img_url: '296x207', crop: 'center', scale: 2 }} 2x, {{ image.src | img_url: '296x207', crop: 'center' }} 1x" media="(min-width: 200px)" />
-      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ product.featured_image.alt | escape }}" width="296" height="207" />
+      <source srcset="{{ image.src | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ image.src | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+      <source srcset="{{ image.src | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ image.src | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
+      <source srcset="{{ image.src | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ image.src | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
+      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ product.featured_image.alt | escape }}" width="300" height="400" />
     </picture>
     {% endfor %}
   {%- if product.metafields.my_fields.hover_image != blank -%}
   {% assign hoverimage = product.metafields.my_fields.hover_image  %}
     <picture class="hoverimage">
-      <source srcset="{{ hoverimage | img_url: '440x414', crop: 'center', scale: 2 }} 2x, {{ hoverimage | img_url: '440x414', crop: 'center' }} 1x" media="(min-width: 321px)" />
-      <source srcset="{{ hoverimage | img_url: '296x207', crop: 'center', scale: 2 }} 2x, {{ hoverimage | img_url: '296x207', crop: 'center' }} 1x" media="(min-width: 200px)" />
-      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ hoverimage.alt | escape }}" width="296" height="207" />
+      <source srcset="{{ hoverimage | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ hoverimage | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+      <source srcset="{{ hoverimage | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ hoverimage | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
+      <source srcset="{{ hoverimage | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ hoverimage | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
+      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ hoverimage.alt | escape }}" width="300" height="400" />
     </picture>
   {%- endif -%}
 </div>

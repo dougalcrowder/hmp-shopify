@@ -1,0 +1,26 @@
+.product_card {
+  a {
+    display: block;
+    position: relative;
+    .text {
+      position: absolute;
+      left: 12px;
+      bottom: 16px;
+      .price {
+        font-size: 68.75%;
+      }
+    }
+    .hover & {
+      h2 {
+        font-size: 81.25%;
+        transition: opacity 0.2s ease-in;
+        opacity: 0;
+      }
+      &:hover {
+        h2 {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

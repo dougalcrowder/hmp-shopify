@@ -1,7 +1,9 @@
 <div class="product_card{% unless product.available %} sold_out{% endunless %}">
   <a href="{{ product.url }}">
     {% include 'product-card-image' %}
-  <h4>{{ product.title }}</h4>
+    <div class="text">
+      <h2 class="h4">{{ product.title }}</h2>
+      {% include 'product-price' %}
+    </div>
   </a>
-  {% include 'add-to-cart-form' %}
 </div>

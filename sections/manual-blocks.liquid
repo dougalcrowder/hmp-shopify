@@ -2,7 +2,6 @@
     <ul class="grid">
       {% for block in section.blocks limit: section.blocks.size %}
         <li class="collection_item">
-          {%- assign collection = collections[block.settings.collection] -%}
           
           {% if block.settings.image != blank %}
             {%- assign collection_image = block.settings.image -%}
@@ -10,8 +9,10 @@
             {% assign collection_image = blank %}
           {% endif %}
           
-          <div class="collection-grid-item">
-            <a href="{{ collection.url }}">
+          <div class="collection-grid-item text-{{ block.settings.colour }}">
+            {% if block.settings.block_url != blank %}
+            <a href="{{ block.settings.block_url }}">
+              {% endif %}
               {% unless collection_image == blank %}
               <picture class="collection_img">
                   <source 
@@ -62,7 +63,7 @@
                 <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
               </picture>
               {% endunless %}
-              <div class="text text-{{ block.settings.colour }}">
+              <div class="text">
                 <{{block.settings.header_tag}}>
                     {% if block.settings.title_image != blank %}
                     {{ block.settings.title_image }}
@@ -74,7 +75,9 @@
                   <p>{{ block.settings.description }}</p>
                 {% endif %}
               </div>
+              {% if block.settings.block_url != blank %}
             </a>
+            {% endif %}
           </div>
         </li>
       {% endfor %}

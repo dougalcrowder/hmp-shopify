@@ -61,7 +61,7 @@
     <div class="collection">
       <div class="collection_grid grid product-grid" id="product-grid" data-id="{{ section.id }}"> 
         {% for product in collection.products %}
-            {% include 'product-card-grid-canonical' %}
+            {% include 'product-card-grid' %}
         {% endfor %}
       </div>
       {%- if paginate.pages > 1 -%}
