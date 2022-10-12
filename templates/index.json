@@ -62,23 +62,6 @@
         "margin_bot": "m"
       }
     },
-    "1663238973837d4d2b": {
-      "type": "video-home",
-      "disabled": true,
-      "settings": {
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/63f29e3b51214856a403d4ef77559bbb.mp4",
-        "slide_title": "High-Performance Sportswear, Inspired by Boxers",
-        "text_shade": "dark",
-        "header_tag": "h2",
-        "fullscreen": true,
-        "arrow_down": true
-      }
-    },
-    "custom": {
-      "type": "custom_content",
-      "settings": {
-      }
-    },
     "3bf0625c-b590-4196-88c2-1b98ba354f5a": {
       "type": "image-bar",
       "blocks": {
@@ -147,23 +130,23 @@
         "lightheader": false
       }
     },
-    "edaa14e1-bcfc-4e76-b713-486a80f78235": {
-      "type": "linklist-grid",
+    "268efbc9-ee41-4e21-906c-be95018720aa": {
+      "type": "main-collection",
       "settings": {
-        "title": "Featured Brands",
-        "subtitle": "Brands we love",
-        "linklist": "main-menu"
+        "title": "New Arrivals",
+        "text": "",
+        "collection": "latest-products",
+        "grid": 3,
+        "link_label": "See all new arrivals"
       }
     }
   },
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
-    "1663238973837d4d2b",
-    "custom",
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
     "829022b1-793e-45d9-bbf8-37458d13e2ab",
-    "edaa14e1-bcfc-4e76-b713-486a80f78235"
+    "268efbc9-ee41-4e21-906c-be95018720aa"
   ]
 }
