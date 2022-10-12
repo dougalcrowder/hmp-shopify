@@ -9,20 +9,20 @@
 
 {% assign articleNumber = section.settings.products_to_show %}
 
-
-<div class="featured_collection">
-  {%- if section.settings.title != blank -%}
-  <h2>{{ section.settings.title | escape }}</h2>
-  {%- endif -%}
-    {%- if section.settings.collection != blank and section.settings.collection.all_products_count > 0 -%}
-      <div class="collection_grid product-grid"> 
-      {%- for product in section.settings.collection.products limit: 3 -%}
-          {% include 'product-card-grid' %}
-      {%- endfor -%}
-      </div>
-    {%- endif -%} 
+<div class="grid">
+  <div class="featured_collection">
+    {%- if section.settings.title != blank -%}
+    <h2>{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+      {%- if section.settings.collection != blank and section.settings.collection.all_products_count > 0 -%}
+        <div class="collection_grid product-grid"> 
+        {%- for product in section.settings.collection.products limit: 3 -%}
+            {% include 'product-card-grid' %}
+        {%- endfor -%}
+        </div>
+      {%- endif -%} 
+  </div>
 </div>
-
 
 {% schema %}
 {
