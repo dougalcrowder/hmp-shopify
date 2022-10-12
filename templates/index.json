@@ -15,6 +15,53 @@
         "lightheader": false
       }
     },
+    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9": {
+      "type": "manual-blocks",
+      "blocks": {
+        "8a91ec81-a07a-424c-89f7-d28d42062501": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hmp-cat-01.jpg",
+            "title_image": "Category",
+            "description": "",
+            "block_url": "shopify:\/\/collections",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "140da9bc-722d-470d-becb-20fc0b3eb80f": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hmp-cat-02.jpg",
+            "title_image": "Category",
+            "description": "",
+            "block_url": "shopify:\/\/collections",
+            "colour": "white",
+            "header_tag": "h3"
+          }
+        },
+        "8c7b080c-5635-4761-bed0-699e548d1fbe": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hmp-cat-03.jpg",
+            "title_image": "Category",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "8a91ec81-a07a-424c-89f7-d28d42062501",
+        "140da9bc-722d-470d-becb-20fc0b3eb80f",
+        "8c7b080c-5635-4761-bed0-699e548d1fbe"
+      ],
+      "settings": {
+        "margin_top": "s",
+        "margin_bot": "m"
+      }
+    },
     "1663238973837d4d2b": {
       "type": "video-home",
       "disabled": true,
@@ -114,6 +161,7 @@
   },
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
+    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "1663238973837d4d2b",
     "custom",
     "1480f43a-6fb0-4637-982e-13dfbb9d9d95",
