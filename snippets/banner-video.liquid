@@ -1,0 +1,35 @@
+{%- assign text_alignments = section.settings.text_alignment | split: ' ' -%}
+{%- assign text_horizontal_alignment = text_alignments.first -%}
+{%- assign text_vertical_alignment = text_alignments.last | strip -%}
+<div data-section-id="{{ section.id }}" data-section-type="slideshow-section" class="hero-section video-hero{% if section.settings.fullscreen != blank %} expand{%- else -%} inner{%- endif -%}">
+  
+  <div class="video_wrapper" role="region" aria-label="video" id="shade_{{ section.settings.text_shade }}">
+    <video id="video-{{ section.id }}" poster="{{ section.settings.poster_image | img_url: '1366x720', crop: 'center' }}" width="1280" height="618" playsinline autoplay muted loop>
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+    {%- if section.settings.sound_ctrl -%}
+    <button id="sound-{{ section.id }}" class="muted nude video_sound" aria-label="toggle sound">
+      {% include 'icon-sound' %}
+      {% include 'icon-sound_mute' %}
+    </button>
+    {%- endif -%}
+  </div>
+
+  <div class="flex">
+    {%- if section.settings.slide_title != blank -%}
+    <div class="text">
+      <{{section.settings.header_tag}} class="h1">{{ section.settings.slide_title }} </{{section.settings.header_tag}}>
+    </div>
+    {%- endif -%}
+    
+    {%- if section.settings.arrow_down != blank -%}
+    <div class="downer">
+      <button class="button nude" id="nextButton">
+        {% include 'icon-arrow_down.liquid' %}
+      </button>
+    </div>
+    {%- endif -%}
+  </div>
+
+</div>
+

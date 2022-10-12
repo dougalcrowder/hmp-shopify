@@ -1,0 +1,137 @@
+<div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.fullscreen != blank %} expand{%- else -%} inner{%- endif -%}">
+    <div class="flex {{ block.settings.text_align }}">
+      <div class="text">
+        {%- if section.settings.title != blank -%}
+        <{{section.settings.header_tag}} class="h1">{{ section.settings.title | escape }} </{{section.settings.header_tag}}>
+        {%- endif -%}
+      </div>
+      
+      {%- if section.settings.arrow_down != blank -%}
+      <div class="downer">
+        <button class="button nude" id="nextButton">
+          {% include 'icon-arrow_down.liquid' %}
+        </button>
+      </div>
+      {%- endif -%}
+      
+      
+            
+            {%- if section.settings.button_link != blank -%}
+              <div class="cta">
+              {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+              {%- capture ariaLabel -%}
+                {{- section.settings.button_label -}}
+                {%- if section.settings.button_link.type == 'frontpage_link' -%}
+                  : {{ 'homepage.general.title' | t -}}
+                {%- elsif section.settings.button_link.type == 'catalog_link' -%}
+                  : {{ 'collections.catalog.title' | t -}}
+                {%- elsif section.settings.button_link.object.title -%}
+                  : {{ section.settings.button_link.object.title -}}
+                {%- endif -%}
+              {%- endcapture -%}
+  
+              <a href="{{ section.settings.button_link }}"
+                class="button alt"
+                aria-label="{{ ariaLabel }}">
+                {{- section.settings.button_label | escape -}}
+              </a>
+            {%- endif -%}
+            </div>
+          {%- endif -%}
+    </div>
+  {%- assign the_image = section.settings.image -%}
+  {%- assign mobimage = section.settings.image -%}
+  {%- if section.settings.mobimage != blank -%}
+    {%- assign mobimage = section.settings.mobimage -%}
+  {%- endif -%}
+  {%- if section.settings.button_link != blank -%}
+  <a href="{{ section.settings.button_link }}" aria-label="{{ ariaLabel }}">
+  {%- endif -%}
+  
+  {% include 'hero_image' %}
+  
+  {%- if section.settings.button_link != blank -%}
+  </a>
+  {%- endif -%}
+  
+</div>
+
+{% schema %}
+{
+  "name": {
+    "en": "Hero Story"
+  },
+  "class": "index-section index-section--flush",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "en": "Image"
+      }
+    },
+    {
+      "type": "image_picker",
+      "id": "mobimage",
+      "label": {
+        "en": "Mobile Image"
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Image with text overlay"
+      }
+    },
+    {
+      "type": "select",
+      "id": "header_tag",
+      "label": "Heading Type",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+         {
+           "value": "h3",
+           "label": "H3"
+         }
+      ],
+      "default": "h2",
+      "info": "Choose a header tag, leave as is if unsure"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullscreen",
+      "label": {
+        "en": "Go full screen size"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "arrow_down",
+      "label": {
+        "en": "Show down Arrow link"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Hero Story Page"
+      },
+      "category": {
+        "en": "Image"
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,41 @@
+
+{% if collection.image %}
+  {%- assign collection_image = collection.image -%}
+{% elsif collection.products.first and collection.products.first.media != empty %}
+  {%- assign collection_image = collection.products.first.featured_media.preview_image -%}
+{% else %}
+  {% assign collection_image = blank %}
+{% endif %}
+
+<div class="collection-grid-item">
+  <a href="{{ collection.url }}">
+    {% unless collection_image == blank %}
+    <picture class="collection_img">
+        <source 
+          srcset="{{ collection_image | img_url: '532x532', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                  {{ collection_image | img_url: '532x532', crop: 'center', format: 'pjpg'}}" 
+          media="(min-width: 1024px)"
+        />
+        <source 
+          srcset="{{ collection_image | img_url: '380x380', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                  {{ collection_image | img_url: '380x380', crop: 'center', format: 'pjpg'}}" 
+          media="(min-width: 768px)"
+        />
+        <source 
+          srcset="{{ collection_image | img_url: '216x216', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                  {{ collection_image | img_url: '216x216', crop: 'center', format: 'pjpg'}}" 
+          media="(min-width: 444px)"
+        />
+        <source 
+          srcset="{{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                  {{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg'}}" 
+          media="(min-width: 320px)"
+        />
+      <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '1x1', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" />
+    </picture>
+    {% endunless %}
+      <h3>
+          {{ collection.title }}
+      </h3>
+  </a>
+</div>

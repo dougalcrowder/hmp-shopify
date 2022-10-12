@@ -1,0 +1,93 @@
+{% include 'banner-video' %}
+
+{% schema %}
+{
+ "name":"Banner Video",
+ "class":"index-section index-section--videobanner",
+ "settings":[
+    {
+       "type":"text",
+       "id":"video_url",
+       "label":"Video url"
+    },
+    {
+       "type":"textarea",
+       "id":"slide_title",
+       "label":{
+          "en":"Heading"
+       },
+       "default":{
+          "en":"High-Performance Sportswear..."
+       }
+    },
+    {
+      "type":"image_picker",
+      "id":"poster_image",
+      "label": "Poster Image"
+    },
+    {
+       "type":"select",
+       "id":"text_shade",
+       "label":{
+          "en":"Text shade"
+       },
+       "options":[
+          {
+             "value":"dark",
+             "label":{
+                "en":"Dark"
+             }
+          },
+          {
+             "value":"light",
+             "label":{
+                "en":"Light"
+             }
+          }
+       ]
+    },
+    {
+       "type":"select",
+       "id":"header_tag",
+       "label":{
+          "en":"Header Type"
+       },
+       "default":"h2",
+       "options":[
+          {
+             "value":"h1",
+             "label":{
+                "en":"H1"
+             }
+          },
+          {
+             "value":"h2",
+             "label":{
+                "en":"H2"
+             }
+          }
+       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "fullscreen",
+      "label": {
+        "en": "Go full screen size"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "arrow_down",
+      "label": {
+        "en": "Show down Arrow link"
+      }
+    }
+ ],
+ "presets":[
+    {
+       "name":"Banner Video",
+       "category":"Video"
+    }
+ ]
+}
+{% endschema %}

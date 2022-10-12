@@ -1,0 +1,29 @@
+<div
+ class="product-recommendations"
+ data-base-url="{{ routes.product_recommendations_url }}"
+ data-product-id="{{ product.id }}"
+ data-limit="3"
+>
+ {%- if recommendations.products_count > 0 -%}
+<div class="product_recommendations inner">
+   <h3>You may also like</h3>
+   <div class="collection_grid">
+     {%- for product in recommendations.products -%}
+     {% include 'product-card-grid-canonical' %}
+     {%- endfor -%}
+   </div>
+ </div>
+ {%- endif -%}
+</div>
+
+
+{% javascript %}
+
+ {% endjavascript %}
+ 
+ {% schema %}
+ {
+   "name": "Product Recommendations",
+   "class": "section-product-recommendations"
+ }
+ {% endschema %}

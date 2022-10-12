@@ -1,0 +1,100 @@
+<div class="linklist-grid inner" data-section-id="{{ section.id }}" data-section-type="linklist">
+  {% if section.settings.title != blank %}
+    <h3>{{ section.settings.title | escape }}</h3>
+  {% endif %}
+  {% if section.settings.subtitle != blank %}
+    <p class="subtitle">{{ section.settings.subtitle | escape }}</p>
+  {% endif %}
+  
+  {%- assign thelinklist = section.settings.linklist -%}
+  <ul class="cat_linklist grid">
+    {%- for link in linklists[thelinklist].links -%}
+      <li class="brands_or_cats">
+        <a href="{{ link.url }}"
+          {% if link.current %} aria-current="page"{% endif %}
+        >
+        {% if link.type == 'collection_link' %}
+         {% assign linkCollection = link.object %}
+         {% if linkCollection.image %}
+           {% assign collection_image = linkCollection.image %}
+         {% else %}
+           {% assign collection_image = linkCollection.products.first.featured_image %}
+          {% endif %}
+          <picture class="collection_img">
+            <source 
+              srcset="{{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                      {{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg'}}" 
+              media="(min-width: 1024px)"
+            />
+            <source 
+              srcset="{{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                      {{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg'}}" 
+              media="(min-width: 768px)"
+            />
+            <source 
+              srcset="{{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                      {{ collection_image | img_url: '193x193', crop: 'center', format: 'pjpg'}}" 
+              media="(min-width: 444px)"
+            />
+            <source 
+              srcset="{{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                      {{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg'}}" 
+              media="(min-width: 320px)"
+            />
+            <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '1x1', crop: 'center', format: 'pjpg'}}" alt="{{ link.title | escape }}" width="193" height="193"/>
+          {% endif %} 
+          <h4 class="title">{{ link.title | escape }}</h4>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+
+</div>
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "LinkList Grid"
+  },
+  "class": "index-section linklist-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Featured Brands"
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": {
+        "en": "Subtitle"
+      },
+      "default": {
+        "en": "Brands we love"
+      }
+    },
+    {
+      "type": "link_list",
+      "id": "linklist",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "LinkList Grid"
+      },
+      "category": {
+        "en": "Image"
+      }
+    }
+  ]
+}
+{% endschema %}

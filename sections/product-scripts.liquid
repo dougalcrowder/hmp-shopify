@@ -1,0 +1,75 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {%- if product.featured_media -%}
+    {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
+    "image": [
+      {{ product.featured_media | img_url: media_size | prepend: "https:" | json }}
+    ],
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
+  {%- if current_variant.sku != blank -%}
+    "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
+  "brand": {
+    "@type": "Brand",
+    "name": {{ product.vendor | json }}
+  },
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ shop.url | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+<script>
+
+function letsDoThis() { 
+  {% if product.options[0] %}var opt1 = document.querySelector('input[name="select-one"]:checked').value;{% endif %}
+  {% if product.options[1] %}var opt2 = document.querySelector('input[name="select-two"]:checked').value;{% endif %}
+  {% if product.options[2] %}var opt3 = document.querySelector('input[name="select-three"]:checked').value;{% endif %}
+  var id = '';
+  {% for v in product.variants %}
+  if(opt1=="{{ v.option1 }}"{% if product.options[1] %} && opt2=="{{ v.option2 }}"{% endif %}{% if product.options[2] %} && opt3=="{{ v.option3 }}"{% endif %}) {
+  var id = {{ v.id }};
+  var price = "{{ v.price | money }}";
+  var image = "{{ v.image | img_url }}";
+  }
+  {% endfor %}
+  if(id!='') {
+  document.getElementById('product-select').value = id;
+  document.getElementById('price').innerHTML = price;
+  } else {
+  document.getElementById('product-select').value = '';
+  document.getElementById('price').innerHTML = 'Unavailable';
+  }
+  
+  console.log(id);
+  console.log(price);
+  console.log(image);
+  
+}
+</script>
+
+<script src="{{ 'products.js' | asset_url }}" async="async"></script>
+
+ {% schema %}
+ {
+   "name": "Product Scripts"
+ }
+ {% endschema %}

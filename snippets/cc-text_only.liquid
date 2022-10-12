@@ -1,0 +1,32 @@
+<div class="{{ block.settings.layout }} bg-{{ block.settings.background }} top-{{ block.settings.spacing }} bot-{{ block.settings.spacing_bottom }} {% if block.settings.class != blank %}{{ block.settings.class }}{% endif %} text-{{ block.settings.text_align }}">
+  <div class="inner grid">
+    <div class="text">
+    {% if block.settings.title != blank %}
+      <{{ block.settings.titletype }}>{{ block.settings.title | escape }}</{{ block.settings.titletype }}>
+    {% endif %}
+    {% if block.settings.text != blank %}
+      <div class="rte">{{ block.settings.text }}</div>
+    {% endif %}
+    
+    {% if block.settings.buttonlabel != blank and block.settings.buttonurl != blank %}
+    {%- capture ariaLabel -%}
+    {{- block.settings.buttonlabel -}}
+    {%- if block.settings.buttonurl.type == 'frontpage_link' -%}
+    : {{ 'homepage.general.title' | t -}}
+    {%- elsif block.settings.buttonurl.type == 'catalog_link' -%}
+    : {{ 'collections.catalog.title' | t -}}
+    {%- elsif block.settings.buttonurl.object.title -%}
+    : {{ block.settings.buttonurl.object.title -}}
+    {%- endif -%}
+    {%- endcapture -%}
+    
+      <a href="{{ block.settings.buttonurl }}"
+        class="button"
+        aria-label="{{ ariaLabel }}">
+        {{- block.settings.buttonlabel -}}
+      </a>
+  
+    {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+section[hidden] {
+  display: none;
+}
+
+html.no-js .no-js-hidden, .no-js:not(html) {
+  display: none!important;
+}

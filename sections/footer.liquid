@@ -1,0 +1,352 @@
+{%- assign social_icons = false -%}
+{%- assign inline_list = false -%}
+{%- assign locale_selector = false -%}
+{%- assign currency_selector = false -%}
+{%- assign show_payment_icons = false -%}
+{%- assign show_selectors = false -%}
+
+
+{%- if
+  settings.social_twitter_link != blank
+  or settings.social_facebook_link != blank
+  or settings.social_pinterest_link != blank
+  or settings.social_instagram_link != blank
+  or settings.social_tumblr_link != blank
+  or settings.social_snapchat_link != blank
+  or settings.social_youtube_link != blank
+  or settings.social_vimeo_link != blank
+  or request.page_type == 'article'
+  or request.page_type == 'blog'
+-%}
+  {%- assign social_icons = true -%}
+{%- endif -%}
+
+
+<footer class="site-footer" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
+  <div class="site_footer inner grid">
+    <div class="flex nuls">
+      {%- for block in section.blocks -%}
+          <div class="footer_item footer-{{ block.type }}">
+
+            {%- case block.type -%}
+              {%- when 'newsletter' -%}
+              
+              {%- if block.settings.title -%}
+              <p class="h2">{{ block.settings.title | escape }}</p>
+              {%- endif -%}
+              
+                <div class="site-footer__newsletter">
+                  {% comment %}
+                  {%- assign formId = 'ContactFooter' -%}
+                  {% form 'customer', id: formId, novalidate: 'novalidate' %}
+                    {%- if form.posted_successfully? -%}
+                      <p class="form-message form-message--success" tabindex="-1" data-form-status>
+                        {{ 'general.newsletter_form.confirmation' | t }}
+                      </p>
+                    {%- endif -%}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <div class="subscribe_block">
+                    <div class="input-group floating-label {% if form.errors %} input-group--error{% endif %}">
+                      <input type="email"
+                        name="contact[email]"
+                        id="{{ formId }}-email"
+                        class="input-group__field newsletter__input{% if form.errors %} input--error{% endif %}"
+                        value="{{ form.email }}"
+                        placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                        aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+                        aria-required="true"
+                        required
+                        autocorrect="off"
+                        autocapitalize="off"
+                        {% if form.errors %}
+                          aria-invalid="true"
+                          aria-describedby="{{ formId }}-email-error"
+                          data-form-status
+                        {% endif %}>
+                        <label for="contact[email]">{{ 'general.newsletter_form.email_placeholder' | t }}</label>
+                      </div>
+                        <button type="submit" class="btn newsletter__submit" name="commit" >
+                          {% include 'arrow_right' %}
+                          {% comment %}<span class="newsletter__submit-text--large">{{ 'general.newsletter_form.submit' | t }}</span>{% endcomment %}
+                        </button>
+                        
+                        {% if form.errors contains 'email' %}
+                        <span id="{{ formId }}-email-error" class="input-error-message">
+                        <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                        <span class="site-footer__newsletter-error">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                        </span>
+                        {% endif %}
+                        
+                        <p class="subscribe_message">Yes I would like to receive emails about Ancient + Brave products, offers and events.<br> Sign up to receive 10% off your first order.</p>
+                      </div>
+                  {% endform %}
+                  {% endcomment %}
+                </div>
+
+              {%- when 'text' -%}
+                {%- if block.settings.title -%}
+                  <strong>{{ block.settings.title | escape }}</strong>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="site-footer__rte">
+                      {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+                
+                {%- when 'html' -%}
+                {%- if block.settings.code != blank -%}
+                  <div class="site-footer__rte code">
+                      {{ block.settings.code }}
+                  </div>
+                {%- endif -%}
+
+              {%- when 'link_list' -%}
+                {%- if block.settings.title -%}
+                  <strong class="product">{{ block.settings.title | escape }}</strong>
+                {%- endif -%}
+                {%- assign footer_linklist = block.settings.menu -%}
+                  <ul class="footer_linklist
+                            {% if inline_list %}list--inline{% endif %}">
+                    {%- for link in linklists[footer_linklist].links -%}
+                      <li class="footer_linklist-item">
+                        <a href="{{ link.url }}"
+                          {% if link.title == "Instagram" %} target="_blank"{% endif %}
+                          {% if link.current %} aria-current="page"{% endif %}
+                        >
+                          {{ link.title | escape }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+
+            {%- endcase -%}
+
+          </div>
+
+      {%- endfor -%}
+    </div>
+  </div>
+
+
+  <div class="footer_bar">
+    <div class="flex inner">
+      <div class="copyright">
+        <span class="logomark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="41" height="53" viewBox="0 0 41 53">
+            <g fill="none" fill-rule="evenodd">
+              <path fill="#FFF" d="M11.6141168 34.1677076c-.0136668-.2128683-.0318892-.3700398-.0318892-.5272113-.0015185-2.8367173.0037963-5.6726716-.0083824-8.5093889-.001488-.36241.0524199-.5882488.4419235-.6035081.1245196-.0053408.2839656-.0770599.3614107-.1762458.3500218-.4478625.7045991-.2578834 1.1161215-.1037637 3.4660506 1.3054393 6.9905647 2.3461285 10.7071732 2.2324461 3.0735099-.0938451 5.5532736-1.4099659 7.1150844-4.3527358.841267-1.5854488.8966935-3.3448544.7979888-5.1088378-.0425189-.7721242-.1677978-1.5404336-.2672617-2.308743-.2991509-2.3125578-2.272484-5.24922397-5.0749359-5.6154489-.7114325-.09308217-1.4426059-.01373344-2.1798535-.01373344-.0652969-.32349868-.1047787-.58824879-.1723534-.84384327-.4950417-1.87995464-1.9938333-2.82222086-3.9193326-2.52084826-1.8343874.28611323-3.2724377 1.27797241-4.4470227 2.75889446-.7531921.94989591-1.4813285 1.92191791-2.2231317 2.88173241-.1078158.1388603-.2209465.2777206-.3515403.388351-.3606514.3059504-.712951.5974044-1.1905295.1686161-.1655201-.1480159-.4327818-.1678531-.6803026-.2555945V.03707013c.1920944-.01068156.3712812-.03051875.5497088-.03051875 3.8487208-.00152594 7.6966824-.01525937 11.5454032.0022889 6.957157.03204469 13.0001574 4.43132165 15.3349012 11.14010452 3.1752517 9.1243416-1.3978092 19.0948152-10.1612607 22.1535564-.1435013.0503559-.2870027.1022378-.4980787.1770087 2.1130381 3.2571129 4.2063352 6.4821812 6.2981139 9.7087754C36.7693682 46.4171685 38.8611469 49.6475775 41 52.9504686c-.2376503.0175483-.396337.0389114-.5542644.0389114-3.0894545.0022889-6.1781498-.0045778-9.2676043.01062-.3636886.0015875-.5732461-.1273542-.778248-.4455121-3.8677024-5.9831998-7.749831-11.956481-11.6152557-17.9412067-.2201872-.3410469-.4472078-.4585441-.8253224-.4547293-1.9239808.0198372-3.8487208.0091557-5.7727016.0091557h-.5724868z"/>
+              <path fill="#FF2D2F" d="M0 .03615456h8.60856119V11.7233076c-.6058945 0-1.22165946-.0015259-1.83818369 0-1.22849285.0022889-1.86020241.679805-1.86172094 2.0104223-.00303706 2.9626071-.00303706 5.9259771 0 8.8885842.00075927 1.2482166.63778368 1.9570144 1.79946111 1.992111.62183909.0190742 1.24443745.0038148 1.92246224.0038148v20.0889633h.64537635c4.15242734 0 8.30485464.0030519 12.45728204-.0061037.3128177-.000763.5193381.0747709.7076362.3730916 1.5868665 2.5124556 3.1927147 5.0119408 4.7917295 7.5160037.0561857.0869784.1017417.1808236.1905758.341047H0V.03615456z"/>
+            </g>
+          </svg>
+        </span>
+        <small class="site-footer__copyright-content">&copy; {{ shop.name | link_to: routes.root_url }} {{ 'now' | date: "%Y" }}</small>
+      </div>
+      <div class="address">
+        <p>ALL PRICES INCLUDE VAT AND ARE IN GBP | COMPANY NUMBER 11703856<br>
+          REAL - POWER OF ONE LTD, 1 NORTH POLE ROAD, LONDON, W10 6QH, UNITED KINGDOM</p>
+      </div>
+    </div>
+  </div>
+  {% comment %}
+  <code style="padding-bottom: 260px">
+  {{ 'font.woff' | asset_url }}
+  </code><br><code>
+  {{ 'font.woff2' | asset_url }}</code><br><code>
+  {{ 'MonumentExtended-Black.woff' | asset_url }}</code><br><code>
+  {{ 'MonumentExtended-Black.woff2' | asset_url }}</code><br>
+  {% endcomment %}
+</footer>
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Footer"
+  },
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "header",
+      "content": {
+        "en": "Footer Content"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": {
+        "en": "Menu"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "en": "Heading"
+          }
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": {
+            "da": "Menu",
+            "de": "Menü",
+            "en": "Menu",
+            "es": "Menú",
+            "fi": "Valikko",
+            "fr": "Menu",
+            "hi": "मेनू",
+            "it": "Menu",
+            "ja": "メニュー",
+            "ko": "메뉴",
+            "nb": "Meny",
+            "nl": "Menu",
+            "pt-BR": "Menu",
+            "pt-PT": "Menu",
+            "sv": "Meny",
+            "th": "เมนู",
+            "zh-CN": "菜单",
+            "zh-TW": "選單"
+          },
+          "default": "footer"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": {
+        "en": "Text"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "en": "Heading"
+          },
+          "default": {
+            "en": "Talk about your business"
+          }
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": {
+            "en": "Text"
+          },
+          "default": {
+            "en": "<p>Share store details, promotions, or brand content with your customers.</p>"
+          }
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "name": {
+        "en": "Custom HTML"
+      },
+      "settings": [
+        {
+          "type": "html",
+          "id": "code",
+          "label": {
+            "en": "HTML"
+          }
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "limit": 1,
+      "name": {
+        "da": "Tilmelding til nyhedsbrev",
+        "de": "Newsletter-Anmeldung",
+        "en": "Newsletter signup",
+        "es": "Suscripción al boletín",
+        "fi": "Uutiskirjeen tilaus",
+        "fr": "Inscription",
+        "hi": "न्यूज़लेटर साइनअप",
+        "it": "Iscriviti alla Newsletter",
+        "ja": "ニュースレターの登録",
+        "ko": "뉴스레터 신청",
+        "nb": "Registrering for nyhetsbrev",
+        "nl": "Nieuwsbriefaanmelding",
+        "pt-BR": "Assinatura da newsletter",
+        "pt-PT": "Registo na newsletter",
+        "sv": "Nyhetsbrevsregistrering",
+        "th": "การสมัครรับจดหมายข่าว",
+        "zh-CN": "新闻通讯注册",
+        "zh-TW": "訂閱電子報"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "da": "Overskrift",
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fi": "Otsake",
+            "fr": "Titre",
+            "hi": "शीर्षक",
+            "it": "Heading",
+            "ja": "見出し",
+            "ko": "제목",
+            "nb": "Overskrift",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "pt-PT": "Título",
+            "sv": "Rubrik",
+            "th": "ส่วนหัว",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "info": {
+            "da": "Abonnenter bliver føjet til [kundelisten](/admin/customers?query=&accepts_marketing=1) for \"accepterer markedsføring\".",
+            "de": "Abonnenten werden zu Ihrer Liste „akzeptiert Marketingmaterial“ hinzugefügt [Kundenliste.](/admin/customers?query=&accepts_marketing=1)",
+            "en": "Subscribers will be added to your “accepts marketing” [customer list.](/admin/customers?query=&accepts_marketing=1)",
+            "es": "Se añadirá los suscriptores a tu [lista de clientes.](/admin/customers?query=&accepts_marketing=1) \"acepta marketing\".",
+            "fi": "Tilaajat lisätään \"hyväksyy markkinointi\" [-asiakasluetteloosi. ](/admin/customers?query=&accepts_marketing=1)",
+            "fr": "Les abonnés seront ajoutés à votre [liste de clients](/admin/customers?query=&accepts_marketing=1) « Accepte le marketing ».",
+            "hi": "सदस्यों को आपकी “मार्केटिंग स्वीकार करता है” [customer list.](/admin/customers?query=&accepts_marketing=1) में जोड़ दिया जाएगा",
+            "it": "Gli iscritti verranno aggiunti al tuo [elenco clienti.](/admin/customers?query=&accepts_marketing=1) «accetta marketing»",
+            "ja": "購読者は「マーケティングを受け入れる」[顧客リスト](/admin/customers?query=&accepts_marketing=1) に追加されます。",
+            "ko": "가입자가 \"마케팅 수락\" [고객 목록.](/admin/customers?query=&accepts_marketing=1)에 추가됩니다.",
+            "nb": "Abonnenter vil bli lagt til i «aksepterer markedsføring» [kundeliste.](/admin/customers?query=&accepts_marketing=1)",
+            "nl": "Abonnees worden toegevoegd aan je \"accepteert marketing\" [klantenlijst.](/admin/customers?query=&accepts_marketing=1)",
+            "pt-BR": "Os assinantes serão adicionados à “aceita marketing” [lista de clientes. ](/admin/customers?query=&accepts_marketing=1)",
+            "pt-PT": "Os subscritores serão adicionados à sua lista de \"aceitam marketing\" [lista de clientes.](/admin/customers?query=&accepts_marketing=1)",
+            "sv": "Prenumeranter läggs till i din \"accepterar marknadsföring\" [kundlista. ](/admin/customers?query=&accepts_marketing=1)",
+            "th": "ระบบจะเพิ่มผู้สมัครใช้งานไปยังส่วน “ยอมรับการตลาด” ของคุณ [รายชื่อลูกค้า](/admin/customers?query=&accepts_marketing=1)",
+            "zh-CN": "订阅者将被添加到您的“接受营销”[客户列表](/admin/customers?query=&accepts_marketing=1)中。",
+            "zh-TW": "系統會將訂閱者新增至您的「接受行銷」[客戶清單。](/admin/customers?query=&accepts_marketing=1)"
+          },
+          "default": {
+            "da": "Nyhedsbrev",
+            "de": "Newsletter",
+            "en": "Newsletter",
+            "es": "Boletín",
+            "fi": "Uutiskirje",
+            "fr": "Newsletter",
+            "hi": "न्यूज़लेटर",
+            "it": "Newsletter",
+            "ja": "ニュースレター",
+            "ko": "뉴스레터",
+            "nb": "Nyhetsbrev",
+            "nl": "Nieuwsbrief",
+            "pt-BR": "Newsletter",
+            "pt-PT": "Newsletter",
+            "sv": "Nyhetsbrev",
+            "th": "จดหมายข่าว",
+            "zh-CN": "新闻通讯",
+            "zh-TW": "電子報"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

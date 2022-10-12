@@ -1,0 +1,99 @@
+/*================ Typography ================*/
+@font-face {
+  font-family: 'Marr Sans True Web';
+  src: url('//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-Regular-Web.woff2?v=50633817073756614141665514258') format('woff2'),
+  url('//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-Regular-Web.woff?v=150014281339218017531665514258') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Marr Sans True Web';
+  src: url('//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-LightItalic-Web.woff2?v=93570896854908201691665514254') format('woff2'),
+  url('//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-LightItalic-Web.woff?v=25316350791061983871665514254') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+  font-size: 100%;
+  font-family: var(--font-body-family);
+  font-style:italic;
+  font-weight: 400;
+  color: var(--color-grey);
+}
+
+blockquote {
+  font-size: 106%;
+  font-style: italic;
+  padding: 0 30px;
+  margin: 0;
+  p + cite {
+    margin-top: 16px;
+  }
+  cite {
+    display: block;
+    font-size:100%;
+    font-style: normal;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, h5 {
+  font-family: var(--font-header-family);
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+h1, .h1 {
+  font-size: 200%;
+}
+h2, .h2 {
+  font-size: 125%;
+}
+h3, .h3, h4, h5 {
+  font-size: 112.5%;
+}
+
+/*================ Paragraph styles ================*/
+
+p {
+  margin: 0 0 16px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*================ Lists ================*/
+li {
+  list-style: none;
+}
+.rte {
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+/*================ Links ================*/
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

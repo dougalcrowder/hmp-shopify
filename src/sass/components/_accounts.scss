@@ -1,0 +1,324 @@
+.account_area {
+  padding: 160px 12px 120px 12px;
+}
+
+.account_header {
+  margin-bottom: 24px;
+}
+
+.please_login {
+  padding-bottom: 60px;
+}
+.login_form {
+  max-width: 380px;
+  width: 100%;
+  .text-center {
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+}
+
+.myaccount {
+
+}
+
+.order_history {
+  flex: 1 0 100%;
+  padding: 12px;
+  @media screen and (min-width: 768px) {
+    flex: 1 0 48%;
+    margin-right: 2%;
+    padding: 32px;
+  }
+}
+
+.account_details {
+  flex: 1 0 100%;
+  padding: 12px;
+  background-color: var(--color-white);
+  @media screen and (min-width: 768px) {
+    flex: 1 0 48%;
+    margin-left: 2%;
+    padding: 32px;
+  }
+}
+
+.order-table {
+  border: 1px solid var(--color-lightgrey);
+
+  a {
+    border-bottom: 1px solid currentColor;
+  }
+
+  th, td {
+    border: 0;
+  }
+
+  tbody th,
+  tfoot th {
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  tbody tr + tr {
+    border-top: 1px solid var(--color-lightgrey);
+  }
+
+  thead {
+    border-bottom: 1px solid var(--color-grey);
+  }
+
+  tfoot {
+    border-top: 1px solid var(--color-grey);
+
+    tr {
+      &:first-child th,
+      &:first-child td {
+        padding-top: 1.25em;
+      }
+
+      &:nth-last-child(2) th,
+      &:nth-last-child(2) td {
+        padding-bottom: 1.25em;
+      }
+
+      &:last-child th,
+      &:last-child td {
+        border-top: 1px solid var(--color-grey);
+        font-weight: 400
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    thead {
+      th {
+        text-transform: uppercase;
+        padding-top: 1.25em;
+        padding-bottom: 1.25em;
+      }
+    }
+
+    tbody {
+      tr {
+        th, td {
+          padding-top: 1.25em;
+          padding-bottom: 1.25em;
+        }
+      }
+    }
+
+    tfoot {
+      tr {
+        td, th {
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+
+ @media screen and (min-width: 768px) {
+    border: 0;
+
+    thead {
+      display: none;
+    }
+
+    th,
+    td {
+      float: left;
+      clear: left;
+      width: 100%;
+      text-align: right;
+      padding: 0.5rem 0;
+      border: 0;
+      margin: 0;
+    }
+
+    th::before,
+    td::before {
+      content: attr(data-label);
+      float: left;
+      text-align: left;
+      padding-right: 2em;
+      max-width: 80%;
+    }
+
+    tbody {
+      tr {
+        th:first-child {
+          padding-top: 1.25em;
+        }
+        td:last-child {
+          padding-bottom: 1.25em;
+        }
+      }
+
+      th::before,
+      td::before {
+        font-weight: 400
+      }
+    }
+  }
+}
+
+.order-table__product {
+ @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.order-discount {
+  color: var(--color-lightgrey);
+  display: block;
+  line-height: 1.2em;
+
+  .icon-saletag {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.4em;
+  }
+}
+
+.order-discount--title {
+  text-transform: uppercase;
+  word-break: break-word;
+  padding-right: 1em;
+}
+
+.order-discount--list {
+  margin: 0.8em 0 0 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+.order-discount__item {
+  text-indent: -1.3em;
+
+  & + .order-discount__item {
+    margin-top: 0.6em;
+  }
+}
+
+.order-discount-wrapper {
+
+ @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.order-discount-card-wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+
+.order-discount--cart {
+  font-size: 15px;
+  padding-right: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.order-discount--cart-total {
+  padding-left: 8px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: $gutter-site;
+    min-width: 150px;
+  }
+}
+
+// Addresses
+.myaccount {
+  .flex {
+    .item {
+      margin-bottom: 24px;;
+      flex: 1 1 100%;
+      padding: 12px;
+      @media screen and (min-width: 768px) {
+        flex: 1 1 50%;
+        padding: 24px;
+      }
+      @media screen and (min-width: 1024px) {
+        flex: 1 1 33.33333%;
+      }
+      &.add_new {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}
+
+.address_item.flex {
+  .half {
+    flex: 1 1 50%;
+    padding: 0 8px 0 4px;
+    &:first-child {
+      padding: 0 4px 0 8px;
+    }
+  }
+  .text-right {
+    text-align: right;
+    .btn {
+      margin-top: 16px;
+    }
+  }
+  .full {
+    flex: 1 1 100%;
+    padding: 0 8px;
+  }
+  .form-vertical {
+    input, textarea, select {
+      margin-bottom: 8px;
+    }
+  }
+}
+.account_address_outer {
+  position: relative;
+  .address_edit {
+    position: relative;
+  }
+  .active_address {
+    transition: all 0.6s ease;
+    height: auto;
+    max-height: 400px;
+    &.inactive {
+      overflow: hidden;
+      height: 0;
+      //max-height: 0px;
+    }
+  }
+  .address-edit-toggle {
+    span {
+      &:last-child {
+        display: none;
+      }
+    }
+    &.active {
+      span {
+        &:last-child {
+          display: inline;
+        }
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+}

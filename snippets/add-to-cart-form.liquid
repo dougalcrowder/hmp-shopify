@@ -1,0 +1,110 @@
+<form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-{{ product.handle }}">  
+  {% if product.variants.size > 1 %}
+  <div class="variant_options">
+    {% if product.options[0] %}
+    {% assign used = '' %}
+    <div class="radio_container {{ product.options[0] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
+      <strong>{{ product.options[0] }}</strong>
+      <fieldset id='select-one' onchange="letsDoThis()">
+        {% for variant in product.variants %}
+        {% unless used contains variant.option1 %}
+        <input name="select-one" type="radio" value="{{ variant.option1 }}" id="{{ variant.option1 }}-{{ product.handle }}" 
+        {% if forloop.index == 1 %}
+          checked
+        {% endif %}>
+        <label class="{{ variant.option1 | handleize }}" for="{{ variant.option1 }}-{{ product.handle }}">{{ variant.option1 }}</label>
+        {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
+        {% endunless %}
+        {% endfor %}
+      </fieldset>
+    </div>
+    {% endif %}
+    
+    {% if product.options[1] %}
+    {% assign used = '' %}
+    <div class="radio_container {{ product.options[1] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
+      <strong>{{ product.options[1] }}</strong>
+      <fieldset id='select-two' onchange="letsDoThis()">
+        {% for variant in product.variants %}
+        {% unless used contains variant.option2 %}
+        <input name="select-two" type="radio" value="{{ variant.option2 }}" id="{{ variant.option2 }}-{{ product.handle }}" 
+        {% if forloop.index == 1 %}
+          checked
+        {% endif %}>
+        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}">{{ variant.option2 }}</label>
+        {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
+        {% endunless %}
+        {% endfor %}
+      </fieldset>
+    </div>
+    {% endif %}
+    {% if product.options[2] %}
+    {% assign used = '' %}
+    <div class="radio_container {{ product.options[2] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
+      <strong>{{ product.options[2] }}</strong>
+      <select id='select-three' onchange="letsDoThis()">
+        {% for variant in product.variants %}
+        {% unless used contains variant.option3 %}
+        <input name="select-three" type="radio" value="{{ variant.option3 }}" id="{{ variant.option3 }}-{{ product.handle }}" 
+        {% if forloop.index == 1 %}
+          checked
+        {% endif %}>
+        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}">{{ variant.option3 }}</label>
+        {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
+        {% endunless %}
+        {% endfor %}
+      </select>
+    </div>
+    {% endif %}
+    
+    {% if product.metafields.custom.model_size != blank %}
+      {% assign modelInfo = product.metafields.custom.model_size.value  %}
+      <span class="size-help small">{{ modelInfo}} - <a href="#sizeguide">Size guide</a></span>
+    {% endif %}
+    
+    </div>
+  {% endif %}
+  
+  <input type="hidden"name="id" id="product-select" value="{{ product.variants.first.id }}" />
+  <input type="hidden" id="Quantity" name="quantity" value="1" min="1" class="product-form__quantity" />
+  <button  
+   type="submit" 
+   name="add" 
+   data-add-to-cart 
+   class="js-go-cart-add-to-cart button green"
+   {%- unless current_variant.available -%}disabled="disabled"{%- endunless -%}> 
+     <span data-add-to-cart-text> 
+        {%- if current_variant.available -%} 
+
+          {%- if current_variant.incoming and current_variant.inventory_policy == 'continue' -%}
+          Preorder
+          {%- else -%} 
+          Add to bag
+          {%- endif -%} 
+          
+        {%- else -%} 
+            {{- 'products.product.sold_out' | t -}} 
+        {%- endif -%} 
+     </span>
+   </button> 
+</form>
+ {%- if current_variant.incoming and current_variant.inventory_policy == 'continue' -%}
+<p class="preorder">Estimated shipping date: {{ product.variants.first.next_incoming_date | date: "%b %d, %Y"}}</p>
+ {%- endif -%} 
+ 
+ 
+{% comment %}
+<div class="actions flex">
+  <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__quantity">
+  <button  type="submit" name="add" data-add-to-cart class="js-go-cart-add-to-cart button"
+ {%- unless current_variant.available -%}disabled="disabled"{%- endunless -%}> 
+   <span data-add-to-cart-text> 
+      {%- if current_variant.available -%} 
+          {{- 'products.product.add_to_cart' | t -}} 
+      {%- else -%} 
+          {{- 'products.product.sold_out' | t -}} 
+      {%- endif -%} 
+   </span>
+  </button>
+</div>
+{% endcomment %}

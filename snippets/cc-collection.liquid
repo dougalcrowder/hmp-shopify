@@ -1,0 +1,39 @@
+{%- assign collection = collections[block.settings.thecollection] -%}
+<div class="top-large bot-regular">
+<div class="feature_collection_header">
+  {% if block.settings.pretitle != blank %}
+  <h3>{{ block.settings.pretitle | escape }}</h2>
+  {% endif %}
+  {% if block.settings.title != blank %}
+  <p><strong>{{ block.settings.title | escape }}</strong></p>
+  {% endif %}
+  {% if block.settings.description != blank %}
+  <div class="rte">{{ block.settings.description }}</div>
+{% endif %}
+</div>
+<div class="container featured_collection featured_products bg-{{ block.settings.block_background }} count_{{ collection.products_count }}">
+<div class="grid product_grid">
+    
+    {% if block.settings.narrow_tag != blank %}
+    {% assign thetag = block.settings.narrow_tag %}
+    {% for product in collection.products limit: 4 %}
+    {% if product.tags contains thetag %}
+    <div class="carousel-cell grid__item">
+      {% include 'product-card-grid-canonical' %}
+    </div>
+    {% endif %} 
+    {% endfor %}
+    
+    {% else %}
+    
+    {% for product in collection.products limit: 4 %}
+    <div class="carousel-cell grid__item">
+      {% include 'product-card-grid-canonical' %}
+    </div>
+    {% endfor %}
+    
+    {% endif %} 
+  </div>
+</div>
+</div>
+</div>

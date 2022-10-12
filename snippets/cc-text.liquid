@@ -1,0 +1,46 @@
+<div class="bg-{{ block.settings.background }} {{ block.settings.layout }} text-{{ block.settings.text_align }} top-{{ block.settings.spacing }} bot-{{ block.settings.spacing_bottom }} {% if block.settings.class != blank %}{{ block.settings.class }}{% endif %}">
+  <div class="grid text_outer inner">
+    <div class="text_inner flex{% if block.settings.image == blank %} text_only{% endif %}{% if block.settings.flip != blank %} flip{% endif %}">
+        {% if block.settings.title != blank %}
+        <h3>{{ block.settings.title | escape }}</h3>
+        {% endif %}
+        {% if block.settings.text != blank %}
+        <div class="rte">{{ block.settings.text }}</div>
+        {% endif %}
+      
+      {% if block.settings.button_label != blank and block.settings.button_url != blank %}
+        {%- capture ariaLabel -%}
+        {{- block.settings.button_label -}}
+        {%- if block.settings.button_url.type == 'frontpage_link' -%}
+        : {{ 'homepage.general.title' | t -}}
+        {%- elsif block.settings.button_url.type == 'catalog_link' -%}
+        : {{ 'collections.catalog.title' | t -}}
+        {%- elsif block.settings.button_url.object.title -%}
+        : {{ block.settings.button_url.object.title -}}
+        {%- endif -%}
+        {%- endcapture -%}
+        
+        <div class="cta">
+          <a href="{{ block.settings.button_url }}"
+          class="button"
+          aria-label="{{ ariaLabel }}">
+            {{- block.settings.button_label -}}
+          </a>
+        </div>
+      {% endif %}
+      
+    </div>
+    {% if block.settings.image != blank %}
+    <div class="image{% if block.settings.flip != blank %} flip{% endif %}">
+      <picture>
+        <source srcset="{{ block.settings.image | img_url: '660x'}}" media="(min-width: 1160px)" />
+        <source srcset="{{ block.settings.image | img_url: '490x'}}" media="(min-width: 960px)" />
+        <source srcset="{{ block.settings.image | img_url: '400x'}}" media="(min-width: 768px)" />
+        <source srcset="{{ block.settings.image | img_url: '768x'}}" media="(min-width: 480px)" />
+        <source srcset="{{ block.settings.image | img_url: '480x'}}" media="(min-width: 320px)" />
+        <img loading="lazy" src="{{ block.settings.image | img_url: 'pico' }}" alt="{{ block.settings.image.alt | escape }}" />
+      </picture>
+    </div>
+    {% endif %}
+  </div>
+</div>

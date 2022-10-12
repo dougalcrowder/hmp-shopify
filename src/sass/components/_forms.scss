@@ -1,0 +1,111 @@
+
+/*================ Forms ================*/
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  &[type="submit"] {
+    cursor: pointer;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input,
+textarea,
+select {
+  border: 0;
+  border-bottom: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-grey);
+  max-width: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1.2;
+  border-radius: 0;
+
+  &:focus {
+    border-color: var(--color-black);
+  }
+  
+  &:focus-visible {
+    outline: 1px;
+    border-color: var(--color-black);
+  }
+  
+  &[disabled] {
+    cursor: default;
+    background-color: var(--color-lightgrey);
+    border-color: var(--color-lightgrey);
+  }
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/*================ Error styles ================*/
+input,
+select,
+textarea {
+  &.input--error {
+    border-color: var(--color-error);
+    background-color: var(--color-white);
+    color: var(--color-error);
+    margin-bottom: 16px;
+  }
+}
+
+.input-error-message {
+  display: flex;
+  line-height: 1;
+  color: var(--color-black);
+  font-size: 14px;
+  margin-bottom: 16px;
+  margin-top: -12px;
+
+ @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8' viewBox='0 0 11 8'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd' stroke='none' stroke-width='1'%3E%3Cg id='Artboard' transform='translate(-57 -38)'%3E%3Cpath id='Path' fill='%23342E2C' fill-rule='nonzero' d='M66.6 38.7l.8.6-4.9 6.533-4.9-6.533.8-.6 4.1 5.467z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8'%3E%3Cpath fill='%23ffffff' d='m9.6.7.8.6-4.9 6.533L.6 1.3l.8-.6 4.1 5.467z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  line-height: 32px;
+  padding-right: 32px;
+  text-indent: 0.01px;
+  cursor: pointer;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-bottom: 4px;
+  @media screen and (min-width: 960px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+
+

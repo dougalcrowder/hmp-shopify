@@ -1,0 +1,43 @@
+{%- liquid
+    assign buildingBlocks = false
+    assign blockCount = 0
+    for block in section.blocks
+      assign buildingBlocks = true
+      assign blockCount = blockCount | plus: 1
+    endfor
+  -%}
+  {% if buildingBlocks %}
+  <div role="status" aria-live="polite" class="notices">
+    <div class="inner flex custom_scroll bc-{{ blockCount }}">
+    {% for block in section.blocks limit: 3 %}
+      <span>{{ block.settings.title }}</span>
+    {% endfor %}
+    </div>
+  </div>
+  <script>
+    document.body.classList.add("noticeActive");
+  </script>
+  {% endif %}
+
+
+
+{% schema %}
+{
+  "name": "Notices",
+  "blocks": [
+    {
+      "type": "notice",
+      "name": {
+        "en": "notice"
+      },
+      "settings": [
+        {
+         "type": "richtext",
+           "id": "title",
+           "label": "notice text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

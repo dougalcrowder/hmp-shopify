@@ -1,0 +1,14 @@
+<div class="product_card{% unless product.available %} sold_out{% endunless %}">
+  <a href="{{ product.url }}">
+    {% include 'product-card-image' %}
+    {% include 'product-price' %}
+    <h3>{{ product.title }}</h3>
+    <a class="button reverse" href="{{ product.url }}">
+      Learn More
+    </a>
+      {% comment %}
+      {% include 'product-price' %}
+      {% include 'add-to-cart-form-simple' %}
+      {% endcomment %}
+  </a>
+</div>

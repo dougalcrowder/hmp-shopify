@@ -1,0 +1,141 @@
+{
+  "name": "Product pages",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "shipping_text",
+      "label": "shipping text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": {
+        "en": "Feature"
+      },
+      "settings": [
+        {
+          "type": "select",
+          "id": "spacing",
+          "label": {
+            "en": "Padding Top"
+          },
+          "default": "regular",
+          "options": [
+            {
+              "value": "none",
+              "label": {
+                "en": "None"
+              }
+            },
+            {
+              "value": "small",
+              "label": {
+                "en": "Small"
+              }
+            },
+            {
+              "value": "regular",
+              "label": {
+                "en": "Regular" 
+              }
+            },
+            {
+              "value": "large",
+              "label": {
+                "en": "Large"
+              }
+            },
+            {
+              "value": "xlarge",
+              "label": {
+                "en": "XLarge"
+              }
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "spacing_bottom",
+          "label": {
+            "en": "Padding bottom"
+          },
+          "default": "regular",
+          "options": [
+            {
+              "value": "none",
+              "label": {
+                "en": "None"
+              }
+            },
+            {
+              "value": "small",
+              "label": {
+                "en": "Small"
+              }
+            },
+            {
+              "value": "regular",
+              "label": {
+                "en": "Regular"
+              }
+            },
+            {
+              "value": "large",
+              "label": {
+                "en": "Large"
+              }
+            },
+            {
+              "value": "xlarge",
+              "label": {
+                "en": "XLarge"
+              }
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "en": "Image"
+          }
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": {
+            "en": "Text"
+          }
+        },
+        {
+          "type": "text",
+          "id": "class",
+          "label": {
+            "en": "Custom Class"
+          }
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "name": {
+        "en": "Custom HTML"
+      },
+      "settings": [
+        {
+          "type": "html",
+          "id": "code",
+          "label": {
+            "en": "HTML"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product pages"
+    }
+  ]
+}

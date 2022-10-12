@@ -1,0 +1,45 @@
+<div class="product-description rte">
+    <div id="accordionGroup" class="Accordion">
+      <h3>
+        <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
+            Details
+        </button>
+      </h3>
+      <section id="accordion-panel-1" aria-labelledby="accordion-header-1" hidden>
+        {{ product.description }}
+      </section>
+      <h3>
+        <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+            Delivery and Returns
+        </button>
+      </h3>
+      <section id="accordion-panel-2" aria-labelledby="accordion-header-2" hidden>
+        {{ section.settings.shipping_text }}
+      </section>   
+     
+    {% render 'size-guides' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": {
+    "en": "Product Accordions"
+  },
+  "class": "product_accordions",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "shipping_text",
+      "label": "shipping text"
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Product Accordions"
+      }
+    }
+  ]
+}
+{% endschema %}

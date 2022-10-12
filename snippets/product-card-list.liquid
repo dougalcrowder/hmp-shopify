@@ -1,0 +1,55 @@
+{% if product.title contains 'for Beauty' %}
+{% assign subcat = 'beauty' %}
+{% elsif product.title contains 'for Brain' %}
+{% assign subcat = 'brain' %}
+{% elsif product.title contains 'for Body' %}
+{% assign subcat = 'body' %}
+{% else %}
+{% assign subcat = false %}
+{% endif %}
+
+<div class="product_card_list{% unless product.available %} sold_out{% endunless %} {{ subcat }}">
+  <div class="flex contained">
+    <div class="image">
+    {% if subcat %}
+      {% capture essveegee %}{{subcat}}-svg{% endcapture %}
+      {% include essveegee %}
+    {% endif %}
+    <a href="{{ product.url | within: collection }}">
+      {% for image in product.images limit:1 %}
+      <picture>
+        <source srcset="{{ image.src | img_url: '808x976', crop: 'center' }} 2x, {{ image.src | img_url: '404x488', crop: 'center' }}" media="(min-width: 321px)" />
+        <source srcset="{{ image.src | img_url: '404x488', crop: 'center' }} 2x, {{ image.src | img_url: '404x488', crop: 'center' }}" media="(min-width: 200px)" />
+        <img class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ product.featured_image.alt | escape }}" />
+      </picture>
+      {% endfor %}
+    </a>
+    {% if subcat %}
+      <div class="tagline {{subcat}}">
+        {{ settings[subcat] }}
+      </div>
+    {% endif %}
+    </div>
+    <div class="text">
+    <a href="{{ product.url | within: collection }}">
+    {% if subcat %}
+      {% assign title = product.title | split: 'for' %}
+      <h2>{{ title | first}} <span class="{{subcat}}">for {{ title | last}}</span></h2>
+    {% else %}
+      <h2>{{ product.title }}</h2>
+      {% endif %}
+    </a>
+    
+    {% assign productsett = product.handle| replace: '-', '_' %}
+    {% if settings[productsett] %}
+    {{ settings[productsett] }}
+    {% else %}
+      {{ product.description | truncatewords: 50}}
+    {% endif %}
+    <div class="actions flex">
+    {% include 'add-to-cart-form-simple' %}
+    <a class="moreinfo" href="{{ product.url | within: collection }}">Details {% include 'arrow_right' %}</a> 
+    </div>
+    </div>
+  </div>
+</div>

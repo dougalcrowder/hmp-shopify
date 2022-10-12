@@ -1,0 +1,29 @@
+
+    <a href="{{ article.url }}">
+        {%- if article.image -%}
+        <picture>
+          <source srcset="{{ article | img_url: '824x824', crop: 'center' }} 2x, {{ article| img_url: '412x412', crop: 'center' }}" media="(min-width: 660px)" />
+          <source srcset="{{ article | img_url: '620x620', crop: 'center' }} 2x, {{ article | img_url: '320x320', crop: 'center' }}" media="(min-width: 200px)" />
+          <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{ article.title }} image" width="320" height="320" />
+        </picture>
+        {%- endif -%}
+      <h3>{{ article.title }}</h3>
+    </a>
+  {%- if article.excerpt.size > 0 -%}
+    {{ article.excerpt | strip_html | truncate: 80 }}
+  {%- else -%}
+    {{ article.content | strip_html | truncate: 80 }}
+  {%- endif -%}
+  
+  <a class="blog-item__link" href="{{ article.url }}">
+  <span>
+   {{ article.published_at | date: format: 'abbreviated_date' }}
+  </span>
+  </a>
+
+
+
+
+
+
+

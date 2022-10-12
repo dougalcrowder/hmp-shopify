@@ -1,0 +1,637 @@
+
+{% if section.settings.title != blank %}
+<div class="section-header text-center">
+  <h4 class="h2">{{ section.settings.title | escape }}</h4>
+</div>
+{% endif %}
+
+  {%- assign block_width_mobile = '' -%}
+  
+  {% for block in section.blocks %}
+  
+  
+  <div class="custom custom-{{ block.type }} custom-{{ block.id }} {{ block_width_mobile }}" {{ block.shopify_attributes }}>     
+    {% case block.type %}
+
+      {% when 'text' %}
+      {% include 'cc-text' %}
+      
+      {% when 'textonly' %}
+      {% include 'cc-text_only' %}
+      
+      {% when 'quotation' %}
+      {% include 'cc-quotation' %}
+
+      {% when 'video' %}
+      {% include 'cc-video' %}
+      
+      {%- when 'collection' -%}
+      {% include 'cc-collection' %}
+      
+      {%- when 'html' -%}
+      {{ block.settings.code }} 
+    
+    {% endcase %}
+    
+    </div>
+
+{% endfor %}
+
+{% if section.blocks.size == 0 %}
+{% include 'no-blocks' %}
+{% endif %}
+
+
+
+
+{% schema %}
+{
+"name": {
+  "en": "Custom content Homepage"
+},
+"class": "index-section",
+"settings": [
+],
+"blocks": [
+  {
+    "type": "text",
+    "name": {
+      "en": "Text and Image"
+    },
+    "settings": [
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": {
+          "en": "Padding Top"
+        },
+        "default": "regular",
+        "options": [
+          {
+            "value": "none",
+            "label": {
+              "en": "None"
+            }
+          },
+          {
+            "value": "small",
+            "label": {
+              "en": "Small"
+            }
+          },
+          {
+            "value": "regular",
+            "label": {
+              "en": "Regular" 
+            }
+          },
+          {
+            "value": "large",
+            "label": {
+              "en": "Large"
+            }
+          },
+          {
+            "value": "xlarge",
+            "label": {
+              "en": "XLarge"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "spacing_bottom",
+        "label": {
+          "en": "Padding bottom"
+        },
+        "default": "regular",
+        "options": [
+          {
+            "value": "none",
+            "label": {
+              "en": "None"
+            }
+          },
+          {
+            "value": "small",
+            "label": {
+              "en": "Small"
+            }
+          },
+          {
+            "value": "regular",
+            "label": {
+              "en": "Regular"
+            }
+          },
+          {
+            "value": "large",
+            "label": {
+              "en": "Large"
+            }
+          },
+          {
+            "value": "xlarge",
+            "label": {
+              "en": "XLarge"
+            }
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "flip",
+        "default": false,
+        "label": "flip image to the right"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": {
+          "en": "Image"
+        }
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": {
+          "en": "Title"
+        }
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": {
+          "en": "Text"
+        }
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": {
+          "en": "Button label"
+        }
+      },
+      {
+        "type": "url",
+        "id": "button_url",
+        "label": {
+          "en": "Button Link"
+        }
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": {
+          "en": "Text Alignment"
+        },
+        "default": "centre",
+        "options": [
+          {
+            "value": "centre",
+            "label": {
+              "en": "Centre"
+            }
+          },
+          {
+            "value": "left",
+            "label": {
+              "en": "Left"
+            }
+          },
+          {
+            "value": "right",
+            "label": {
+              "en": "Right"
+            }
+          },
+          {
+            "value": "justify",
+            "label": {
+              "en": "Justify"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": {
+          "en": "Background"
+        },
+        "default": "black",
+        "options": [
+          {
+            "value": "white",
+            "label": {
+              "en": "white"
+            }
+          },
+          {
+            "value": "black",
+            "label": {
+              "en": "black"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": {
+          "en": "Custom Class"
+        }
+      }
+    ]
+  },
+  {
+    "type": "textonly",
+    "name": {
+      "en": "Text Only"
+    },
+    "settings": [
+      {
+        "type": "select",
+        "id": "spacing",
+        "label": {
+          "en": "Padding Top"
+        },
+        "default": "regular",
+        "options": [
+          {
+            "value": "none",
+            "label": {
+              "en": "None"
+            }
+          },
+          {
+            "value": "small",
+            "label": {
+              "en": "Small"
+            }
+          },
+          {
+            "value": "regular",
+            "label": {
+              "en": "Regular" 
+            }
+          },
+          {
+            "value": "large",
+            "label": {
+              "en": "Large"
+            }
+          },
+          {
+            "value": "xlarge",
+            "label": {
+              "en": "XLarge"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "spacing_bottom",
+        "label": {
+          "en": "Padding bottom"
+        },
+        "default": "regular",
+        "options": [
+          {
+            "value": "none",
+            "label": {
+              "en": "None"
+            }
+          },
+          {
+            "value": "small",
+            "label": {
+              "en": "Small"
+            }
+          },
+          {
+            "value": "regular",
+            "label": {
+              "en": "Regular"
+            }
+          },
+          {
+            "value": "large",
+            "label": {
+              "en": "Large"
+            }
+          },
+          {
+            "value": "xlarge",
+            "label": {
+              "en": "XLarge"
+            }
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": {
+          "en": "Text Alignment"
+        },
+        "default": "centre",
+        "options": [
+          {
+            "value": "centre",
+            "label": {
+              "en": "Centre"
+            }
+          },
+          {
+            "value": "left",
+            "label": {
+              "en": "Left"
+            }
+          },
+          {
+            "value": "right",
+            "label": {
+              "en": "Right"
+            }
+          },
+          {
+            "value": "justify",
+            "label": {
+              "en": "Justify"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": {
+          "en": "Title"
+        }
+      },
+      {
+        "type": "select",
+        "id": "titletype",
+        "label": {
+          "en": "Title Type"
+        },
+        "default": "h2",
+        "options": [
+          {
+            "value": "h1",
+            "label": {
+              "en": "h1"
+            }
+          },
+          {
+            "value": "h2",
+            "label": {
+              "en": "h2"
+            }
+          },
+          {
+            "value": "h3",
+            "label": {
+              "en": "h3"
+            }
+          }
+        ]
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": {
+          "en": "Text"
+        }
+      },
+      {
+        "type": "text",
+        "id": "buttonlabel",
+        "label": {
+          "en": "Button Text"
+        }
+      },
+      {
+        "type": "url",
+        "id": "buttonurl",
+        "label": {
+          "en": "Button Link"
+        }
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": {
+          "en": "Background"
+        },
+        "default": "black",
+        "options": [
+          {
+            "value": "white",
+            "label": {
+              "en": "white"
+            }
+          },
+          {
+            "value": "black",
+            "label": {
+              "en": "black"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": {
+          "en": "Custom Class"
+        }
+      }
+    ]
+  },
+  {
+    "type": "quotation",
+    "name": {
+      "en": "Quotation"
+    },
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": {
+          "en": "Person or Title"
+        }
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": {
+          "en": "Quote"
+        }
+      },
+      {
+        "type": "richtext",
+        "id": "subtext",
+        "label": {
+          "en": "Subtext"
+        }
+      },
+      {
+        "type": "richtext",
+        "id": "first_button_label",
+        "label": "First Button text"
+      },
+      {
+        "type": "url",
+        "id": "first_button_link",
+        "label": "First Button link"
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": {
+          "en": "Background"
+        },
+        "default": "grey",
+        "options": [
+          {
+            "value": "grey",
+            "label": {
+              "en": "grey"
+            }
+          },
+          {
+            "value": "blue",
+            "label": {
+              "en": "blue"
+            }
+          },
+          {
+            "value": "white",
+            "label": {
+              "en": "white"
+            }
+          },
+          {
+            "value": "black",
+            "label": {
+              "en": "black"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "collection",
+    "name": {
+      "en": "Collection"
+    },
+    "settings": [
+      {
+        "type": "collection",
+        "id": "thecollection",
+        "label": {
+          "en": "Collection"
+        }
+      },
+      {
+        "id": "pretitle",
+        "type": "text",
+        "label": {
+          "en": "Pre Title"
+        }
+      },
+      {
+        "id": "title",
+        "type": "text",
+        "label": {
+          "en": "Title"
+        }
+      },
+      {
+        "id": "description",
+        "type": "richtext",
+        "label": {
+          "en": "Description"
+        }
+      },
+      {
+        "id": "narrow_tag",
+        "type": "text",
+        "label": {
+          "en": "Narrow by tag"
+        }
+      },
+      {
+        "type": "select",
+        "id": "background",
+        "label": {
+          "en": "Background"
+        },
+        "default": "grey",
+        "options": [
+          {
+            "value": "grey",
+            "label": {
+              "en": "grey"
+            }
+          },
+          {
+            "value": "blue",
+            "label": {
+              "en": "blue"
+            }
+          },
+          {
+            "value": "white",
+            "label": {
+              "en": "white"
+            }
+          },
+          {
+            "value": "black",
+            "label": {
+              "en": "black"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "html",
+    "name": {
+      "en": "Custom HTML"
+    },
+    "settings": [
+      {
+        "type": "html",
+        "id": "code",
+        "label": {
+          "en": "HTML"
+        }
+      }
+    ]
+  }
+],
+"presets": [
+  {
+    "name": {
+      "en": "Custom content Homepage"
+    },
+    "category": {
+      "en": "Advanced layout"
+    },
+    "blocks": [
+      {
+        "type": "text"
+      }
+    ]
+  }
+]
+}
+{% endschema %}

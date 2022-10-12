@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-template",
+      "settings": {
+      }
+    },
+    "newsletter": {
+      "type": "mailchimp_newsletter",
+      "blocks": {
+        "5f19692b-8fe9-4386-b08a-2a6ff7c95503": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our community"
+          }
+        },
+        "b11eea6f-cbf8-4871-a691-d487dddcbbeb": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Offers, pre-launch previews and all meaningful REAL news before anyone else - Join us.<\/p>"
+          }
+        },
+        "17a10bd1-f155-4325-8ce7-151b3aa7d4de": {
+          "type": "email_form",
+          "settings": {
+            "button_text": "Sign up"
+          }
+        }
+      },
+      "block_order": [
+        "5f19692b-8fe9-4386-b08a-2a6ff7c95503",
+        "b11eea6f-cbf8-4871-a691-d487dddcbbeb",
+        "17a10bd1-f155-4325-8ce7-151b3aa7d4de"
+      ],
+      "settings": {
+        "chimp_url": "https:\/\/realpowerofone.us20.list-manage.com\/subscribe\/post?u=fde30870205a640d93c128964&id=a6595f8345"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "newsletter"
+  ]
+}

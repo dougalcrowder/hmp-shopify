@@ -1,0 +1,174 @@
+
+  {% if section.settings.title != blank %}
+    <div class="section-header">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="collection_list-grid mininner">
+    <ul class="grid">
+      {% for block in section.blocks limit: section.blocks.size %}
+        <li class="collection_item {{ block.settings.colour }}">
+          {%- assign collection = collections[block.settings.collection] -%}
+          
+          {% if block.settings.override_image != blank %}
+            {%- assign collection_image = block.settings.override_image -%}
+          {% elsif collection.image %}
+            {%- assign collection_image = collection.image -%}
+          {% elsif collection.products.first and collection.products.first.media != empty %}
+            {%- assign collection_image = collection.products.first.featured_media.preview_image -%}
+          {% else %}
+            {% assign collection_image = blank %}
+          {% endif %}
+          
+          <div class="collection-grid-item">
+            <a href="{{ collection.url }}">
+              {% unless collection_image == blank %}
+              <picture class="collection_img">
+                  <source 
+                    srcset="{{ collection_image | img_url: '532x532', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '532x532', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 1024px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '380x380', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '380x380', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 768px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '216x216', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '216x216', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 444px)"
+                  />
+                  <source 
+                    srcset="{{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '152x152', crop: 'center', format: 'pjpg'}}" 
+                    media="(min-width: 320px)"
+                  />
+                <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '1x1', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" />
+              </picture>
+              {% endunless %}
+                <{{block.settings.header_tag}}>
+                    {% if block.settings.title_image != blank %}
+                    {{ block.settings.title_image }}
+                    {% else %}
+                    {{ collection.title }}
+                    {% endif %}
+                </{{block.settings.header_tag}}>
+                {% if block.settings.description != blank %}
+                  <p>{{ block.settings.description }}</p>
+                {% endif %}
+                
+            </a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+
+
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Collection list here"
+  },
+  "class": "index-section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Collection list"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": {
+        "en": "Collection"
+      },
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": {
+            "en": "Collection"
+          }
+        },
+        {
+           "type": "select",
+           "id": "colour",
+           "options": [
+              { "value": "blue", "label": "blue"},
+              { "value": "purple", "label": "purple"},
+              { "value": "darkblue", "label": "dark blue"},
+              { "value": "pink", "label": "pink"},
+              { "value": "green", "label": "green"},
+              { "value": "mutegreen", "label": "mute green"},
+              { "value": "red", "label": "red"}
+           ],
+           "label": "Heading Colour",
+           "default": "darkblue"
+        },
+        {
+         "type": "textarea",
+           "id": "description",
+           "label": "Introductory Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image",
+          "label": "Image (replaces collection image if required)"
+        },
+        {
+           "type": "text",
+           "id": "title_image",
+           "label": "Title Override"
+        },
+        {
+           "type": "select",
+           "id": "header_tag",
+           "label": "Heading Type",
+           "options": [
+             {
+               "value": "h1",
+               "label": "H1"
+             },
+             {
+               "value": "h2",
+               "label": "H2"
+             },
+              {
+                "value": "h3",
+                "label": "H3"
+              }
+           ],
+           "default": "h2",
+           "info": "Choose a header tag, leave as is if unsure"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Collection list"
+      },
+      "category": {
+        "en": "Collection"
+      }
+    }
+  ]
+}
+{% endschema %}

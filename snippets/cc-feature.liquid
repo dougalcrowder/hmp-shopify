@@ -1,0 +1,44 @@
+<div class="top-{{ block.settings.spacing }} bot-{{ block.settings.spacing_bottom }} {% if block.settings.class != blank %}{{ block.settings.class }}{% endif %}">
+  <div class="feature">
+    <div class="feature_text">
+        {% if block.settings.text != blank %}
+        <div class="rte large"><p>{{ block.settings.text }}</p></div>
+        {% endif %}
+    </div>
+    {% if block.settings.image != blank %}
+    <div class="feature_image">
+      <picture>
+        <source srcset="{{ block.settings.image  | img_url: '1024x', scale: 2 }} 2x, {{ block.settings.image | img_url: '1440x' }}" media="(min-width: 1600px)" />
+        <source srcset="{{ block.settings.image  | img_url: '1001x', scale: 2 }} 2x, {{ block.settings.image | img_url: '1001x' }}" media="(min-width: 1320px)" />
+        <source srcset="{{ block.settings.image  | img_url: '721x', scale: 2 }} 2x, {{ block.settings.image | img_url: '721x' }}" media="(min-width: 1200px)" />
+        <source srcset="{{ block.settings.image  | img_url: '601x', scale: 2 }} 2x, {{ block.settings.image | img_url: '601x' }}" media="(min-width: 1024px)" />
+        <source srcset="{{ block.settings.image  | img_url: '540x', scale: 2 }} 2x, {{ block.settings.image | img_url: '540x' }}" media="(min-width: 769px)" />
+        <source srcset="{{ block.settings.image  | img_url: '721x', scale: 2 }} 2x, {{ block.settings.image | img_url: '721x' }}" media="(min-width: 660px)" />
+        <source srcset="{{ block.settings.image  | img_url: '613x', scale: 2 }} 2x, {{ block.settings.image | img_url: '613x' }}" media="(min-width: 550px)" />
+        <source srcset="{{ block.settings.image  | img_url: '503x', scale: 2 }} 2x, {{ block.settings.image | img_url: '503x' }}" media="(min-width: 450px)" />
+        <source srcset="{{ block.settings.image  | img_url: '403x', scale: 2 }} 2x, {{ block.settings.image | img_url: '403x' }}" media="(min-width: 375px)" />
+        <source srcset="{{ block.settings.image  | img_url: '328x', scale: 2 }} 2x, {{ block.settings.image | img_url: '328x' }}" media="(min-width: 320px)" />
+        <img id="image_{{ block.id }}" loading="lazy" src="{{ block.settings.image | img_url: 'pico' }}" alt="{{ block.settings.image.alt | escape }}" />
+      </picture>
+    </div>
+    <script>
+    
+      let image{{ forloop.index }} = document.getElementById('image_{{ block.id }}');
+      window.addEventListener('scroll', () => {
+        let distanceToTop = image{{ forloop.index }}.getBoundingClientRect().top - window.innerHeight;
+        let location = getElemDistance( image{{ forloop.index }} );
+        let offset = location - window.innerHeight;
+        let scale = 1;
+        let scrollcal = window.scrollY - offset;
+        let erm = scrollcal / 9000;
+        let amount = 1 + erm; 
+        if (scrollcal >= 1) {
+          image{{ forloop.index }}.style.transform = 'scale('+amount+')';
+        } else {
+          image{{ forloop.index }}.style.transform = 'scale(1)';
+        } 
+      });
+    </script>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,148 @@
+<div class="grid gallery lightboxGallery inner">
+  {% for block in section.blocks %}
+    <div class="grid__item" {{ block.shopify_attributes }}>
+    {% capture caption %}Flipstop Picture {{ block.index }}{% endcapture %}
+    {% if block.settings.cta_label != blank %}
+      {% capture caption %}{{ block.settings.cta_label | escape }}{% endcapture %}
+    {% endif %}
+    {% if block.settings.image != blank %}
+      <a data-no-swup
+      href="{{ block.settings.image | img_url: '2000x', crop: 'center', format: 'pjpg' }}" 
+      title="{{caption}}">
+        <picture class="heroshot">
+            <source srcset="{{ block.settings.image | img_url: '230x230', crop: 'center', format: 'pjpg' }}" media="(min-width: 1440px)" />
+            <source srcset="{{ block.settings.image | img_url: '296x296', crop: 'center', format: 'pjpg' }}" media="(min-width: 1024px)" />
+            <source srcset="{{ block.settings.image | img_url: '315x315', crop: 'center', format: 'pjpg' }}" media="(min-width: 768px)" />
+            <source srcset="{{ block.settings.image | img_url: '368x368', crop: 'center', format: 'pjpg' }}" media="(min-width: 600px)" />
+            <source srcset="{{ block.settings.image | img_url: '284x284', crop: 'center', format: 'pjpg' }}" media="(min-width: 444px)" />
+          <img loading="lazy" class="thumb" src="{{ block.settings.image | img_url: '206x206' }}" alt="{{ block.settings.image.alt | escape }}" width="206" height="206" />
+        </picture>
+      </a>
+    {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+{{ 'simplelightbox.css' | asset_url | stylesheet_tag }}
+{% include 'simplelightbox' %}
+
+
+
+{% schema %}
+{
+  "name": "Page Gallery",
+  "class": "index-section",
+  "max_blocks": 100,
+  "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "hi": "इमेज",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fi": "Kuva",
+            "fr": "Image",
+            "hi": "इमेज",
+            "it": "Immagine",
+            "ja": "画像",
+            "ko": "이미지",
+            "nb": "Bilde",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "pt-PT": "Imagem",
+            "sv": "Bild",
+            "th": "รูปภาพ",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": {
+            "da": "Billedtekst",
+            "de": "Unterschrift",
+            "en": "Caption",
+            "es": "Leyenda",
+            "fi": "Kuvateksti",
+            "fr": "Légende",
+            "hi": "कैप्शन",
+            "it": "Didascalia",
+            "ja": "キャプション",
+            "ko": "캡션",
+            "nb": "Bildetekst",
+            "nl": "Bijschrift",
+            "pt-BR": "Legenda",
+            "pt-PT": "Legenda",
+            "sv": "Rubrik",
+            "th": "คำบรรยาย",
+            "zh-CN": "字幕",
+            "zh-TW": "說明"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Gallery",
+      "category": {
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "hi": "इमेज",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

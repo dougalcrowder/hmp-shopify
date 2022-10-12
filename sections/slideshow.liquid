@@ -1,0 +1,294 @@
+{% include 'slideshow' %}
+
+{% schema %}
+{
+"name":{
+"da":"Diasshow",
+"de":"Slideshow",
+"en":"Slideshow",
+"es":"Diapositivas",
+"fi":"Diaesitys",
+"fr":"Diaporama",
+"hi":"स्लाइडशो",
+"it":"Presentazione",
+"ja":"スライドショー",
+"ko":"슬라이드 쇼",
+"nb":"Lysbildefremvisning",
+"nl":"Diavoorstelling",
+"pt-BR":"Apresentação de slides",
+"pt-PT":"Apresentação de diapositivos",
+"sv":"Bildspel",
+"th":"สไลด์โชว์",
+"zh-CN":"幻灯片",
+"zh-TW":"素材輪播"
+},
+"class":"index-section index-section--flush index-section--slideshow",
+"max_blocks":6,
+"settings":[
+
+],
+"blocks":[
+{
+"type":"image",
+"name":{
+"da":"Billeddias",
+"de":"Foto-Slide",
+"en":"Image slide",
+"es":"Diapositiva de imagen",
+"fi":"Kuvadia",
+"fr":"Diapositive (image)",
+"hi":"इमेज स्लाइड",
+"it":"Slide immagine",
+"ja":"画像スライド",
+"ko":"이미지 슬라이드",
+"nb":"Lysbilde",
+"nl":"Afbeelding dia",
+"pt-BR":"Slide de imagem",
+"pt-PT":"Diapositivo de imagem",
+"sv":"Bild i bildspel",
+"th":"สไลด์รูปภาพ",
+"zh-CN":"图片幻灯片",
+"zh-TW":"圖片投影片"
+},
+"settings":[
+{
+"type":"image_picker",
+"id":"image",
+"label":{
+"da":"Billede",
+"de":"Foto",
+"en":"Image",
+"es":"Imagen",
+"fi":"Kuva",
+"fr":"Image",
+"hi":"इमेज",
+"it":"Immagine",
+"ja":"画像",
+"ko":"이미지",
+"nb":"Bilde",
+"nl":"Afbeelding",
+"pt-BR":"Imagem",
+"pt-PT":"Imagem",
+"sv":"Bild",
+"th":"รูปภาพ",
+"zh-CN":"图片",
+"zh-TW":"圖片"
+}
+},
+{
+"type":"text",
+"id":"slide_title",
+"label":{
+"en":"Heading"
+},
+"default":{
+"en":"Image slide"
+}
+},
+{
+"type":"richtext",
+"id":"subheading",
+"label":{
+"da":"Underoverskrift",
+"de":"Untertitel",
+"en":"Subheading",
+"es":"Subtítulo",
+"fi":"Alaotsikko",
+"fr":"Sous-titre",
+"hi":"उपशीर्षक",
+"it":"Sottotitolo",
+"ja":"小見出し",
+"ko":"소제목",
+"nb":"Underoverskrift",
+"nl":"Subkop",
+"pt-BR":"Subtítulo",
+"pt-PT":"Subtítulo",
+"sv":"Underrubrik",
+"th":"หัวเรื่องย่อย",
+"zh-CN":"副标题",
+"zh-TW":"子標題"
+}
+},
+{
+"type":"textarea",
+"id":"slide_icon",
+"label":{
+"en":"Slide Icon svg code"
+}
+},
+{
+"type":"select",
+"id":"text_align",
+"label":{
+"en":"Text alignment"
+},
+"options":[
+{
+"value":"left",
+"label":{
+"en":"Left"
+}
+},
+{
+"value":"right",
+"label":{
+"en":"Right"
+}
+},
+{
+"value":"center",
+"label":{
+"en":"Centre"
+}
+}
+]
+},
+{
+"type":"select",
+"id":"text_shade",
+"label":{
+"en":"Text shade"
+},
+"options":[
+{
+"value":"dark",
+"label":{
+"en":"Dark"
+}
+},
+{
+"value":"light",
+"label":{
+"en":"Light"
+}
+}
+]
+},
+{
+  "type": "select",
+  "id": "header_type",
+  "label": {
+    "en": "Header Type"
+  },
+  "default": "h2",
+  "options": [
+    {
+      "value": "h1",
+      "label": {
+        "en": "H1"
+      }
+    },
+    {
+      "value": "h2",
+      "label": {
+        "en": "H2"
+      }
+    }
+  ]
+},
+{
+"type":"text",
+"id":"button_label",
+"label":{
+"da":"Knaptekst",
+"de":"Button-Name",
+"en":"Button label",
+"es":"Etiqueta de botón",
+"fi":"Tekstipainike",
+"fr":"Texte du bouton",
+"hi":"बटन लेबल",
+"it":"Etichetta pulsante",
+"ja":"ボタンのラベル",
+"ko":"버튼 레이블",
+"nb":"Knappetikett",
+"nl":"Knoplabel",
+"pt-BR":"Etiqueta de botão",
+"pt-PT":"Etiqueta do botão",
+"sv":"Knappetikett",
+"th":"ป้ายกำกับปุ่ม",
+"zh-CN":"按钮标签",
+"zh-TW":"按鈕標籤"
+}
+},
+{
+"type":"url",
+"id":"button_link",
+"label":{
+"da":"Knaplink",
+"de":"Button-Link",
+"en":"Button link",
+"es":"Enlace de la diapositiva",
+"fi":"Painikelinkki",
+"fr":"Lien du bouton",
+"hi":"बटन लिंक",
+"it":"Link slide",
+"ja":"ボタンのリンク",
+"ko":"버튼 링크",
+"nb":"Kobling for knapp",
+"nl":"Knoplink",
+"pt-BR":"Link do slide",
+"pt-PT":"Ligação do botão",
+"sv":"Knapplänk",
+"th":"ลิงก์ปุ่ม",
+"zh-CN":"按钮链接",
+"zh-TW":"按鈕連結"
+}
+}
+]
+}
+],
+"presets":[
+{
+"name":{
+"da":"Diasshow",
+"de":"Slideshow",
+"en":"Slideshow",
+"es":"Diapositivas",
+"fi":"Diaesitys",
+"fr":"Diaporama",
+"hi":"स्लाइडशो",
+"it":"Presentazione",
+"ja":"スライドショー",
+"ko":"슬라이드 쇼",
+"nb":"Lysbildefremvisning",
+"nl":"Diavoorstelling",
+"pt-BR":"Apresentação de slides",
+"pt-PT":"Apresentação de diapositivos",
+"sv":"Bildspel",
+"th":"สไลด์โชว์",
+"zh-CN":"幻灯片",
+"zh-TW":"素材輪播"
+},
+"category":{
+"da":"Billede",
+"de":"Foto",
+"en":"Image",
+"es":"Imagen",
+"fi":"Kuva",
+"fr":"Image",
+"hi":"इमेज",
+"it":"Immagine",
+"ja":"画像",
+"ko":"이미지",
+"nb":"Bilde",
+"nl":"Afbeelding",
+"pt-BR":"Imagem",
+"pt-PT":"Imagem",
+"sv":"Bild",
+"th":"รูปภาพ",
+"zh-CN":"图片",
+"zh-TW":"圖片"
+},
+"blocks":[
+{
+"type":"image"
+},
+{
+"type":"image"
+}
+]
+}
+]
+}
+
+{% endschema %}

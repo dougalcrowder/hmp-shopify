@@ -1,0 +1,14 @@
+.collection .loading-overlay,
+.loading-overlay__spinner {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: 0 1.5rem;
+  opacity: .7;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc2Fzcy9zdHlsZXMtY29sbGVjdGlvbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0NBRUYiLCJmaWxlIjoiL3N0eWxlcy1jb2xsZWN0aW9ucy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29sbGVjdGlvbiAubG9hZGluZy1vdmVybGF5LCAubG9hZGluZy1vdmVybGF5X19zcGlubmVyIHtcbiAgdG9wOiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBsZWZ0OiAwO1xuICBkaXNwbGF5OiBub25lO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMCAxLjVyZW07XG4gIG9wYWNpdHk6IC43O1xufSJdLCJzb3VyY2VSb290IjoiIn0=*/

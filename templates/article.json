@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article-template",
+      "settings": {
+        "blog_show_author": true,
+        "blog_show_date": true,
+        "show_share_buttons": true,
+        "show_mc": true,
+        "mc_heading": "Subscribe to our newsletter",
+        "mc_text": "<p>Offers, pre-launch previews and all meaningful REAL news before anyone else - Join us.<\/p>",
+        "mc_button_text": "Subscribe",
+        "chimp_url": "https:\/\/realpowerofone.us20.list-manage.com\/subscribe\/post?u=fde30870205a640d93c128964&amp;id=a6595f8345"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
