@@ -79,37 +79,6 @@
       "settings": {
       }
     },
-    "1480f43a-6fb0-4637-982e-13dfbb9d9d95": {
-      "type": "collection-list",
-      "blocks": {
-        "3ba32cec-d613-45f6-b160-06e5633343c0": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "colour": "darkblue",
-            "description": "",
-            "title_image": "",
-            "header_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "3ba32cec-d613-45f6-b160-06e5633343c0"
-      ],
-      "settings": {
-        "title": "Collection list"
-      }
-    },
-    "3d7c11d7-5390-4c25-9b43-932a3a79b25b": {
-      "type": "main-collection",
-      "settings": {
-        "title": "A collection",
-        "text": "<p>and Collect<\/p>",
-        "collection": "frontpage",
-        "grid": 5,
-        "link_label": "See all new arrivals"
-      }
-    },
     "3bf0625c-b590-4196-88c2-1b98ba354f5a": {
       "type": "image-bar",
       "blocks": {
@@ -164,8 +133,6 @@
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "1663238973837d4d2b",
     "custom",
-    "1480f43a-6fb0-4637-982e-13dfbb9d9d95",
-    "3d7c11d7-5390-4c25-9b43-932a3a79b25b",
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
     "edaa14e1-bcfc-4e76-b713-486a80f78235"
   ]
