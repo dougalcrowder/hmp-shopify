@@ -119,14 +119,6 @@
         "section_height": "medium"
       }
     },
-    "edaa14e1-bcfc-4e76-b713-486a80f78235": {
-      "type": "linklist-grid",
-      "settings": {
-        "title": "Featured Brands",
-        "subtitle": "Brands we love",
-        "linklist": "main-menu"
-      }
-    },
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
       "type": "hero",
       "settings": {
@@ -154,6 +146,14 @@
         "fullscreen": false,
         "lightheader": false
       }
+    },
+    "edaa14e1-bcfc-4e76-b713-486a80f78235": {
+      "type": "linklist-grid",
+      "settings": {
+        "title": "Featured Brands",
+        "subtitle": "Brands we love",
+        "linklist": "main-menu"
+      }
     }
   },
   "order": [
@@ -162,8 +162,8 @@
     "1663238973837d4d2b",
     "custom",
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
-    "edaa14e1-bcfc-4e76-b713-486a80f78235",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
-    "829022b1-793e-45d9-bbf8-37458d13e2ab"
+    "829022b1-793e-45d9-bbf8-37458d13e2ab",
+    "edaa14e1-bcfc-4e76-b713-486a80f78235"
   ]
 }
