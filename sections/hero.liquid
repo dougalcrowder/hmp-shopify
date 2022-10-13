@@ -1,4 +1,4 @@
-<div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.fullscreen != blank %} expand{%- else -%} border{%- endif -%}">
+<div data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero-section {% if section.settings.border %} border{%- endif -%}">
     <div class="flex  text-{{ section.settings.text_color }}">
       <div class="text">
         {%- if section.settings.title != blank -%}
