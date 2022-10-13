@@ -299,6 +299,7 @@
         "title": "Scrolling Blocks",
         "constrain": false,
         "titles_down": false,
+        "load_scripts": true,
         "margin_top": "m",
         "margin_bot": "m"
       }
