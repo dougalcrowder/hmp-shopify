@@ -12,6 +12,7 @@ mix.js('src/js/scripts.js', 'assets')
     .sass('src/sass/styles-collections.scss', 'assets')
     .sass('src/sass/styles-page.scss', 'assets')
     .sass('src/sass/styles-product.scss', 'assets')
+    .sass('src/sass/styles-swiffy.scss', 'assets')
     .setPublicPath('assets')
     .browserSync({
       proxy: 'http://127.0.0.1:9292',
