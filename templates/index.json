@@ -202,7 +202,7 @@
         "button_link": "shopify:\/\/collections\/latest-products",
         "header_tag": "h2",
         "text_color": "white",
-        "border": false,
+        "border": true,
         "lightheader": false
       }
     },
@@ -278,11 +278,12 @@
         "461b246f-1e06-4405-a8b8-113f4ff85ab0": {
           "type": "manual_block",
           "settings": {
-            "title_image": "",
+            "image": "shopify:\/\/shop_images\/red-apple-against-white-background.jpg",
+            "title_image": "Say What",
             "description": "",
             "block_url": "",
-            "colour": "white",
-            "header_tag": "h2"
+            "colour": "black",
+            "header_tag": "h3"
           }
         }
       },
@@ -298,8 +299,8 @@
       "settings": {
         "title": "Scrolling Blocks",
         "constrain": false,
-        "titles_down": false,
-        "load_scripts": true,
+        "titles_down": true,
+        "load_scripts": false,
         "margin_top": "m",
         "margin_bot": "m"
       }
