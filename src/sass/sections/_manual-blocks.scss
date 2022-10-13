@@ -1,7 +1,24 @@
 .collection_list-grid {
   grid-column: 1 / span 12;
-  .grid {
-    gap: 0;
+  > h2 {
+    margin-left: 10px;
+    @media screen and (min-width: 768px) {
+      margin-left: 25px;
+    }
+  }
+  &.constrain {
+    grid-column: 2 / span 10;
+    > h2 {
+      margin-left: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .grid {
+      gap: 12px;
+      &.nogap {
+        gap: 0;
+      }
+    }
   }
   .collection_item {
     grid-column: span 12;
@@ -13,19 +30,43 @@
       grid-column: span 4;
     }
   }
+  .num-4 .collection_item {
+    @media screen and (min-width: 768px) {
+      grid-column: span 3;
+    }
+  }
   .text {
-    position: absolute;
-    width: calc(100% - 64px);
-    left: 32px;
-    bottom: 32px;
-    z-index: 2;
     color: currentcolor;
     h1, h2, h3 {
       color: currentcolor;
+    }
+    &.inpic {
+      position: absolute;
+      width: calc(100% - 64px);
+      left: 32px;
+      bottom: 32px;
+      z-index: 2;
+    }
+    &.titles_down {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding-top: 8px;
+      h1, h2, h3 {
+        font-family: var(--font-body-family);
+        font-weight: 400;
+      }
     }
   }
   picture {
     position: relative;
     z-index: 1;
+  }
+}
+
+.scrolling_blocks {
+  grid-column: 1 / span 12;
+  @media screen and (min-width: 768px) {
+    grid-column: 2 / span 11;
   }
 }

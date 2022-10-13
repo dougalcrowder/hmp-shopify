@@ -1,15 +1,24 @@
- <div class="grid manual pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
-    <ul class="collection_list-grid grid {% if section.settings.constrain %} constrain{% endif %} {% if section.settings.gap %} nogap{% endif %}">  
-      {% for block in section.blocks limit: section.blocks.size %}
-        <li class="collection_item">
+<div class="grid manual pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
+   <div class="collection_list-grid {% if section.settings.constrain %} constrain{% endif %}">
+   
+   {%- if section.settings.title != blank -%}
+   <h2>{{ section.settings.title | escape }}</h2>
+   {%- endif -%}
+   
+   {% assign blockCount = 0 %}
+   {% for block in section.blocks %}
+      {% assign blockCount = blockCount | plus: 1 %}
+   {% endfor %}
+    <ul class="grid num-{{ blockCount }}{% if section.settings.gap %} nogap{% endif %}">  
+      {% for block in section.blocks limit: 4 %}
+        <li class="collection_item text-{{ block.settings.colour }}">
           
           {% if block.settings.image != blank %}
             {%- assign collection_image = block.settings.image -%}
           {% else %}
             {% assign collection_image = blank %}
           {% endif %}
-          
-          <div class="collection-grid-item text-{{ block.settings.colour }}">
+
             {% if block.settings.block_url != blank %}
             <a href="{{ block.settings.block_url }}">
               {% endif %}
@@ -63,7 +72,7 @@
                 <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
               </picture>
               {% endunless %}
-              <div class="text {% if section.settings.titles_down %} titles_down{% endif %}">
+              <div class="text {% if section.settings.titles_down %} titles_down{% else %} inpic{% endif %}">
                 <{{block.settings.header_tag}}>
                     {% if block.settings.title_image != blank %}
                     {{ block.settings.title_image }}
@@ -78,7 +87,6 @@
               {% if block.settings.block_url != blank %}
             </a>
             {% endif %}
-          </div>
         </li>
       {% endfor %}
     </ul>
@@ -88,7 +96,7 @@
     {% include 'no-blocks' %}
   {% endif %}
 
-
+ </div>
 
 
 {% schema %}
