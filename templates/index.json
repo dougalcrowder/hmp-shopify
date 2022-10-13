@@ -129,20 +129,6 @@
         "lightheader": false
       }
     },
-    "829022b1-793e-45d9-bbf8-37458d13e2ab": {
-      "type": "hero",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/hmp-banner-03.jpg",
-        "title": "showroom",
-        "text": "<p>Saints are a low-waist, drop crotch relaxed boyfriend jean. Straight fit across the hips, bow shape legs, with knee.<\/p>",
-        "button_label": "View Collection",
-        "button_link": "shopify:\/\/collections\/latest-products",
-        "header_tag": "h2",
-        "text_color": "white",
-        "border": false,
-        "lightheader": false
-      }
-    },
     "ce4db669-7e9c-4025-90c1-3e79944c0301": {
       "type": "manual-blocks",
       "blocks": {
@@ -205,6 +191,117 @@
         "margin_top": "m",
         "margin_bot": "m"
       }
+    },
+    "829022b1-793e-45d9-bbf8-37458d13e2ab": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hmp-banner-03.jpg",
+        "title": "showroom",
+        "text": "<p>Saints are a low-waist, drop crotch relaxed boyfriend jean. Straight fit across the hips, bow shape legs, with knee.<\/p>",
+        "button_label": "View Collection",
+        "button_link": "shopify:\/\/collections\/latest-products",
+        "header_tag": "h2",
+        "text_color": "white",
+        "border": false,
+        "lightheader": false
+      }
+    },
+    "118bb3a3-c417-4371-9422-7c401f439628": {
+      "type": "scrolling-blocks",
+      "blocks": {
+        "1c0a9baa-8f2e-4622-a0f4-d35bc93e1929": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "cd33c54a-526f-4410-b707-9231e76ca256": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "2b593da8-46d0-4a69-8004-13f7ff6d8925": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "3bfac53a-3162-4e05-bd79-891519a1357b": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "d402fadb-d7d2-48f2-9a87-a56ab1f16892": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "6b811507-83c9-4c99-ad42-d9e2bd628d2a": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "461b246f-1e06-4405-a8b8-113f4ff85ab0": {
+          "type": "manual_block",
+          "settings": {
+            "title_image": "",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "1c0a9baa-8f2e-4622-a0f4-d35bc93e1929",
+        "cd33c54a-526f-4410-b707-9231e76ca256",
+        "2b593da8-46d0-4a69-8004-13f7ff6d8925",
+        "3bfac53a-3162-4e05-bd79-891519a1357b",
+        "d402fadb-d7d2-48f2-9a87-a56ab1f16892",
+        "6b811507-83c9-4c99-ad42-d9e2bd628d2a",
+        "461b246f-1e06-4405-a8b8-113f4ff85ab0"
+      ],
+      "settings": {
+        "title": "Scrolling Blocks",
+        "constrain": false,
+        "titles_down": false,
+        "margin_top": "m",
+        "margin_bot": "m"
+      }
     }
   },
   "order": [
@@ -213,7 +310,8 @@
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
     "bb386705-e11f-4d44-a176-b860b833fbb9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
+    "ce4db669-7e9c-4025-90c1-3e79944c0301",
     "829022b1-793e-45d9-bbf8-37458d13e2ab",
-    "ce4db669-7e9c-4025-90c1-3e79944c0301"
+    "118bb3a3-c417-4371-9422-7c401f439628"
   ]
 }
