@@ -55,6 +55,15 @@ html {
   @media screen and (min-width: 1024px) {
     gap: 64px;
   }
+  &.four {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.nogap {
+  gap: 0;
 }
 
 .flex {

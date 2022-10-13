@@ -1,5 +1,5 @@
- <div class="grid manual pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
-    <ul class="collection_list-grid {% if section.settings.constrain %} constrain{% endif %}">  
+ <div class="grid scrolling pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
+    <ul class="collection_list-scroller">  
       {% for block in section.blocks limit: section.blocks.size %}
         <li class="collection_item">
           
@@ -94,7 +94,7 @@
 {% schema %}
 {
   "name": {
-    "en": "Manual Blocks"
+    "en": "Scrolling Blocks"
   },
   "class": "index-section",
   "max_blocks": 8,
@@ -102,7 +102,7 @@
     {
       "type": "text",
       "id": "title",
-      "default": "Manual Blocks",
+      "default": "Scrolling Blocks",
       "label": "t:sections.featured-collection.settings.title.label"
     },
     {
@@ -242,7 +242,7 @@
   "presets": [
     {
       "name": {
-        "en": "Manual Blocks"
+        "en": "Scrolling Blocks"
       }
     }
   ]

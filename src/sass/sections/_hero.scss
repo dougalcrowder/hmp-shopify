@@ -1,5 +1,14 @@
 .hero-section {
   z-index: 1;
+  position: relative;
+  width: 100%;
+  min-height: 460px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   h1, h2, h3 {
     color: currentcolor;
   }
@@ -22,6 +31,24 @@
       padding-bottom: 80px;
     }
   }
+  &.border {
+    img {
+      border: 10px solid transparent;
+      @media screen and (min-width: 768px) {
+        border: 25px solid transparent;
+      }
+    }
+    .flex {
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      .flex {
+        padding-left: 105px;
+        padding-bottom: 105px;
+      }
+    }
+  }
   .text {
     flex: 1 1 100%;
     max-width: 400px;
@@ -36,37 +63,6 @@
     @media screen and (min-width: 768px) {
       flex: 1 1 100%;
       text-align: left;
-    }
-  }
-  &.expand:not(.video-hero):not(.block-banner) {
-    width: 100%;
-    position: relative;
-    min-height: 460px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      //opacity: 0.5;
-    }
-    // @media screen and (max-height: 1200px) {
-    //   height: 100vh;
-    //   overflow: hidden;
-    //   img {
-    //     
-    //   }
-    // }
-  }
-  .downer {
-    position: absolute;
-    bottom: 16px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    @media screen and (min-width: 768px) {
-      bottom: 48px;
-    }
-    @media screen and (max-height: 1025px) {
-      bottom: 120px; //iphone nav etc
     }
   }
 }
