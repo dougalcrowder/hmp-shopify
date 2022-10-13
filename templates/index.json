@@ -302,7 +302,7 @@
         "titles_down": true,
         "load_scripts": false,
         "margin_top": "m",
-        "margin_bot": "m"
+        "margin_bot": "xl"
       }
     }
   },
