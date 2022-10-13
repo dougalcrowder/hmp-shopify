@@ -1,11 +1,3 @@
-{%- if section.settings.load_scripts -%}
-{% comment %}
-<script src="{{ 'swiffy-slider.min.js' | asset_url }}" async="async"></script>
-{{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
-
-{% endcomment %}
-
-{%- endif -%}
  <div class="grid scrolling pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
    <div class="scrolling_blocks">
    {%- if section.settings.title != blank -%}
@@ -129,12 +121,6 @@
       "type": "checkbox",
       "id": "titles_down",
       "label": "Put titles under images",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "load_scripts",
-      "label": "Load scripts",
       "default": false
     },
     {

@@ -71,7 +71,13 @@ picture {
 
 .scrolling_blocks {
   grid-column: 1 / span 12;
+  padding-left: 10px;
   @media screen and (min-width: 768px) {
     grid-column: 2 / span 11;
+  }
+  @media screen and (max-width: 767px) {
+    .swiffy-slider.slider-item-show5 {
+      --swiffy-slider-item-count: 2;
+    }
   }
 }
