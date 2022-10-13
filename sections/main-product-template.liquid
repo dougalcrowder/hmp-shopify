@@ -1,3 +1,5 @@
+{{ 'styles-product.css' | asset_url | stylesheet_tag }}
+
 <div class="product-template"
   id="ProductSection-{{ section.id }}"
   data-section-id="{{ section.id }}"
@@ -34,7 +36,7 @@
       };
       
     </script>
-  <div class="grid">
+  <div class="product_grid">
     <div id="productImages" class="product-image top_image">
       <div class="glide">
         <div class="glide__track" data-glide-el="track">
@@ -117,58 +119,58 @@
         
         {% include 'add-to-cart-form' %}
     </div>
-  </div>
-    <div class="product_info">
-    {% for block in section.blocks %}
-      <div class="product-information -{{ block.type }} custom-{{ block.id }} {{ block_width_mobile }}" {{ block.shopify_attributes }}>     
-        {% case block.type %}
-    
-          {% when 'feature' %}
-          {% include 'cc-feature' %}
+      <div class="product_info">
+      {% for block in section.blocks %}
+        <div class="product-information -{{ block.type }} custom-{{ block.id }} {{ block_width_mobile }}" {{ block.shopify_attributes }}>     
+          {% case block.type %}
+      
+            {% when 'feature' %}
+            {% include 'cc-feature' %}
+            
+            {%- when 'html' -%}
+            {{ block.settings.code }} 
           
-          {%- when 'html' -%}
-          {{ block.settings.code }} 
-        
-        {% endcase %}
+          {% endcase %}
+          </div>
+      {% endfor %}
+      
+      <div class="product-description rte">
+          <div id="accordionGroup" class="Accordion">
+            <h3>
+              <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
+                  Features
+              </button>
+            </h3>
+            <section id="accordion-panel-1" aria-labelledby="accordion-header-1" hidden>
+              {{ product.description }}
+            </section>
+            {% if section.settings.sustainability_text %}
+            <h3>
+              <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+                  Sustainability
+              </button>
+            </h3>
+            <section id="accordion-panel-2" aria-labelledby="accordion-header-2" hidden>
+              {{ section.settings.sustainability_text }}
+            </section>   
+            {% endif %}
+            {% if section.settings.shipping_text %}
+            <h3 id="shipping">
+              <button id="accordion-header-3" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
+                  Shipping and Returns
+              </button>
+            </h3>
+            <section id="accordion-panel-3" aria-labelledby="accordion-header-3" hidden>
+              {{ section.settings.shipping_text }}
+            </section>   
+            {% endif %}
+           
+          {% render 'size-guides' %}
         </div>
-    {% endfor %}
-    
-    <div class="product-description rte">
-        <div id="accordionGroup" class="Accordion">
-          <h3>
-            <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
-                Features
-            </button>
-          </h3>
-          <section id="accordion-panel-1" aria-labelledby="accordion-header-1" hidden>
-            {{ product.description }}
-          </section>
-          {% if section.settings.sustainability_text %}
-          <h3>
-            <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
-                Sustainability
-            </button>
-          </h3>
-          <section id="accordion-panel-2" aria-labelledby="accordion-header-2" hidden>
-            {{ section.settings.sustainability_text }}
-          </section>   
-          {% endif %}
-          {% if section.settings.shipping_text %}
-          <h3 id="shipping">
-            <button id="accordion-header-3" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
-                Shipping and Returns
-            </button>
-          </h3>
-          <section id="accordion-panel-3" aria-labelledby="accordion-header-3" hidden>
-            {{ section.settings.shipping_text }}
-          </section>   
-          {% endif %}
-         
-        {% render 'size-guides' %}
       </div>
-    </div>
-    
-    
+      
+      
+      </div>
     </div>
   </div>
   
