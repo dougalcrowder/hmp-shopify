@@ -1,13 +1,18 @@
 {%- if section.settings.load_scripts -%}
+{% comment %}
 <script src="{{ 'swiffy-slider.min.js' | asset_url }}" async="async"></script>
 {{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
+
+{% endcomment %}
+
 {%- endif -%}
  <div class="grid scrolling pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
    <div class="scrolling_blocks">
    {%- if section.settings.title != blank -%}
    <h2>{{ section.settings.title | escape }}</h2>
    {%- endif -%}
-    <ul class="swiffy-slider slider-item-show5 slider-item-snapstart slider-nav-autohide slider-item-first-visible slider-nav-animation slider-nav-animation-appear">  
+   <div class="swiffy-slider slider-item-show5 slider-item-snapstart slider-nav-autohide slider-item-first-visible slider-nav-animation slider-nav-animation-appear">
+    <ul class="slider-container">  
       {% for block in section.blocks limit: section.blocks.size %}
         <li class="collection_item text-{{ block.settings.colour }}">
           
@@ -90,6 +95,7 @@
     </ul>
     <button type="button" class="slider-nav"></button>
     <button type="button" class="slider-nav slider-nav-next"></button>
+   </div>
   </div>
 
   {% if section.blocks.size == 0 %}

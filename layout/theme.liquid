@@ -60,7 +60,9 @@
   
   <link rel="stylesheet" href="https://use.typekit.net/yhj4zca.css" />
   {{ 'styles-top.css' | asset_url | stylesheet_tag }}
+  {{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
   {{ content_for_header }}
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer>
 </head>
 
 <body class="template-{{ request.page_type | handle }} template-{{ template | handleize }} loading">

@@ -21,11 +21,7 @@
     }
   }
   .collection_item {
-    grid-column: span 12;
-    position: relative;
-    a {
-      color: currentcolor;
-    }
+    grid-column: span 6;
     @media screen and (min-width: 768px) {
       grid-column: span 4;
     }
@@ -34,6 +30,13 @@
     @media screen and (min-width: 768px) {
       grid-column: span 3;
     }
+  }
+}
+
+.collection_item {
+  position: relative;
+  a {
+    color: currentcolor;
   }
   .text {
     color: currentcolor;
@@ -58,10 +61,12 @@
       }
     }
   }
-  picture {
-    position: relative;
-    z-index: 1;
-  }
+}
+
+
+picture {
+  position: relative;
+  z-index: 1;
 }
 
 .scrolling_blocks {
