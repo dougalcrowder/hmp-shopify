@@ -11,7 +11,7 @@
         "button_link": "shopify:\/\/collections",
         "header_tag": "h2",
         "text_color": "white",
-        "fullscreen": true,
+        "border": false,
         "lightheader": false
       }
     },
@@ -58,6 +58,10 @@
         "8c7b080c-5635-4761-bed0-699e548d1fbe"
       ],
       "settings": {
+        "title": "Manual Blocks",
+        "constrain": false,
+        "gap": true,
+        "titles_down": false,
         "margin_top": "s",
         "margin_bot": "m"
       }
@@ -106,7 +110,9 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Arrivals",
-        "collection": "latest-products"
+        "collection": "latest-products",
+        "margin_top": "m",
+        "margin_bot": "m"
       }
     },
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
@@ -119,15 +125,8 @@
         "button_link": "shopify:\/\/collections\/frontpage",
         "header_tag": "h2",
         "text_color": "white",
-        "fullscreen": true,
+        "border": false,
         "lightheader": false
-      }
-    },
-    "04882820-bbb5-4c1d-8e70-332d15d2a180": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Shop by type",
-        "collection": "frontpage"
       }
     },
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
@@ -140,8 +139,71 @@
         "button_link": "shopify:\/\/collections\/latest-products",
         "header_tag": "h2",
         "text_color": "white",
-        "fullscreen": false,
+        "border": false,
         "lightheader": false
+      }
+    },
+    "ce4db669-7e9c-4025-90c1-3e79944c0301": {
+      "type": "manual-blocks",
+      "blocks": {
+        "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/house-plant-in-white-pot.jpg",
+            "title_image": "Type 1",
+            "description": "",
+            "block_url": "shopify:\/\/products\/choker-with-bead",
+            "colour": "black",
+            "header_tag": "h3"
+          }
+        },
+        "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fashionable-man-by-textured-wall.jpg",
+            "title_image": "Type 2",
+            "description": "",
+            "block_url": "shopify:\/\/pages\/contact",
+            "colour": "black",
+            "header_tag": "h3"
+          }
+        },
+        "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red-apple-against-white-background.jpg",
+            "title_image": "Type 3",
+            "description": "",
+            "block_url": "shopify:\/\/products\/choker-with-gold-pendant",
+            "colour": "black",
+            "header_tag": "h3"
+          }
+        },
+        "c35be025-f767-45a7-a7fa-6607b64326a9": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/white-warehouse-loading-bays.jpg",
+            "title_image": "Type 4",
+            "description": "",
+            "block_url": "",
+            "colour": "black",
+            "header_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "bc8f4b82-1798-4fed-9a0d-76476a7d6101",
+        "72dc5433-a7c9-419f-9ffb-f3b5c312ef06",
+        "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165",
+        "c35be025-f767-45a7-a7fa-6607b64326a9"
+      ],
+      "settings": {
+        "title": "Shop by Type",
+        "constrain": true,
+        "gap": false,
+        "titles_down": true,
+        "margin_top": "m",
+        "margin_bot": "m"
       }
     }
   },
@@ -151,7 +213,7 @@
     "3bf0625c-b590-4196-88c2-1b98ba354f5a",
     "bb386705-e11f-4d44-a176-b860b833fbb9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
-    "04882820-bbb5-4c1d-8e70-332d15d2a180",
-    "829022b1-793e-45d9-bbf8-37458d13e2ab"
+    "829022b1-793e-45d9-bbf8-37458d13e2ab",
+    "ce4db669-7e9c-4025-90c1-3e79944c0301"
   ]
 }
