@@ -1,5 +1,5 @@
  <div class="grid manual pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
-    <ul class="collection_list-grid {% if section.settings.constrain %} constrain{% endif %}">  
+    <ul class="collection_list-grid grid {% if section.settings.constrain %} constrain{% endif %} {% if section.settings.gap %} nogap{% endif %}">  
       {% for block in section.blocks limit: section.blocks.size %}
         <li class="collection_item">
           
@@ -109,6 +109,12 @@
       "type": "checkbox",
       "id": "constrain",
       "label": "Constrain to 10 columns",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gap",
+      "label": "Remove grid gap",
       "default": false
     },
     {
