@@ -300,9 +300,64 @@
         "title": "Scrolling Blocks",
         "constrain": false,
         "titles_down": true,
-        "load_scripts": false,
         "margin_top": "m",
         "margin_bot": "xl"
+      }
+    },
+    "8995934a-6537-42d5-b421-3b5b32204b3a": {
+      "type": "insta-grid",
+      "blocks": {
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-4": {
+          "type": "Instalink",
+          "settings": {
+            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-1.jpg",
+            "author": "@hannahmartinpierced",
+            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+          }
+        },
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-0": {
+          "type": "Instalink",
+          "settings": {
+            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-5.jpg",
+            "author": "@hannahmartinpierced",
+            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+          }
+        },
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-1": {
+          "type": "Instalink",
+          "settings": {
+            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-4.jpg",
+            "author": "@hannahmartinpierced",
+            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+          }
+        },
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-2": {
+          "type": "Instalink",
+          "settings": {
+            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-3.jpg",
+            "author": "@hannahmartinpierced",
+            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+          }
+        },
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-3": {
+          "type": "Instalink",
+          "settings": {
+            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-2.jpg",
+            "author": "@hannahmartinpierced",
+            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+          }
+        }
+      },
+      "block_order": [
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-4",
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-0",
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-1",
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-2",
+        "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-3"
+      ],
+      "settings": {
+        "title": "Instagram",
+        "subtitle": "#HMPIERCED"
       }
     }
   },
@@ -314,6 +369,7 @@
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
     "ce4db669-7e9c-4025-90c1-3e79944c0301",
     "829022b1-793e-45d9-bbf8-37458d13e2ab",
-    "118bb3a3-c417-4371-9422-7c401f439628"
+    "118bb3a3-c417-4371-9422-7c401f439628",
+    "8995934a-6537-42d5-b421-3b5b32204b3a"
   ]
 }
