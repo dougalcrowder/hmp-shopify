@@ -1,24 +1,40 @@
 
 
-<div class="insta inner" data-section-id="{{ section.id }}" data-section-type="quotes">
+<div class="insta grid pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}"" data-section-id="{{ section.id }}" data-section-type="quotes">
+  <div class="collection_list-grid constrain">
   {% if section.settings.title != blank %}
     <h2>{{ section.settings.title | escape }}</h2>
   {% endif %}
-  {% if section.settings.subtitle != blank %}
-    <p class="subtitle">{{ section.settings.subtitle | escape }}</p>
-  {% endif %}
   {% if section.blocks.size > 0 %}
-      <div class="instagramification grid mininner">
+      <div class="instagrid">
         {% for block in section.blocks %}
             <blockquote>
               <a href="{{ block.settings.link }}">
               {% if block.settings.insta_image != blank %}
               {% assign the_image = block.settings.insta_image %}
-              <picture class="insta_shot">
-                  <source srcset="{{ the_image | img_url: '308x308', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '308x308', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 600px)" />
-                  <source srcset="{{ the_image | img_url: '154x154', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '154x154', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
-                <img loading="lazy" class="heroshot_image" src="{{ the_image | img_url: '100x100' }}" alt="{{ the_image.alt | escape }}" width="100" height="100" />
+              {% if forloop.index == 1 %}
+              <picture class="insta_shot larger">
+                  <source srcset="{{ the_image | img_url: '800x800', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '800x800', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1440px)" />
+                  <source srcset="{{ the_image | img_url: '591x591', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '591x591', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1024px)" />
+                  <source srcset="{{ the_image | img_url: '419x419', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '419x419', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 768px)" />
+                  <source srcset="{{ the_image | img_url: '313x313', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '313x313', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 601px)" />
+                  <source srcset="{{ the_image | img_url: '580x580', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '580x580', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 475px)" />
+                  <source srcset="{{ the_image | img_url: '455x455', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '455x455', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 380px)" />
+                  <source srcset="{{ the_image | img_url: '360x360', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '360x360', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
+                <img loading="lazy" class="heroshot_image" src="{{ the_image | img_url: '300x300' }}" alt="{{ the_image.alt | escape }}" width="300" height="300" />
               </picture>
+              {% else %}
+              <picture class="insta_shot">
+                  <source srcset="{{ the_image | img_url: '400x400', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '400x400', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1440px)" />
+                  <source srcset="{{ the_image | img_url: '296x296', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '296x296', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1024px)" />
+                  <source srcset="{{ the_image | img_url: '210x210', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '210x210', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 768px)" />
+                  <source srcset="{{ the_image | img_url: '157x157', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '157x157', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 601px)" />
+                  <source srcset="{{ the_image | img_url: '290x290', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '290x290', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 475px)" />
+                  <source srcset="{{ the_image | img_url: '228x228', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '228x228', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 380px)" />
+                  <source srcset="{{ the_image | img_url: '180x180', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '180x180', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
+                  <img loading="lazy" class="heroshot_image" src="{{ the_image | img_url: '150x150' }}" alt="{{ the_image.alt | escape }}" width="150" height="150" />
+              </picture>
+              {% endif %}
               {% endif %}
               </a>
               {% if block.settings.author != blank %}
@@ -28,9 +44,11 @@
         {% endfor %}
       </div>
   {% endif %}
-
+{% if section.settings.subtitle != blank %}
+    <p class="subtitle">{{ section.settings.subtitle | escape }}</p>
+  {% endif %}
+  </div>
 </div>
-
 
 
 {% schema %}
