@@ -1,8 +1,9 @@
 {
-  "name": "Cart",
   "sections": {
     "main": {
-      "type": "main-cart-template-ajax"
+      "type": "main-cart-template-ajax",
+      "settings": {
+      }
     }
   },
   "order": [
