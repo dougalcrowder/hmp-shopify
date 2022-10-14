@@ -37,38 +37,26 @@
       
     </script>
   <div class="product_grid">
-    <div id="productImages" class="product-image top_image">
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul id="productImages" class="product-image top_image glide__slides" >
+    <ul id="productImages" class="product-images" >
             {%- for image in product.images -%}
             <li class="product_shot  glide__slide">
-              <a 
-              href="{{ image | img_url: '2560x2560' }}"
-              data-img="{{ image | img_url: '2560x2560' }}"
-              data-thumb="{{ image | img_url: '120x120' }}"
-              data-alt="{{ image.alt | escape }}"
-              data-height="2560"
-              data-width="2560"
-              >
-                  <picture class="productShots">
-                      <source srcset="{{ image | img_url: '1024x1024', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1440x1440', crop: 'center' }}" media="(min-width: 1600px)" />
-                      <source srcset="{{ image | img_url: '1001x1001', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1001x1001', crop: 'center' }}" media="(min-width: 1320px)" />
-                      <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 1200px)" />
-                      <source srcset="{{ image | img_url: '601x601', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '601x601', crop: 'center' }}" media="(min-width: 1024px)" />
-                      <source srcset="{{ image | img_url: '540x540', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '540x540', crop: 'center' }}" media="(min-width: 769px)" />
-                      <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 660px)" />
-                      <source srcset="{{ image | img_url: '613x613', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '613x613', crop: 'center' }}" media="(min-width: 550px)" />
-                      <source srcset="{{ image | img_url: '503x503', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '503x503', crop: 'center' }}" media="(min-width: 450px)" />
-                      <source srcset="{{ image | img_url: '403x403', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '403x403', crop: 'center' }}" media="(min-width: 375px)" />
-                      <source srcset="{{ image | img_url: '328x328', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '328x328', crop: 'center' }}" media="(min-width: 320px)" />
-                    <img class="prod-shot" src="{{ image | img_url: '304x304', crop: 'center' }}" alt="{{ image.alt | escape }}" width="image.width" height="image.height" />
-                  </picture>
-              </a>
+              <picture class="productShots">
+                  <source srcset="{{ image | img_url: '1024x1024', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1440x1440', crop: 'center' }}" media="(min-width: 1600px)" />
+                  <source srcset="{{ image | img_url: '1001x1001', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1001x1001', crop: 'center' }}" media="(min-width: 1320px)" />
+                  <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 1200px)" />
+                  <source srcset="{{ image | img_url: '601x601', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '601x601', crop: 'center' }}" media="(min-width: 1024px)" />
+                  <source srcset="{{ image | img_url: '540x540', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '540x540', crop: 'center' }}" media="(min-width: 769px)" />
+                  <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 660px)" />
+                  <source srcset="{{ image | img_url: '613x613', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '613x613', crop: 'center' }}" media="(min-width: 550px)" />
+                  <source srcset="{{ image | img_url: '503x503', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '503x503', crop: 'center' }}" media="(min-width: 450px)" />
+                  <source srcset="{{ image | img_url: '403x403', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '403x403', crop: 'center' }}" media="(min-width: 375px)" />
+                  <source srcset="{{ image | img_url: '328x328', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '328x328', crop: 'center' }}" media="(min-width: 320px)" />
+                <img class="prod-shot" src="{{ image | img_url: '304x304', crop: 'center' }}" alt="{{ image.alt | escape }}" width="image.width" height="image.height" />
+              </picture>
             </li>
             {%- endfor -%}
             {% if product.metafields.my_fields.video != blank %}
-            <li class="product_shot  glide__slide">
+            <li class="product_shot">
               <video id="video-{{ section.id }}" {%- if product.metafields.my_fields.video_poster != blank -%}poster="
               {% assign posterimage = product.metafields.my_fields.video_poster  %}
               {{ posterimage | img_url: '1280x720', crop: 'center' }}
@@ -78,37 +66,10 @@
             </li>
             {% endif %}
           </ul>
-        </div>
-        <div class="glide__bullets flex" data-glide-el="controls[nav]">
-          {%- for image in product.images -%}
-          <button class="glide__bullet" data-glide-dir="={{ forloop.index0 }}"></button>
-          {% capture imageCount %}{{ forloop.length }}{% endcapture %}
-          {%- endfor -%}
-          {% if product.metafields.my_fields.video != blank %}
-          <button class="glide__bullet video_icon" data-glide-dir="={{ imageCount }}">
-            <svg width="13" height="13" viewBox="0 0 13 13"><path fill-rule="evenodd" d="M13 6.5 0 13V0z"/></svg>
-          </button>
-          {% endif %}
-        </div>
-        <div id="addtoPlaceholder"></div>
-      </div>
-    </div>
     <div class="product-detail" id="addto">
       <div class="detail-inner">
-        <h1 class="product-single">{{ product.title }}</h1>
-        <div class="price_meta flex">
-          
-          <div class="theprice">
-            {% include 'product-price-flypage' %}
-          </div>
-          <div class="theship">
-            <a class="small" href="#shipping">Free Shipping</a>
-          </div>
-          <div class="theret">
-           &nbsp;&nbsp;-&nbsp;&nbsp;<a class="small" href="#shipping">Free Returns</a>
-          </div>
-
-        </div>
+        <h1 class="h2">{{ product.title }}</h1>
+        {% include 'product-price-flypage' %}
         
         {% capture "form_classes" -%}
           product-form product-form-{{ section.id }}
@@ -120,52 +81,39 @@
         {% include 'add-to-cart-form' %}
     </div>
       <div class="product_info">
-      {% for block in section.blocks %}
-        <div class="product-information -{{ block.type }} custom-{{ block.id }} {{ block_width_mobile }}" {{ block.shopify_attributes }}>     
-          {% case block.type %}
-      
-            {% when 'feature' %}
-            {% include 'cc-feature' %}
-            
-            {%- when 'html' -%}
-            {{ block.settings.code }} 
-          
-          {% endcase %}
-          </div>
-      {% endfor %}
-      
       <div class="product-description rte">
           <div id="accordionGroup" class="Accordion">
             <h3>
-              <button id="accordion-header-1" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
-                  Features
+              <button id="accordion-header-1" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
+                  PRODUCT DESCRIPTION
               </button>
             </h3>
-            <section id="accordion-panel-1" aria-labelledby="accordion-header-1" hidden>
+            <section id="accordion-panel-1" class="accordion_section" aria-labelledby="accordion-header-1" hidden>
               {{ product.description }}
             </section>
-            {% if section.settings.sustainability_text %}
-            <h3>
-              <button id="accordion-header-2" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
-                  Sustainability
-              </button>
-            </h3>
-            <section id="accordion-panel-2" aria-labelledby="accordion-header-2" hidden>
-              {{ section.settings.sustainability_text }}
-            </section>   
-            {% endif %}
             {% if section.settings.shipping_text %}
             <h3 id="shipping">
-              <button id="accordion-header-3" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
-                  Shipping and Returns
+              <button id="accordion-header-2" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+                  SHIPPING & RETURNS
               </button>
             </h3>
-            <section id="accordion-panel-3" aria-labelledby="accordion-header-3" hidden>
+            <section id="accordion-panel-2" class="accordion_section" aria-labelledby="accordion-header-2" hidden>
               {{ section.settings.shipping_text }}
             </section>   
             {% endif %}
-           
-          {% render 'size-guides' %}
+            
+            {% assign composition = product.metafields.custom.composition %}
+            {%- if composition != blank -%}
+            <h3>
+              <button id="accordion-header-3" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
+                  Fabric Composition
+              </button>
+            </h3>
+            <section id="accordion-panel-3" class="accordion_section" aria-labelledby="accordion-header-3" hidden>
+              <p>{{ composition }}</p>
+            </section>   
+            {% endif %}
+
         </div>
       </div>
       
@@ -175,55 +123,6 @@
   </div>
   
 </div>
-<div class="addto_helper flex" id="addto_helper">
-  <div class="title">{{ product.title }}</div><a href="#addtoPlaceholder" class="button">Add to cart</a></div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-<script src="https://cdn.jsdelivr.net/npm/bigger-picture@0.0.12/dist/bigger-picture.umd.min.js"></script>
-<script>
-  
-  new Glide('.glide').mount();
-  
-  // initialize BiggerPicture
-  let bp = BiggerPicture({
-    target: document.body
-  });
-  
-  // grab image links
-  let imageLinks = document.querySelectorAll("#productImages a");
-  
-  // add click listener to open BiggerPicture
-  for (let link of imageLinks) {
-    link.addEventListener("click", openGallery);
-  }
-  
-  // open BiggerPicture
-  function openGallery(e) {
-    e.preventDefault();
-    bp.open({
-      items: imageLinks,
-      el: e.currentTarget
-    });
-    console.log(e.currentTarget);
-  }
-  
-  if(!!window.IntersectionObserver){
-    let addto = document.querySelector('#addto');
-    let addto_helper = document.querySelector('#addto_helper');
-    let observer = new IntersectionObserver((entries, observer) => { 
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          addto_helper.classList.remove('active'); console.log('so is vis');
-        } 
-        else {addto_helper.classList.add('active'); console.log('no vis dude');}
-  
-      });
-    }, {threshold: 0.1});
-    observer.observe(addto) ;
-  }
-  
-</script>
 
 {% schema %}
 {
@@ -244,132 +143,6 @@
       "id": "ownline",
       "label": "Show variant labels inline",
       "default": true
-    }
-  ],
-  "blocks": [
-    {
-      "type": "feature",
-      "name": {
-        "en": "Feature"
-      },
-      "settings": [
-        {
-          "type": "select",
-          "id": "spacing",
-          "label": {
-            "en": "Padding Top"
-          },
-          "default": "regular",
-          "options": [
-            {
-              "value": "none",
-              "label": {
-                "en": "None"
-              }
-            },
-            {
-              "value": "small",
-              "label": {
-                "en": "Small"
-              }
-            },
-            {
-              "value": "regular",
-              "label": {
-                "en": "Regular" 
-              }
-            },
-            {
-              "value": "large",
-              "label": {
-                "en": "Large"
-              }
-            },
-            {
-              "value": "xlarge",
-              "label": {
-                "en": "XLarge"
-              }
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "spacing_bottom",
-          "label": {
-            "en": "Padding bottom"
-          },
-          "default": "regular",
-          "options": [
-            {
-              "value": "none",
-              "label": {
-                "en": "None"
-              }
-            },
-            {
-              "value": "small",
-              "label": {
-                "en": "Small"
-              }
-            },
-            {
-              "value": "regular",
-              "label": {
-                "en": "Regular"
-              }
-            },
-            {
-              "value": "large",
-              "label": {
-                "en": "Large"
-              }
-            },
-            {
-              "value": "xlarge",
-              "label": {
-                "en": "XLarge"
-              }
-            }
-          ]
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": {
-            "en": "Image"
-          }
-        },
-        {
-          "type": "textarea",
-          "id": "text",
-          "label": {
-            "en": "Text"
-          }
-        },
-        {
-          "type": "text",
-          "id": "class",
-          "label": {
-            "en": "Custom Class"
-          }
-        }
-      ]
-    },
-    {
-      "type": "html",
-      "name": {
-        "en": "Custom HTML"
-      },
-      "settings": [
-        {
-          "type": "html",
-          "id": "code",
-          "label": {
-            "en": "HTML"
-          }
-        }
-      ]
     }
   ],
   "presets": [

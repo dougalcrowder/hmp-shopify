@@ -12,7 +12,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option1 | handleize }}" for="{{ variant.option1 }}-{{ product.handle }}">{{ variant.option1 }}</label>
+        <label class="{{ variant.option1 | handleize }}" for="{{ variant.option1 }}-{{ product.handle }}"  data-tooltip="{{ variant.option1 }}"><span class="visually-hidden">{{ variant.option1 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -31,7 +31,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}">{{ variant.option2 }}</label>
+        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}"  data-tooltip="{{ variant.option2 }}"><span class="visually-hidden">{{ variant.option2 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -49,7 +49,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}">{{ variant.option3 }}</label>
+        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}" data-tooltip="{{ variant.option3 }}"><span class="visually-hidden">{{ variant.option3 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -71,7 +71,7 @@
    type="submit" 
    name="add" 
    data-add-to-cart 
-   class="js-go-cart-add-to-cart button green"
+   class="button"
    {%- unless current_variant.available -%}disabled="disabled"{%- endunless -%}> 
      <span data-add-to-cart-text> 
         {%- if current_variant.available -%} 

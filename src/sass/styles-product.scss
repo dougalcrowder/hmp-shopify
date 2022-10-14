@@ -1,18 +1,151 @@
 .product-template {
   .product_grid {
-    padding-top: 146px;
-    grid-template-columns: repeat(2, 1fr);
+    padding-top: 80px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid;
     gap: 16px;
     @media screen and (min-width: 768px) {
       gap: 24px;
-      grid-template-columns: repeat(3, 1fr);
-      .product-image {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      .product-images {
         grid-column: 1 / span 2;
       }
       .product-detail {
         grid-column: 3 / span 1;
+        padding: 4px 10px 0 10px;
+        @media screen and (min-width: 768px) {
+          padding: 4px 24px 0;
+        }
+        .price {
+          font-size: 81.25%;
+        }
+        .product-description {
+          padding-top: 32px;
+        }
       }
     }
+  }
+  form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    align-items: stretch; 
+    align-content: stretch;
+  }
+  .variant_options {
+    flex: 0 1 100%;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+  button.button {
+    flex: 1 1 auto;
+  }
+  .radio_container {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    strong {
+      flex: 1 1 60px;
+      font-weight: 400;
+      font-size: 81.25%;
+    }
+    fieldset {
+      flex: 1 1 100%;
+      flex-basis: calc(100% - 60px);
+      input[type=radio] {
+        clip: rect(0,0,0,0);
+        overflow: hidden;
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        &+label {
+          font-size: 100%;
+          border: 2px solid var(--color-black);
+          color: white;
+          display: inline-block;
+          padding: 10px;
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+          line-height: 1;
+          text-align: center;
+          transition: all 0.1s ease;
+          cursor: pointer;
+          color: var(--color-black);
+          margin: 0 6px 0 0;
+        }
+        &:checked+label {
+          background-color: var(--color-black);
+          color: white;
+        }
+      }
+    }
+    &.color {
+      fieldset {
+      input[type=radio]+label {
+        opacity: 0.75;
+        &.green {
+          border-color: var(--color-green-light);
+          color: var(--color-black);
+          background-color: transparent;
+          }
+        &.black {
+          border-color: var(--color-black); 
+          color: white;
+          color: var(--color-black);
+          background-color: var(--color-black);
+          }
+        &.white {
+          background-color: white; 
+          border-color: #f7f7f7;
+          color: var(--color-black);
+          background-color: transparent;
+          }
+          &.blue {
+          background-color: #0b00ff; 
+          border-color: #0b00ff;
+          color: var(--color-black);
+          }
+        }
+        
+        }
+      input[type=radio]:checked+label {
+      opacity: 1;
+      &.green {
+        background-color: var(--color-green-light);
+        border-color: var(--color-green-light); 
+        color: white;
+        }
+      &.black {
+        background-color: var(--color-black); 
+        border-color: var(--color-black); 
+        color: white;
+        }
+      &.white {
+        background-color: white; 
+        border-color: var(--color-black); 
+        color:  var(--color-black);
+        }
+        &.blue {
+        background-color: #0b00ff; 
+        border-color: #0b00ff; 
+        color:  var(--color-white);
+        }
+      }
+      }
+    }
+  .variant_options {
+    div:last-of-type {
+      margin-bottom: 0;
+    } 
+  }
+  .size-help {
+    padding-left: 60px;
+    display: block;
   }
 }

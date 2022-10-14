@@ -1,6 +1,9 @@
 // Header Styles
 .site-header {
-  padding: 24px 12px;
+  padding: 24px 10px;
+  @media screen and (min-width: 768px) {
+    padding: 34px 10pxx;
+  }
   position: fixed;
   z-index: 999;
   top: 0;
@@ -10,37 +13,51 @@
   .noticeActive & {
     top: 28px;
   }
-  @media screen and (min-width: 768px) {
-    .logo {
+  
+  .logo {
+    @media screen and (min-width: 768px) {
       flex: 0 0 180px;
       height: 31px;
       img {
         display: block;
       }
-    } 
-    .navigation {
-      flex: 1 0 200px;
-      flex-basis: calc(100% - 360px);
     }
-    .customer_actions {
-      gap: 16px;
-      flex: 0 0 180px;
-      button, a {
-        position: relative;
-        flex: 0 1 16px;
-        height: 16px;
-        line-height: 16px;
-      }
-      .cart_number {
-        position: absolute;
-        font-size: 8px;
-        top: 98%;
-        right: 50%;
-        line-height: 1;
-      }
+    @media screen and (min-width: 1260px) {
+      flex: 0 0 240px;
+      padding-left: 60px;
     }
   }
-  
+  .navigation {
+    @media screen and (min-width: 768px) {
+      flex: 1 0 50%;
+      flex-basis: calc(100% - 360px);
+    }
+    @media screen and (min-width: 1260px) {
+      flex-basis: calc(100% - 480px);
+    }
+  }
+  .customer_actions {
+    @media screen and (min-width: 768px) {
+      gap: 16px;
+      flex: 0 0 180px;
+    }
+    @media screen and (min-width: 1260px) {
+      flex: 0 0 240px;
+    }
+    button, a {
+      position: relative;
+      flex: 0 1 16px;
+      height: 16px;
+      line-height: 16px;
+    }
+    .cart_number {
+      position: absolute;
+      font-size: 8px;
+      top: 98%;
+      right: 50%;
+      line-height: 1;
+    }
+  }
 }
 
 .notices {
