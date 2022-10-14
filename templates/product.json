@@ -2,23 +2,10 @@
   "sections": {
     "main": {
       "type": "main-product-template",
-      "blocks": {
-        "cfd07636-15a2-4bb2-9d5f-7287f93d3d0f": {
-          "type": "feature",
-          "settings": {
-            "spacing": "regular",
-            "spacing_bottom": "none",
-            "text": "The Flyweight Tee weighs in at approximately 100g. Designed to thrive in warmer conditions, it’s perforated with pinpoint ventilation. Built to be extremely lightweight, breathable, frictionless and comfortable under heavy usage.",
-            "class": ""
-          }
-        }
-      },
-      "block_order": [
-        "cfd07636-15a2-4bb2-9d5f-7287f93d3d0f"
-      ],
       "settings": {
-        "shipping_text": "<p>Free shipping for orders over £50 within the UK.<\/p><p>Free shipping worldwide on orders above €200. Product prices do not include import tax.<\/p><p>Free returns and exchanges within the UK, within 15 days of original purchase. Items must be unworn, unwashed, and undamaged with original and detachable labels intact.<\/p><p>Items may be exchanged for a different size or colour of the same style.<\/p><p><strong>* <\/strong>Visit our <a href=\"\/pages\/delivery-returns\" title=\"Delivery & Returns\">Shipping & Returns<\/a> page for more info<\/p>",
-        "sustainability_text": "<p>Ethically produced in Portugal. We have visited this factory many times and continue to stay on top of their best practises.<\/p><p>We have away to go before we can evangelise how green we are. But we will never make copious, seasonal collections and instead we make pan-seasonal clothing, that is built to last.<\/p><p>Buy less, buy well. <\/p><p>REAL is committed to a better world.<\/p>"
+        "shipping_text": "<p>Free shipping for orders over £50 within the UK.<\/p><p>Free shipping worldwide on orders above €200. Product prices do not include import tax.<\/p><p>Free returns and exchanges within the UK, within 15 days of original purchase. Items must be unworn, unwashed, and undamaged with original and detachable labels intact.<\/p><p>Items may be exchanged for a different size or colour of the same style.<\/p><p><strong>* <\/strong>Visit our <a href=\"\/pages\/contact\" title=\"Contact\">Shipping & Returns<\/a> page for more info<\/p>",
+        "sustainability_text": "",
+        "ownline": true
       }
     },
     "recommendations": {
