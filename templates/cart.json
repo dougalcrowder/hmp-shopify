@@ -2,7 +2,7 @@
   "name": "Cart",
   "sections": {
     "main": {
-      "type": "main-cart-template"
+      "type": "main-cart-template-ajax"
     }
   },
   "order": [

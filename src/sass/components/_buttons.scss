@@ -145,3 +145,49 @@ button, input[type="submit"],.btn, .button {
     font-size: 81.25%;
   }
 }
+
+.addtocart.button {
+  position: relative;
+  z-index: 1;
+  &:before {
+    content: " ";
+    background: conic-gradient(var(--color-white) 0deg, var(--color-black) 280deg);
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    left: 8px;
+    top:10px;
+    border-radius: 16px;
+    z-index: 2;
+    opacity: 0;
+    .js-ajax-cart-request-in-progress & {
+      animation: rotate-center 0.6s linear infinite reverse both;
+      opacity: 1;
+    }
+  }
+  &:after {
+    content: " ";
+    background: var(--color-black);
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    left: 11px;
+    top:13px;
+    border-radius: 16px;
+    z-index: 3;
+    opacity: 0;
+    .js-ajax-cart-request-in-progress & {
+      opacity: 1;
+    }
+  }
+  &:hover, &:focus {
+    &:after {
+      background: black;
+    }
+    &:before {
+      background: conic-gradient(var(--color-white) 0deg,black 280deg);
+    }
+  }
+}
