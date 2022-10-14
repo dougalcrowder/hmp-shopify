@@ -2,6 +2,22 @@
   "sections": {
     "main": {
       "type": "main-cart-template-ajax",
+      "blocks": {
+        "8566ae68-f4c0-4106-9745-7f2ef743bc3b": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "af766f1e-a40a-46b8-8824-6201044bb8f5": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "8566ae68-f4c0-4106-9745-7f2ef743bc3b",
+        "af766f1e-a40a-46b8-8824-6201044bb8f5"
+      ],
       "settings": {
       }
     }
