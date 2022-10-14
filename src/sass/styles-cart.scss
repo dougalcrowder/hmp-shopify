@@ -1,6 +1,25 @@
-.cart_page {
-  padding-bottom: 120px;
-  .dynamic-checkout__content {
-    margin-top: 32px;
+.cart_grid {
+  padding: 12px;
+  grid-column: 1 / span 12;
+  @media screen and (min-width: 1024px) {
+    grid-column: 2 / span 10;
+  }
+  padding-top: 80px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+  gap: 16px;
+  @media screen and (min-width: 768px) {
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    .cart_items {
+      grid-column: 1 / span 2;
+    }
+    .cart_footer {
+      grid-column: 3 / span 1;
+      padding: 4px 10px 0 10px;
+      @media screen and (min-width: 768px) {
+        padding: 4px 24px 0;
+      }
+    }
   }
 }
