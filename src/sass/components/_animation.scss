@@ -49,3 +49,9 @@ html.is-animating .transition-fade {
 // .rotate-center {
 //   animation: rotate-center 0.6s linear infinite reverse both;
 // }
+
+@keyframes fadeinDelay {
+  0%   { opacity: 0; }
+  70%  { opacity: 0; }
+  100% { opacity: 1; }
+}

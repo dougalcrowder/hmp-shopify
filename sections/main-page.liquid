@@ -1,14 +1,160 @@
-<div class="page basic mininner">
-  <div class="section-header {{ page.handle }}">
+{{ 'styles-page.css' | asset_url | stylesheet_tag }}
+
+<div class="page">
+  <div class="section-header {{ page.handle }}{% if section.settings.hidetitle %} visually-hidden{% endif %}">
     <h1>{{ page.title }}</h1>
   </div>
+  {% if section.settings.hidetext %}
   <div class="rte">
     {{ page.content }}
   </div>
+  {% endif %}
+  <div class="grid">
+    {% if section.settings.sidenav != blank %}
+    {%- assign page_linklist = section.settings.sidenav -%}
+    <ul class="page_nav">
+      {%- for link in linklists[page_linklist].links -%}
+        <li class="page_linklist-item">
+          <a href="{{ link.url }}"
+            {% if link.current %} aria-current="page"{% endif %}
+          >
+            {{ link.title | escape }}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+    {% assign blocksize = section.blocks | size %}
+    {% if blocksize >= 1 %}
+    <div class="text_and_title">
+    {% for block in section.blocks %}
+    <div class="flex">
+      <div class="title">
+        {% if block.settings.title != blank %}
+        <h2>{{ block.settings.title }}</h2>
+        {% endif %}
+      </div>
+      <div class="rte">
+        {% if block.settings.text != blank %}
+        {{ block.settings.title }}
+        {% endif %}
+      </div>
+    </div>
+    
+    {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  
 </div>
 
 {% schema %}
 {
-  "name": "Page"
+  "name": "Page",
+  "class": "index-page",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "sidenav",
+      "label": "Side Navigation Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "hidetitle",
+      "label": "Visually hide title",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "hidetext",
+      "label": "Hide standard page text",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "X Large"
+        }
+      ],
+      "default": "m",
+      "label": "spacing above",
+      "info": "Top Margin"
+    },
+    {
+      "type": "select",
+      "id": "margin_bot",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "s",
+          "label": "Small"
+        },
+        {
+          "value": "m",
+          "label": "Medium"
+        },
+        {
+          "value": "l",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "X Large"
+        }
+      ],
+      "default": "m",
+      "label": "spacing below",
+      "info": "Bottom Margin"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_and_title",
+      "name": {
+        "en": "Title and Text"
+      },
+      "settings": [
+        {
+           "type": "text",
+           "id": "title",
+           "label": "Title"
+        },
+        {
+         "type": "richtext",
+           "id": "description",
+           "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Page"
+      }
+    }
+  ]
 }
 {% endschema %}

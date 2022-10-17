@@ -122,8 +122,14 @@
                   {%- endfor -%}
                 </ul>
               </fieldset>
-              
-              {% else %}
+              {% endif %}
+              {% endcase %}
+              {%- endfor -%}
+              <span class="h3 fakehead">Filters</span>
+              {%- for filter in results.filters -%}
+              {% case filter.type %}
+              {% when 'boolean' or 'list' %} 
+              {% unless thetype == 'type' or thetype == 'body-placement' %}
                 <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{{ filter.type }} filter-{{ filter.label | handleize }} js-filter" data-index="{{ forloop.index }}"{% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
                   <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
                     
@@ -188,7 +194,7 @@
                   </div>
                 </details>
                 
-              {% endif %}
+              {% endunless %}
               
               {% when 'price_range' %}
                 {% liquid
@@ -198,13 +204,13 @@
                     assign uses_comma_decimals = true
                   endif
                 %}
-                <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}"{% if filter_type == 'vertical' and  forloop.index == 1 %} open{% endif %}>
+                <details id="Details-{{ forloop.index }}-{{ section.id }}" class="price_filters {% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" data-index="{{ forloop.index }}"{% if filter_type == 'vertical' and  forloop.index == 1 %} open{% endif %}>
                   <summary class="facets__summary caption-large focus-offset">
                     <div>
                       <span class="facet_name plus_left">{{ filter.label | escape }}</span>
                     </div>
                   </summary>
-                  <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
+                  <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="price_filtration {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
                     <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
                       {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                       <span class="facets__selected">{{ "products.facets.max_price" | t: price: max_price_amount }}</span>
@@ -217,8 +223,7 @@
                       {%- endif -%}
                     </div>
                     <price-range class="facets__price">
-                      <span class="field-currency">{{ cart.currency.symbol }}</span>
-                      <div class="field">
+                      <div class="field flex">
                         <input class="field__input"
                           name="{{ filter.min_value.param_name }}"
                           id="Filter-{{ filter.label | escape }}-GTE"
@@ -235,7 +240,7 @@
                       {%- if filter_type != 'vertical' -%}
                         <span class="field-currency">{{ cart.currency.symbol }}</span>
                       {%- endif -%}
-                      <div class="field">
+                      <div class="field flex">
                         <input class="field__input"
                           name="{{ filter.max_value.param_name }}"
                           id="Filter-{{ filter.label | escape }}-LTE"

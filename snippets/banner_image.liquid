@@ -1,0 +1,12 @@
+
+<picture class="heroshot">
+    <source srcset="{{ the_image | img_url: '1680x456', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '1680x456', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1440px)" />
+    <source srcset="{{ the_image | img_url: '1440x391', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '1440x391', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1025px)" />
+    <source srcset="{{ the_image | img_url: '1024x278', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '1024x278', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 881px)" />
+    <source srcset="{{ the_image | img_url: '881x239', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ the_image | img_url: '881x239', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 769px)" />
+    <source srcset="{{ mobimage | img_url: '769x209', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ mobimage | img_url: '769x209', crop: 'center', format: 'pjpg' }} 1x" 
+            media="(min-width: 376px)" />
+    <source srcset="{{ mobimage | img_url: '540x147', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ mobimage | img_url: '540x147', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 540px)" />
+    <source srcset="{{ mobimage | img_url: '375x102', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ mobimage | img_url: '375x102', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
+  <img loading="lazy" class="heroshot_image loading" src="{{ the_image | img_url: '320x87' }}" alt="{{ mobimage.alt | escape }}" />
+</picture>

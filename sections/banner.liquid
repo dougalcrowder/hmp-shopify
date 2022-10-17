@@ -1,0 +1,43 @@
+<div data-section-id="{{ section.id }}" data-section-type="banner-section" class="banner-section">
+    
+  {%- assign the_image = section.settings.image -%}
+  {%- assign mobimage = section.settings.image -%}
+  {%- if section.settings.mobimage != blank -%}
+    {%- assign mobimage = section.settings.mobimage -%}
+  {%- endif -%}
+  
+  {% include 'banner_image' %}
+</div>
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Banner Image"
+  },
+  "class": "index-section index-section--flush",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "en": "Image"
+      }
+    },
+    {
+      "type": "image_picker",
+      "id": "mobimage",
+      "label": {
+        "en": "Mobile Image ie portrait"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Banner Image"
+      }
+    }
+  ]
+}
+{% endschema %}
