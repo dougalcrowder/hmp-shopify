@@ -1,0 +1,24 @@
+.text_and_title {
+  @media screen and (min-width: 768px) {
+    grid-column: 3 / span 8;
+  }
+  .flex {
+    @media screen and (min-width: 768px) {
+      gap: 24px;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      .title {
+        flex: 0 0 25%;
+      }
+      .text {
+        flex: 0 0 75%;
+      }
+    }
+  }
+}
+
+.page {
+  > .grid {
+    padding-top: 56px;
+  }
+}
