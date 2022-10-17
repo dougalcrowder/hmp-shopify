@@ -107,7 +107,6 @@ button, input[type="submit"],.btn, .button {
   width: 100%;
   border: 0;
   text-transform: uppercase;
-  position: relative;
   padding-left: 30px;
   height: 39px;
   line-height: 39px;
@@ -115,6 +114,17 @@ button, input[type="submit"],.btn, .button {
   font-size: 81.25%;
   background-color: transparent;
   color: var(--color-black);
+
+}
+.accordion_section {
+  padding-left: 30px;
+  p {
+    font-size: 81.25%;
+  }
+}
+
+.plus_left {
+  position: relative;
   &:before {
     content: " ";
     display: block;
@@ -142,12 +152,6 @@ button, input[type="submit"],.btn, .button {
       top: 20px;
       height: 1px;
     }
-  }
-}
-.accordion_section {
-  padding-left: 30px;
-  p {
-    font-size: 81.25%;
   }
 }
 

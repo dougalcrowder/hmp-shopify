@@ -85,7 +85,7 @@
       <div class="product-description rte">
           <div id="accordionGroup" class="Accordion">
             <h3>
-              <button id="accordion-header-1" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
+              <button id="accordion-header-1" class="accordion_button plus_left" aria-expanded="false" aria-controls="accordion-panel-1" data-accordion-header>
                   PRODUCT DESCRIPTION
               </button>
             </h3>
@@ -94,11 +94,11 @@
             </section>
             {% if section.settings.shipping_text %}
             <h3 id="shipping">
-              <button id="accordion-header-2" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+              <button id="accordion-header-2" class="accordion_button plus_left" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
                   SHIPPING & RETURNS
               </button>
             </h3>
-            <section id="accordion-panel-2" class="accordion_section" aria-labelledby="accordion-header-2" hidden>
+            <section id="accordion-panel-2" class="accordion_section plus_left" aria-labelledby="accordion-header-2" hidden>
               {{ section.settings.shipping_text }}
             </section>   
             {% endif %}
@@ -106,7 +106,7 @@
             {% assign composition = product.metafields.custom.composition %}
             {%- if composition != blank -%}
             <h3>
-              <button id="accordion-header-3" class="accordion_button" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
+              <button id="accordion-header-3" class="accordion_button plus_left" aria-expanded="false" aria-controls="accordion-panel-3" data-accordion-header>
                   Fabric Composition
               </button>
             </h3>
@@ -124,6 +124,21 @@
   </div>
   
 </div>
+
+{% assign companion_products =  product.metafields.custom.companion_pieces.value %}
+{% if companion_products != blank %}
+<div class="grid">
+  <div class="companion_products_grid grid nogap">
+    <div class="title flex justify-center items-center content-center">
+      <h2 class="h1">Create your Piece</h2>
+      <a href="#">See More</a>
+    </div>
+    {% for product in companion_products limit: 2  %}     
+      {% include 'product-card-grid' %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
 
 {% schema %}
 {

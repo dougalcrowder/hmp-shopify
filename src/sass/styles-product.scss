@@ -153,6 +153,25 @@
   }
 }
 
+.companion_products_grid {
+  margin-top: 88px;
+  grid-column: 1 / span 12;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  @media screen and (min-width: 1260px) {
+    margin-top: 180px;
+  }
+  .title.flex {
+    h2.h1, a {
+      flex: 0 1 400px;
+      text-transform: uppercase;
+      // @media screen and (min-width: 1260px) {
+      //   padding: 0 15%;
+      // }
+    }
+  }
+}
+
 .product_recommendations {
   padding-top: 134px;
   h3 {

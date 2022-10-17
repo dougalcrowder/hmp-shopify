@@ -1,3 +1,5 @@
+@import "components/facets";
+
 .collection .loading-overlay, .loading-overlay__spinner {
   top: 0;
   right: 0;
@@ -19,4 +21,11 @@
   @media screen and (min-width:1024px) {
     grid-column: 4 / span 9;
   }
+}
+#FacetFiltersFormMobile {
+  display: none;
+}
+
+.main_collections_section {
+  margin-top: 48px;
 }
