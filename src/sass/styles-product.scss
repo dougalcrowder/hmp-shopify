@@ -10,6 +10,9 @@
       .product-images {
         grid-column: 1 / span 2;
       }
+      .sticky {
+        top: 84px;
+      }
       .product-detail {
         grid-column: 3 / span 1;
         padding: 4px 10px 0 10px;
@@ -147,5 +150,18 @@
   .size-help {
     padding-left: 60px;
     display: block;
+  }
+}
+
+.product_recommendations {
+  padding-top: 134px;
+  h3 {
+    margin-bottom: 24px;
+  }
+  .constrain {
+    grid-column: 1 / span 12;
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / span 10;
+    }
   }
 }

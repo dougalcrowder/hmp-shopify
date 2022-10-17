@@ -2,17 +2,19 @@
  class="product-recommendations"
  data-base-url="{{ routes.product_recommendations_url }}"
  data-product-id="{{ product.id }}"
- data-limit="3"
+ data-limit="4"
 >
  {%- if recommendations.products_count > 0 -%}
-<div class="product_recommendations inner">
-   <h3>You may also like</h3>
-   <div class="collection_grid">
-     {%- for product in recommendations.products -%}
-     {% include 'product-card-grid-canonical' %}
-     {%- endfor -%}
+<div class="product_recommendations grid pt-m pb-m">
+  <div class="constrain">
+   <h3 class="text-center">You may also like</h3>
+     <div class="collection_grid four product-grid nogap">
+       {%- for product in recommendations.products -%}
+       {% include 'product-card-grid' %}
+       {%- endfor -%}
+     </div>
    </div>
- </div>
+  </div>
  {%- endif -%}
 </div>
 
