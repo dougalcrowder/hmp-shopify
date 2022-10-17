@@ -1,6 +1,9 @@
 .cart_grid {
   padding: 12px;
   grid-column: 1 / span 12;
+  .cart_contents {
+    margin-top: 40px;
+  }
   @media screen and (min-width: 1024px) {
     grid-column: 2 / span 10;
   }
@@ -13,12 +16,40 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     .cart_items {
       grid-column: 1 / span 2;
+      a {
+        text-decoration: none;
+        border-bottom: 0;
+      }
     }
     .cart_footer {
       grid-column: 3 / span 1;
       padding: 4px 10px 0 10px;
       @media screen and (min-width: 768px) {
-        padding: 4px 24px 0;
+        padding: 116px 24px 0;
+      }
+    }
+  }
+  tbody {
+    border-top: 1px solid currentcolor;
+  }
+  .cart-item__media {
+    padding-right: 32px;
+  }
+  .cart-item__quantity {
+    input {
+      width: auto;
+      min-width: 20px;
+      flex: 0 1 40px;
+      border: 1px solid currentcolor;
+      text-align: center;
+    }
+    a {
+      flex: 1;
+      width: 20px;
+      max-width: 20px;
+      margin: 0px 8px;
+      &.remove {
+        margin-left: 24px;
       }
     }
   }

@@ -2,9 +2,6 @@
 /*================ #Tables ================*/
 table {
   margin-bottom: 16px;
-  a {
-    border-bottom: 1px solid currentColor;
-  }
 }
 
 th, td.label {
@@ -16,8 +13,8 @@ th, td.label {
 th,
 td {
   text-align: left;
-  border: 1px solid var(--color-lightgrey);
-  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-black);
+  padding: 4px 0;
 }
 
 tbody th,

@@ -28,6 +28,11 @@ button, input[type="submit"],.btn, .button {
   @media screen and (min-width: 1024px) {
     padding: 10px 40px;
   }
+  &.large {
+    padding: 16px 24px;
+    font-size: 112%;
+    width: 100%;
+  }
   &:not([disabled]):hover,
   &:focus {
     color: var(--color-white);

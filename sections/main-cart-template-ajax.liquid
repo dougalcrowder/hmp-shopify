@@ -7,36 +7,23 @@
         <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
         <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
       </div>
+
     
-      <div class="cart__warnings">
-        <h1 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h1>
-        <a href="{{ routes.all_products_collection_url }}" class="button">
-          {{ 'general.continue_shopping' | t }}
-        </a>
-    
-        {%- if shop.customer_accounts_enabled and customer == nil -%}
-          <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
-          <p class="cart__login-paragraph">
-            {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-          </p>
-        {%- endif -%}
-      </div>
-    
-      <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
+      <form action="{{ routes.cart_url }}" class="cart_contents" method="post" id="cart">
         <div class="cart__items" id="main-cart-items" data-id="{{ section.id }}">
           <div class="js-contents" data-ajax-cart-section>
             {%- if cart != empty -%}
               <table class="cart-items" data-ajax-cart-section-scroll>
                 <caption class="visually-hidden">{{ 'sections.cart.title' | t }}</caption>
+                {% comment %}
                 <thead>
                   <tr>
                     <th class="caption-with-letter-spacing" colspan="2" scope="col">{{ 'sections.cart.headings.product' | t }}</th>
-                    <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.total' | t }}</th>
                     <th class="cart-items__heading--wide small-hide caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.quantity' | t }}</th>
                     <th class="small-hide right caption-with-letter-spacing" colspan="1" scope="col">{{ 'sections.cart.headings.total' | t }}</th>
                   </tr>
                 </thead>
-    
+                {% endcomment %}
                 <tbody>
                   {%- for item in cart.items -%}
                   {% assign item_index = forloop.index %}
@@ -59,7 +46,7 @@
                           <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                         {%- endif -%}
     
-                        <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }},| {{ item.index }}</a>
+                        <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
     
                         {%- if item.original_price != item.final_price -%}
                           <div class="cart-item__discounted-prices">
@@ -125,55 +112,8 @@
                         </ul>
                       </td>
     
-                      <td class="cart-item__totals right medium-hide large-up-hide">
-                        <div class="loading-overlay hidden">
-                          <div class="loading-overlay__spinner">
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                        <div class="cart-item__price-wrapper">
-                          {%- if item.original_line_price != item.final_line_price -%}
-                            <dl class="cart-item__discounted-prices">
-                              <dt class="visually-hidden">
-                                {{ 'products.product.price.regular_price' | t }}
-                              </dt>
-                              <dd>
-                                <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money }}
-                                </s>
-                              </dd>
-                              <dt class="visually-hidden">
-                                {{ 'products.product.price.sale_price' | t }}
-                              </dt>
-                              <dd class="price price--end">
-                                {{ item.final_line_price | money }}
-                              </dd>
-                            </dl>
-                          {%- else -%}
-                            <span class="price price--end">
-                              {{ item.original_line_price | money }}
-                            </span>
-                          {%- endif -%}
-    
-                          {%- if item.variant.available and item.unit_price_measurement -%}
-                            <div class="unit-price caption">
-                              <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                              {{ item.variant.unit_price | money }}
-                              <span aria-hidden="true">/</span>
-                              <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
-                              {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                                {{- item.variant.unit_price_measurement.reference_value -}}
-                              {%- endif -%}
-                              {{ item.variant.unit_price_measurement.reference_unit }}
-                            </div>
-                          {%- endif -%}
-                        </div>
-                      </td>
-    
                       <td class="cart-item__quantity">
-                        <div class="cart-item__quantity-wrapper">
+                        <div class="flex nowrap items-center content-center ">
                           <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
                             {{ 'products.product.quantity.label' | t }}
                           </label>
@@ -198,11 +138,11 @@
                                {% render 'icon-plus' %}
                              </a>
     
-                          <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
-                            <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+     
+                            <a href="{{ item.url_to_remove }}" class="remove" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
                               {% render 'icon-remove' %}
                             </a>
-                          </cart-remove-button>
+       
                         </div>
                         <div class="cart-item__error" id="Line-item-error-{{ item.index | plus: 1 }}" role="alert" data-ajax-cart-messages="{{ item.key }}">
                         </div>
@@ -262,13 +202,21 @@
     </div>
     
     <div class="cart_footer">
-          {%- if settings.show_cart_note -%}
-            <textarea data-ajax-cart-property-input
-              name="note" 
-              placeholder="Cart note">
-              {{ cart.note }}
-            </textarea>
-          {%- endif -%}
+      
+      {%- if shop.customer_accounts_enabled and customer == nil -%}
+        <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+        <p class="cart__login-paragraph">
+          {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+        </p>
+      {%- endif -%}
+      
+      {%- if settings.show_cart_note -%}
+        <textarea data-ajax-cart-property-input
+          name="note" 
+          placeholder="Cart note">
+          {{ cart.note }}
+        </textarea>
+      {%- endif -%}
     
           <div class="cart__blocks">
             {% for block in section.blocks %}
@@ -311,12 +259,12 @@
                 {%- else -%}
                   <div class="cart__ctas" {{ block.shopify_attributes }}>
                     <noscript>
-                      <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                      <button type="submit" class="button alt" form="cart">
                         {{ 'sections.cart.update' | t }}
                       </button>
                     </noscript>
     
-                    <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+                    <button type="submit" id="checkout" class="button large" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                       {{ 'sections.cart.checkout' | t }}
                     </button>
                   </div>
@@ -328,8 +276,6 @@
                   {%- endif -%}
               {%- endcase -%}
             {% endfor %}
-    
-            <div id="cart-errors"></div>
           </div>
         </div>
 
