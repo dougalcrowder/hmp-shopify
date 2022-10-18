@@ -176,7 +176,7 @@
           "a64c7843-af19-4f15-9378-d5d2bb4ce9fc"
         ],
         "settings": {
-          "title": "Choose Your Base"
+          "title": ""
         }
       },
       "nav-drop-create": {
@@ -241,6 +241,28 @@
       },
       "nav-drop-guide": {
         "type": "nav-drop-guide",
+        "blocks": {
+          "2760bb89-362c-42a9-9f87-4181603219a7": {
+            "type": "menu",
+            "settings": {
+              "menu": "nav-piercing",
+              "title": "Piercing"
+            }
+          },
+          "b987b75f-f323-4e4e-b9c2-d515655ced43": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hmp-banner-03.jpg",
+              "title_image": "",
+              "block_url": "",
+              "image_size": "four"
+            }
+          }
+        },
+        "block_order": [
+          "2760bb89-362c-42a9-9f87-4181603219a7",
+          "b987b75f-f323-4e4e-b9c2-d515655ced43"
+        ],
         "settings": {
           "title": "Choose Your Base"
         }
