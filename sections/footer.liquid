@@ -23,16 +23,6 @@
 
 <footer class="site-footer" role="contentinfo" data-section-id="{{ section.id }}" data-section-type="footer-section">
   <div class="page-width site_footer inner grid">
-    {% comment %}
-    <div class="flex nlogo">
-      <span class="footer_logo">
-        <a href="/" alt="go to the homepage">
-          <span class="visually-hidden">{{ shop.title }}</span>
-        </a>
-      </span>
-    </div>
-    {% endcomment %}
-    <div class="flex nuls">
       {%- for block in section.blocks -%}
           <div class="footer_item footer-{{ block.type }}">
 
@@ -65,7 +55,7 @@
 
               {%- when 'text' -%}
                 {%- if block.settings.title -%}
-                  <strong>{{ block.settings.title | escape }}</strong>
+                  <strong class="h3">{{ block.settings.title | escape }}</strong>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="site-footer__rte">
@@ -75,11 +65,10 @@
 
               {%- when 'link_list' -%}
                 {%- if block.settings.title -%}
-                  <strong class="product">{{ block.settings.title | escape }}</strong>
+                  <strong class="h3">{{ block.settings.title | escape }}</strong>
                 {%- endif -%}
                 {%- assign footer_linklist = block.settings.menu -%}
-                  <ul class="footer_linklist
-                            {% if inline_list %}list--inline{% endif %}">
+                  <ul class="footer_linklist">
                     {%- for link in linklists[footer_linklist].links -%}
                       <li class="footer_linklist-item">
                         <a href="{{ link.url }}"
@@ -94,10 +83,7 @@
             {%- endcase -%}
 
           </div>
-
       {%- endfor -%}
-    </div>
-    
   </div>
 
 
@@ -106,7 +92,7 @@
     {{ payment_icon_markup }}
     <div class="flex">
       <div class="copyright">
-        <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}. All Rights Reserved. Company registration number 09830217</small>
+        <small class="site-footer__copyright-content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}. All Rights Reserved. </small>
       </div>
     </div>
   </div>

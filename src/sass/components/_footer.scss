@@ -1,0 +1,38 @@
+.site_footer.grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  @media screen and (min-width: 500px) and (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .footer-text {
+      grid-column: span 2;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    .footer-text {
+      grid-column: span 2;
+    }
+  }
+  @media screen and (min-width: 1201px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  strong.h3 {
+    font-size: 100%;
+    text-transform: uppercase;
+  }
+  .footer_linklist, .site-footer__rte {
+    li, p {
+      font-size: 75%;
+    }
+    padding: 16px 0 24px 0;
+  }
+  ul {
+    li {
+      text-transform: uppercase;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.footer_bar {
+  padding: 24px 0 40px 0;
+}
