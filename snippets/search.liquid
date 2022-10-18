@@ -1,30 +1,220 @@
-<div class="form_inner">
-  <form class="search-form" action="{{ routes.search_url }}" method="get" role="search">
-      <input
-        type="text"
-        name="q"
-        placeholder="{{ 'general.search.placeholder' | t }}"
-        role="combobox"
-        aria-autocomplete="list"
-        aria-owns="predictive-search-results"
-        aria-expanded="false"
-        aria-label="{{ 'general.search.placeholder' | t }}"
-        aria-haspopup="listbox"
-        class="search-form_input snize-exclude-input"
-      />
-      <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
-  
-  
-    <button class="search-form_submit nude"
-      type="submit"
-      data-search-form-submit data-no-swup>
-      {% include 'icon-search' %}
-      <span class="icon_fallback-text">{{ 'general.search.submit' | t }}</span>
-    </button>
-  </form>
-  <button class="nude searchcloser" id="mobSearchClose">
-    <div class="span1"></div>
-    <div class="span2"></div>
-    <span class="icon_fallback-text">Close Search</span>
-  </button>
+<div class="predictivesearchresults" id="predictiveSearchResults">
+  <div class="incider">
+    <form class="search-form" action="{{ routes.search_url }}" method="get" role="search">
+        <input
+          type="text"
+          name="q"
+          placeholder="Search..."
+          role="combobox"
+          aria-autocomplete="list"
+          aria-owns="predictive-search-results"
+          aria-expanded="false"
+          aria-label="Search"
+          aria-haspopup="listbox"
+          class="search-form_input searchInput"
+        />
+        <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+    
+    
+      <button class="search-form_submit nude visually-hidden"
+        type="submit"
+        data-search-form-submit data-no-swup>
+        {% include 'icon-search' %}
+        <span class="visually-hidden">Submit</span>
+      </button>
+    </form>
+    <div id="searchProducts" class="searchProducts"></div>
+    <div id="searchContent" class="searchContent">
+      <div id="searchCollections" class="searchCollections"></div>
+      <div id="searchPages" class="searchPages"></div>
+      <div id="searchArticles" class="searchArticles"></div>
+    </div>
+  </div>
 </div>
+<button class="search_close nude" id="searchClose"><span class="visually-hidden">Close Search</span></button>
+
+<script>
+  function predictiveSearch(query) {
+      const jsonUrl = "/search/suggest.json?q=";
+      const resources = "&resources[type]=product,article,page,collection&resources[limit]=10&resources[options][unavailable_products]=last";
+      const predictiveSearchResults = document.getElementById("predictiveSearchResults");
+      const searchProducts = document.getElementById("searchProducts");
+      const searchCollections = document.getElementById("searchCollections");
+      const searchPages = document.getElementById("searchPages");
+      const searchArticles = document.getElementById("searchArticles");
+      const searchContent = document.getElementById("searchContent");
+      
+      // console.log(jsonUrl + query + resources);
+      fetch(jsonUrl + query + resources)
+      // fetch("/search/suggest.json?q=wood&resources[type]=product&resources[limit]=4&resources[options][unavailable_products]=last")
+      .then(response => response.json())
+      .then(suggestions => {
+        
+        const productSuggestions = suggestions.resources.results.products;
+        searchProducts.innerHTML = '';
+        if (productSuggestions.length > 0) {
+          
+          let productsTitle = '<h4>Products</h4>';
+          
+          // predictiveSearchResults.classList.add("active");
+          document.body.classList.add("search-active");
+          searchProducts.insertAdjacentHTML( 'afterbegin', productsTitle );
+          
+          productSuggestions.forEach((item, index) => {
+              let ogImage = item.image;
+              let imageSized = ogImage.replace(".jpg", "_96x128.jpg");
+              const singleProduct = '<a href="' + item.url + '"><img src="' + imageSized + '" /><span><p>' + item.title + '</p><span></a>';
+              // predictiveSearchResults.append('<div>' + singleProduct + '</div>');
+              searchProducts.insertAdjacentHTML( 'beforeend', singleProduct );
+          });
+          
+          if (productSuggestions.length > 9) {
+            let seeAll = '<a class="more_results" href="/search?q=' + query + '&type=product">See all matching Products</a>';
+            searchProducts.insertAdjacentHTML( 'beforeend', seeAll );
+          }
+        }
+        
+        const collectionSuggestions = suggestions.resources.results.collections;
+        searchCollections.innerHTML = '';
+        if (collectionSuggestions.length > 0) {
+          
+          let collectionsTitle = '<h4>Collections</h4>';
+          // predictiveSearchResults.classList.add("active");
+          searchContent.classList.add("active"); 
+          searchCollections.insertAdjacentHTML( 'afterbegin', collectionsTitle );
+          
+          // collectionSuggestions.forEach((item, index) => {
+          //   const singleCollection = '<a href="' + item.url + '">' + item.title + '</a>';
+          //   // console.log(singleCollection);
+          //   // predictiveSearchResults.append('<div>' + singleProduct + '</div>');
+          //   searchCollections.insertAdjacentHTML( 'beforeend', singleCollection );
+          // });
+          
+          let collcount = 0;
+          
+          for (var i = 0; i < 3; i++) {
+            if (collectionSuggestions[i].title != 'Fabric Samples' && collectionSuggestions[i].title != 'Wallpaper Samples' ) {
+              collcount++;
+              
+              const singleCollection = '<a href="' + collectionSuggestions[i].url + '">' + collectionSuggestions[i].title + '</a>';
+              searchCollections.insertAdjacentHTML( 'beforeend', singleCollection );
+            
+              console.log(collcount);
+              if (collcount === 4){
+                break;
+              }
+            }
+          }
+          
+          // if (collectionSuggestions.length > 5) {
+          //   let seeAll = '<a class="more_results" href="/search?q=' + query + '&type=collection">See all matching Collections</a>';
+          //   searchCollections.insertAdjacentHTML( 'beforeend', seeAll );
+          // }
+        }
+        
+        const pageSuggestions = suggestions.resources.results.pages;
+        searchPages.innerHTML = '';
+        if (pageSuggestions.length > 0) {
+          
+          let pagesTitle = '<h4>Pages</h4>';
+          // predictiveSearchResults.classList.add("active");
+          searchContent.classList.add("active"); 
+          searchPages.insertAdjacentHTML( 'afterbegin', pagesTitle );
+          
+          // pageSuggestions.forEach((item, index) => {
+          //   const singlePage = '<a href="' + item.url + '">' + item.title + '</a>';
+          //   // console.log(singlePage);
+          //   // predictiveSearchResults.append('<div>' + singleProduct + '</div>');
+          //   searchPages.insertAdjacentHTML( 'beforeend', singlePage );
+          // });
+          
+          for (var i = 0; i < 3; i++) {
+            const singlePage = '<a href="' + pageSuggestions[i].url + '">' + pageSuggestions[i].title + '</a>';
+            searchPages.insertAdjacentHTML( 'beforeend', singlePage );
+            if (i === 3){
+              break;
+            }
+          }
+          
+          if (pageSuggestions.length > 3) {
+            let seeAllPages = '<a class="more_results" href="/search?q=' + query + '&type=page">See all matching Pages</a>';
+            searchPages.insertAdjacentHTML( 'beforeend', seeAllPages );
+          }
+        }
+        
+        const articleSuggestions = suggestions.resources.results.articles;
+        searchArticles.innerHTML = '';
+        if (articleSuggestions.length > 0) {
+          let articlesTitle = '<h4>Articles</h4>';
+          // predictiveSearchResults.classList.add("active");
+          searchContent.classList.add("active"); 
+          searchArticles.insertAdjacentHTML( 'afterbegin', articlesTitle );
+          
+          for (var i = 0; i < 4; i++) {
+            const singleArticle = '<a href="' + articleSuggestions[i].url + '">' + articleSuggestions[i].title + '</a>';
+            searchArticles.insertAdjacentHTML( 'beforeend', singleArticle );
+            if (i === 4){
+              break;
+            }
+          }
+          
+          if (articleSuggestions.length > 4) {
+            let seeAllArticles = '<a class="more_results" href="/search?q=' + query + '&type=article">See all matching Articles</a>';
+            searchArticles.insertAdjacentHTML( 'beforeend', seeAllArticles );
+          }
+        } 
+        
+      });
+      
+    }
+    
+  const searchInput = document.querySelector(".searchInput");
+  searchInput.addEventListener("keyup", (e) => {
+    // If input value is longer or equal than 2 chars, adding "users" on ID attribute.
+    let query = searchInput.value;
+    if (e.target.value.length >= 2) {
+      predictiveSearch(query);
+    } else if (e.target.value.length < 2) {
+      // predictiveSearchResults.classList.remove("active");
+      document.body.classList.remove('search-active');
+    }
+  });
+  searchInput.addEventListener("pointerdown", (e) => {
+    let query = searchInput.value;
+    if (e.target.value.length > 2) {
+      // predictiveSearchResults.classList.add("active");
+      document.body.classList.remove("search-active");
+    }
+  });
+  
+  const searchToggle= document.getElementById('searchToggle');
+  
+  searchToggle.addEventListener('click', function (){
+    if (searchToggle.classList.contains('active')) {
+      searchToggle.classList.remove('active');
+      predictiveSearchResults.classList.remove('active');
+      document.body.classList.remove("search-active");
+      setTimeout(function() {
+        predictiveSearchResults.classList.remove('alive');
+      }, 500);
+    } else {
+      searchToggle.classList.add('active');
+      document.body.classList.add("search-active");
+      predictiveSearchResults.classList.add('alive');
+      setTimeout(function() {
+        predictiveSearchResults.classList.add('active');
+      }, 50);
+    }
+  });
+  
+  document.getElementById("searchClose").addEventListener('click', function(e){
+    predictiveSearchResults.classList.remove("active");
+    document.body.classList.remove("search-active");
+    searchToggle.classList.remove('active');
+    setTimeout(function() {
+      predictiveSearchResults.classList.remove('alive');
+    }, 500);
+  });
+  
+  </script>
+</script>
