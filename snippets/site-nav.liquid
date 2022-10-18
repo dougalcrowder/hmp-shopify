@@ -64,11 +64,8 @@
         </div>
       </li>
     {% else %}
-      <li {% if link.active %} class="active"{% endif %}>
-        <a href="{{ link.url }}"
-          class="link link_main{% if link.active %} active{% endif %}"
-          {% if link.current %} aria-current="page"{% endif %}
-        >
+      <li class="topnav{% if link.active %} active{% endif %}" id="navToggle-{{ link.title | handleize }}">
+        <a href="{{ link.url }}" class="link link_main{% if link.active %} active{% endif %}" {% if link.current %} aria-current="page"{% endif %}>
           <span class="label">{{ link.title | escape }}</span>
         </a>
       </li>

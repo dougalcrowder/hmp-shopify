@@ -1,4 +1,4 @@
-<div class="dropdown shop inner" id="shopDrop">
+<div class="dropdown guide inner" id="guideDrop">
    <nav class="nav-dropper">
    {%- if section.settings.title != blank -%}
    <h2 class="h3">{{ section.settings.title | escape }}</h2>
@@ -75,9 +75,9 @@
 {% schema %}
 {
   "name": {
-    "en": "Nav Dropdown Shop"
+    "en": "Nav Dropdown Guide"
   },
-  "class": "dropdown-nav shop-nav",
+  "class": "dropdown-nav guide-nav",
   "max_blocks": 8,
   "settings": [
     {
@@ -159,7 +159,7 @@
   "presets": [
     {
       "name": {
-        "en": "Shop Dropdown"
+        "en": "Guide Dropdown"
       }
     }
   ]
