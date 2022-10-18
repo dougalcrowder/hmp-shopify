@@ -178,6 +178,72 @@
         "settings": {
           "title": "Choose Your Base"
         }
+      },
+      "nav-drop-create": {
+        "type": "nav-drop-create",
+        "blocks": {
+          "5292ed9e-b274-4968-a178-7307371cc26d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
+              "title_image": "Thing",
+              "block_url": "#",
+              "image_size": "one"
+            }
+          },
+          "a7e52e23-f5f7-4649-957a-6af46950a193": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.jpg",
+              "title_image": "Thing 2",
+              "block_url": "#",
+              "image_size": "one"
+            }
+          },
+          "dc3f582f-9f44-49ca-900a-dcb4d5ee54b6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-3.jpg",
+              "title_image": "Thing 3",
+              "block_url": "",
+              "image_size": "one"
+            }
+          },
+          "e94c952f-69a1-487c-818d-ff84380a2ce9": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/GREEN_PEARL_PENDANT_CONE.jpg",
+              "title_image": "Thing 4",
+              "block_url": "#",
+              "image_size": "one"
+            }
+          },
+          "ebff0d40-cae4-4cdf-919e-ca3039e11801": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2.jpg",
+              "title_image": "Thing 5",
+              "block_url": "#",
+              "image_size": "one"
+            }
+          }
+        },
+        "block_order": [
+          "5292ed9e-b274-4968-a178-7307371cc26d",
+          "a7e52e23-f5f7-4649-957a-6af46950a193",
+          "dc3f582f-9f44-49ca-900a-dcb4d5ee54b6",
+          "e94c952f-69a1-487c-818d-ff84380a2ce9",
+          "ebff0d40-cae4-4cdf-919e-ca3039e11801"
+        ],
+        "settings": {
+          "title": "Choose Your Base"
+        }
+      },
+      "nav-drop-guide": {
+        "type": "nav-drop-guide",
+        "settings": {
+          "title": "Choose Your Base"
+        }
       }
     },
     "content_for_index": [
