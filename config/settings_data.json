@@ -72,6 +72,37 @@
           "subheading": "<p>Sign up for exclusive early sale access and tailored new arrivals.<\/p>",
           "show_background": false
         }
+      },
+      "mailchimp_newsletter": {
+        "type": "mailchimp_newsletter",
+        "blocks": {
+          "c00bc1bb-4818-49b8-91fd-baf4601b9dc0": {
+            "type": "heading",
+            "settings": {
+              "heading": "Sign up for updates"
+            }
+          },
+          "1cdc603b-b3ad-4794-9065-65458dc9e3e8": {
+            "type": "paragraph",
+            "settings": {
+              "text": "<p>Sign up for exclusive early sale access and tailored new arrivals.<\/p>"
+            }
+          },
+          "de978a78-4c9b-452b-b924-0a8d6fce0731": {
+            "type": "email_form",
+            "settings": {
+              "button_text": "Join"
+            }
+          }
+        },
+        "block_order": [
+          "c00bc1bb-4818-49b8-91fd-baf4601b9dc0",
+          "1cdc603b-b3ad-4794-9065-65458dc9e3e8",
+          "de978a78-4c9b-452b-b924-0a8d6fce0731"
+        ],
+        "settings": {
+          "chimp_url": "https:\\\/\\\/hannahmartinpierced.us20.list-manage.com\\\/subscribe\\\/post?u=fde30870205a640d93c128964&id=a6595f8345"
+        }
       }
     },
     "content_for_index": [
