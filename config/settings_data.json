@@ -121,6 +121,63 @@
         "settings": {
           "chimp_url": "https:\/\/hannahmartinpierced.us20.list-manage.com\\\/subscribe\\\/post?u=fde30870205a640d93c128964&id=a6595f8345"
         }
+      },
+      "sidecart": {
+        "type": "sidecart",
+        "settings": {
+        }
+      },
+      "nav-drop-shop": {
+        "type": "nav-drop-shop",
+        "blocks": {
+          "d6dc6572-60c3-46da-aec8-953a190794c2": {
+            "type": "menu",
+            "settings": {
+              "menu": "nav-shop-by-material",
+              "title": "shop by material"
+            }
+          },
+          "bf55dc3d-7813-4935-9676-c75055d1c52f": {
+            "type": "menu",
+            "settings": {
+              "menu": "nav-shop-by-piercing",
+              "title": "shop by piercing"
+            }
+          },
+          "b70b2ffa-2012-40f9-9834-ef795e0fbf56": {
+            "type": "menu",
+            "settings": {
+              "menu": "nav-shop-by-style",
+              "title": "Shop by Style"
+            }
+          },
+          "8b063991-9ab7-4e20-aa62-88e1fa29854e": {
+            "type": "menu",
+            "settings": {
+              "menu": "nav-shop-components",
+              "title": "shop components"
+            }
+          },
+          "a64c7843-af19-4f15-9378-d5d2bb4ce9fc": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/LARGE_GOLD_TEARDROP.jpg",
+              "title_image": "",
+              "block_url": "",
+              "image_size": "one"
+            }
+          }
+        },
+        "block_order": [
+          "d6dc6572-60c3-46da-aec8-953a190794c2",
+          "bf55dc3d-7813-4935-9676-c75055d1c52f",
+          "b70b2ffa-2012-40f9-9834-ef795e0fbf56",
+          "8b063991-9ab7-4e20-aa62-88e1fa29854e",
+          "a64c7843-af19-4f15-9378-d5d2bb4ce9fc"
+        ],
+        "settings": {
+          "title": "Choose Your Base"
+        }
       }
     },
     "content_for_index": [
