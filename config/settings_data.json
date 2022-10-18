@@ -8,7 +8,52 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "b8b3f2ac-e400-4931-986e-b183e72e208c": {
+            "type": "link_list",
+            "settings": {
+              "title": "Pieces",
+              "menu": "footer"
+            }
+          },
+          "fd18923d-3cd7-418a-9b4b-fd5f3d5ed1ec": {
+            "type": "link_list",
+            "settings": {
+              "title": "Customer Service",
+              "menu": "customer-service"
+            }
+          },
+          "e7ee78e4-2fae-4e8a-824b-b8b44af4f225": {
+            "type": "link_list",
+            "settings": {
+              "title": "Info",
+              "menu": "info"
+            }
+          },
+          "ba8a599c-3713-420a-8779-f62d866ed5dc": {
+            "type": "link_list",
+            "settings": {
+              "title": "Follow Us",
+              "menu": "follow-us"
+            }
+          },
+          "41add3d2-3725-4e34-a252-c32b90d8f8e1": {
+            "type": "text",
+            "settings": {
+              "title": "Contact Us",
+              "text": "<p><a href=\"mailto:hello@hannahmartinpierced.com\" title=\"mailto:hello@hannahmartinpierced.com\">hello@hannahmartinpierced.com<\/a><\/p><p><a href=\"tel:447522620244\" title=\"tel:447522620244\">+44 7 522 620 244<\/a><\/p><p>74a Clerkenwell roadEC1M 5GA, London<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "b8b3f2ac-e400-4931-986e-b183e72e208c",
+          "fd18923d-3cd7-418a-9b4b-fd5f3d5ed1ec",
+          "e7ee78e4-2fae-4e8a-824b-b8b44af4f225",
+          "ba8a599c-3713-420a-8779-f62d866ed5dc",
+          "41add3d2-3725-4e34-a252-c32b90d8f8e1"
+        ],
         "settings": {
+          "show_payment_icons": true
         }
       },
       "mailchimp": {
