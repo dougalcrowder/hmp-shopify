@@ -8,33 +8,6 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "98d1d36a-6d63-462a-a012-3d212d60e45a": {
-            "type": "link_list",
-            "settings": {
-              "title": "",
-              "menu": ""
-            }
-          },
-          "e9ec529a-732d-4fad-b1cc-56d620089c72": {
-            "type": "html",
-            "settings": {
-              "code": ""
-            }
-          },
-          "1e4c0900-9b03-4f7a-989c-e5be037c65dd": {
-            "type": "link_list",
-            "settings": {
-              "title": "",
-              "menu": ""
-            }
-          }
-        },
-        "block_order": [
-          "98d1d36a-6d63-462a-a012-3d212d60e45a",
-          "e9ec529a-732d-4fad-b1cc-56d620089c72",
-          "1e4c0900-9b03-4f7a-989c-e5be037c65dd"
-        ],
         "settings": {
         }
       },
