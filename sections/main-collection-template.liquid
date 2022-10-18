@@ -1,17 +1,48 @@
 {{ 'styles-collections.css' | asset_url | stylesheet_tag }}
-{% if collection.image != blank %}
-<header class="collection-header inner flex">
-  <div class="title">
-    <h1>{{ collection.title }}</h1>
-    <div class="rte">{{ collection.description }}</div>
-  </div>
-</header>
-{% else %}
-<h1 class="visibility-hidden">{{ collection.title }}</h1>
-{% endif %}
-<div id="shopify-section-collection-template">
 
-<div data-section-id="{{ section.id }}" data-section-type="collection-template" class="collectionpage grid inner">
+<div id="shopify-section-collection-template" class="collection-template">
+  {% unless collection.image %}
+  <h1 class="visibility-hidden">{{ collection.title }}</h1>
+  {% endunless %}
+  <div data-section-id="{{ section.id }}" data-section-type="collection-template" class="collectionpage grid inner">
+  
+  {% if collection.image %}
+  <div class="collection_banner">
+    
+    <div class="collection_header flex content-center">
+      <div class="text">
+        <h1 class="h3">{{ collection.title }}</h1>
+        {%- if collection.description -%}
+        <div class="rte" {{ block.shopify_attributes }}>
+          <span>{{ collection.description }}</span>
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+    
+    <div class="collection_image">
+      {% assign desk_image = collection.metafields.custom.desktop_image  %}
+      {% assign tab_image = collection.metafields.custom.tablet_image  %}
+      {%- assign image = collection.image -%}
+      
+      {%- if desk_image -%}
+      {%- assign desktop = desk_image -%}
+      {%- else -%}
+      {%- assign desktop = collection.image -%}
+      {%- endif -%}
+      
+      {%- if tab_image -%}
+      {%- assign tablet = tab_image -%}
+      {%- else -%}
+      {%- assign tablet = collection.image -%}
+      {%- endif -%}
+      
+      {% include 'hero_collection' %}
+  
+    </div>
+  </div>
+  {% endif %}
+  
   <div class="filters">
     <aside aria-labelledby="verticalTitle" class="facets-wrapper" id="main-collection-filters" data-id="{{ section.id }}">
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
@@ -45,6 +76,9 @@
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
 
 </div>
+
+</div>
+
 {% schema %}
 {
   "name": {
