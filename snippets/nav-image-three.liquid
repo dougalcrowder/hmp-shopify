@@ -1,0 +1,9 @@
+
+<picture class="nav-image-one">
+    <source srcset="{{ image | img_url: '940x358', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ image | img_url: '940x358', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1440px)" />
+    <source srcset="{{ image | img_url: '940x358', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ image | img_url: '940x358', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 1025px)" />
+    <source srcset="{{ image | img_url: '701x267', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ image | img_url: '701x267', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 769px)" />
+    <source srcset="{{ image | img_url: '701x267', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ image | img_url: '701x267', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 540px)" />
+    <source srcset="{{ image | img_url: '701x267', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ image | img_url: '701x267', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
+  <img loading="lazy" src="{{ image | img_url: '532x267' }}" alt="{{ image.alt | escape }}" />
+</picture>
