@@ -11,19 +11,19 @@
         "5f19692b-8fe9-4386-b08a-2a6ff7c95503": {
           "type": "heading",
           "settings": {
-            "heading": "Join our community"
+            "heading": "Sign up for updates"
           }
         },
         "b11eea6f-cbf8-4871-a691-d487dddcbbeb": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Offers, pre-launch previews and all meaningful REAL news before anyone else - Join us.<\/p>"
+            "text": "<p>Sign up for exclusive early sale access and tailored new arrivals.<\/p>"
           }
         },
         "17a10bd1-f155-4325-8ce7-151b3aa7d4de": {
           "type": "email_form",
           "settings": {
-            "button_text": "Sign up"
+            "button_text": "Join"
           }
         }
       },
