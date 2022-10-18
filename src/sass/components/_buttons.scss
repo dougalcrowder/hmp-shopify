@@ -123,7 +123,7 @@ button, input[type="submit"],.btn, .button {
   }
 }
 
-.plus_left {
+.plus_left, .close_left {
   position: relative;
   &:before {
     content: " ";
@@ -152,6 +152,11 @@ button, input[type="submit"],.btn, .button {
       top: 20px;
       height: 1px;
     }
+  }
+}
+.close_left { 
+  &:before, &:after {
+    transform: rotate(45deg);
   }
 }
 

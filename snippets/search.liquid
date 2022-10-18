@@ -1,4 +1,4 @@
-<div class="predictivesearchresults" id="predictiveSearchResults">
+<div class="predictivesearchresults custom_scroll" id="predictiveSearchResults">
   <div class="incider">
     <form class="search-form" action="{{ routes.search_url }}" method="get" role="search">
         <input
@@ -16,7 +16,7 @@
         <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
     
     
-      <button class="search-form_submit nude visually-hidden"
+      <button class="button search-form_submit nude visually-hidden"
         type="submit"
         data-search-form-submit data-no-swup>
         {% include 'icon-search' %}
@@ -31,7 +31,7 @@
     </div>
   </div>
 </div>
-<button class="search_close nude" id="searchClose"><span class="visually-hidden">Close Search</span></button>
+<button class="search_close button nude" id="searchClose"><span class="visually-hidden">Close Search</span></button>
 
 <script>
   function predictiveSearch(query) {

@@ -1,0 +1,66 @@
+<div class="sidecart custom_scroll" id="sidecart">
+<form action="{{ routes.cart_url }}" method="post" class="my-cart">
+  <!-- data-ajax-cart-section makes the element's HTML update
+  when the cart gets changed -->
+  <div data-ajax-cart-section>
+    <small>Bag (<span data-ajax-cart-bind-state="cart.item_count">{{ cart.item_count }}</span>)</small>
+    <div class="h3">Total: {{ cart.total_price | money_with_currency }}</div>
+    <a href="/cart" class="button alt">View Bag</a>
+    <button type="submit" name="checkout" class="button">
+      Checkout<span class="visually-hidden"> — {{ cart.total_price | money_with_currency }}</span>
+    </button> 
+    <!-- data-ajax-cart-section-scroll keeps the scroll position unchanged
+    when the element's HTML is changed -->
+    <div class="my-cart__items" data-ajax-cart-section-scroll>
+      {% for item in cart.items %}
+        {% assign item_index = forloop.index %}
+         
+        <div class="cart_item">
+          <a href="{{ item.url }}">
+            <picture class="productShots">
+              <source srcset="{{  item.image | img_url: '355x506', scale: 2, crop: 'center' }} 2x, {{  item.image | img_url: '355x506', crop: 'center' }}" media="(min-width: 320px)" />
+              <source srcset="{{  item.image | img_url: '305x435', scale: 2, crop: 'center' }} 2x, {{  item.image | img_url: '305x435', crop: 'center' }}" media="(min-width: 300px)" />
+            <img class="prod-shot" src="{{  item.image | img_url: '305x435', crop: 'center' }}" alt="{{  item.image.alt | escape }}" width="60" height="60" />
+            </picture>
+          </a>
+          <a href="/cart/change?line={{ item_index }}&amp;quantity=0" class="remove-button" data-ajax-cart-request-button="">
+            <small class="close_left">Remove</small>
+          </a>
+          <div class="cart_item_text">
+            <h4>{{ item.title }}</h4>
+            <div class="flex qty">
+              <label>Quantity:</label>
+              <!-- data-ajax-cart-quantity-input ajaxifies the line item quantity input -->
+              <input data-ajax-cart-quantity-input="{{ item_index }}"
+                name="updates[]" 
+                value="{{ item.quantity }}" 
+                type="number" />
+            </div>
+            <div>{{ item.final_price | money }}</div>
+            <!-- Container for errors -->
+            <div data-ajax-cart-messages="{{ item.key }}"></div>
+    
+            <div class="visually-hidden">Total: <strong>{{ item.final_line_price | money }}</strong></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <!-- data-ajax-cart-static-element keeps the container unchanged
+    when the cart and the surrounding HTML get updated -->
+    <div data-ajax-cart-static-element class="my-cart__app-container"></div>
+
+    <button type="submit" name="checkout" class="button">
+      Checkout — {{ cart.total_price | money_with_currency }}
+    </button> 
+  </div>
+</form>
+<button id="closeCartx" class="closecart button nude">
+  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7.83958 7.6497L1.07158 14.4671C0.883553 14.6565 0.883553 14.9633 1.07158 15.1527C1.16547 15.2475 1.28875 15.2947 1.4118 15.2947C1.53508 15.2947 1.65812 15.2475 1.75201 15.1527L8.5709 8.28408L15.3898 15.1527C15.4839 15.2475 15.607 15.2947 15.73 15.2947C15.853 15.2947 15.9763 15.2475 16.0702 15.1527C16.2582 14.9633 16.2582 14.6565 16.0702 14.4671L9.30246 7.6497L16.0748 0.827506C16.2628 0.638107 16.2628 0.331267 16.0748 0.141868C15.8867 -0.0472895 15.5821 -0.0472895 15.3943 0.141868L8.57114 7.01533L1.74723 0.142109C1.55921 -0.0470488 1.25483 -0.0470488 1.0668 0.142109C0.878775 0.331508 0.878775 0.638348 1.0668 0.827746L7.83958 7.6497Z" fill="#1D1D1B"/>
+  </svg>
+
+</button>
+</div>
+<button class="cart_close button nude" id="closeCart"><span class="visually-hidden">Close Cart Drawer</span></button>
+{% schema %} { "name": "My Cart" } {% endschema %}

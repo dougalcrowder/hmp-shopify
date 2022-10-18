@@ -36,7 +36,7 @@
         <span class="icon_fallback-text">Search</span>
       </button>
       
-      <a href="{{ routes.cart_url }}" alt="Your Shopping Cart">
+      <a href="{{ routes.cart_url }}" alt="Your Shopping Cart" id="cartToggle">
         {% include 'icon-cart' %}
         <div data-ajax-cart-bind-state="cart.item_count" class="cart_number">
           {{ cart.item_count }}

@@ -251,6 +251,50 @@ function accordions() {
   }
 }
 
+let cartToggle= document.getElementById('cartToggle');
+let closeCartx= document.getElementById('closeCartx');
+let closeCart= document.getElementById('closeCart');
+let sideCart= document.getElementById('sidecart');
+
+cartToggle.addEventListener('click', function (event){
+  if (cartToggle.classList.contains('active')) {
+    cartToggle.classList.remove('active');
+    sideCart.classList.remove('active');
+    document.body.classList.remove("sidecart-active");
+    setTimeout(function() {
+      sideCart.classList.remove('alive');
+    }, 500);
+  } else {
+    cartToggle.classList.add('active');
+    document.body.classList.add("sidecart-active");
+    sideCart.classList.add('alive');
+    setTimeout(function() {
+      sideCart.classList.add('active');
+    }, 50);
+  }
+ event.preventDefault();
+});
+
+closeCartx.addEventListener('click', function (event){
+  if (sideCart.classList.contains('active')) {
+    sideCart.classList.remove('active');
+    document.body.classList.remove("sidecart-active");
+    setTimeout(function() {
+      sideCart.classList.remove('alive');
+    }, 500);
+  }
+});
+closeCart.addEventListener('click', function (event){
+  if (sideCart.classList.contains('active')) {
+    sideCart.classList.remove('active');
+    document.body.classList.remove("sidecart-active");
+    setTimeout(function() {
+      sideCart.classList.remove('alive');
+    }, 500);
+  }
+});
+
+
 // Swup *****************************************************
 ///////////////////////////////////////////////////////////////////////////////////////
 
