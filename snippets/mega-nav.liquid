@@ -1,0 +1,108 @@
+<ul class="site-nav flex level1" id="SiteNav">
+  {% for link in linklists.mega-menu.links %}
+    {%- assign child_list_handle = link.title | handleize -%}
+
+    {% comment %}
+      Check if third-level nav exists on each parent link.
+    {% endcomment %}
+    {%- assign three_level_nav = false -%}
+    {% if link.links != blank %}
+      {% if link.levels == 2 %}
+        {%- assign three_level_nav = true -%}
+      {% endif %}
+    {% endif %}
+
+    {% if link.links != blank %}
+      <li class="column level1_item {{ link.title | handleize }} hasmega{% if link.active %} li_active{% endif %}{% if forloop.index == 100000 %} active{% endif %}" data-has-dropdowns>
+        <a href="{{ link.url }}" class="link level1_parent {% if link.active %} link_active{% endif %}" {% if link.current %} aria-current="page"{% endif %}>
+          <span class="label">{{ link.title | escape }} {% include 'icon-navarrow' %}</span>
+          <div class="triangle"></div>
+        </a>
+        <div class="dropdown" id="navLabel-{{ child_list_handle }}">
+          <div class="dropdown-nav">
+              <ul class="flex level2">
+                {% if link.links != blank %}
+                  {% for childlink in link.links %}
+                  {% if childlink.type == 'product_link'  %}
+                  {% assign navProduct = childlink.object %} 
+                  <li class="product level2_item">
+                    <a href="{{ navProduct.url }}" class="link">
+                    {% assign image =  childlink.object.featured_image %}
+                    <picture>
+                      <source srcset="{{ image | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+                      <source srcset="{{ image | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
+                      <source srcset="{{ image | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
+                      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navProduct.title }}" width="300" height="400" />
+                    </picture>
+                    <div class="uppercase text-center">{{ navProduct.title }}</div>
+                    </a>
+                  </li>
+                  {% else %}
+                    <li class="level2_item{% if childlink.links == blank %} noparentsallowed{% else %} isparent{% endif %}">
+                      <a href="{{ childlink.url }}"
+                        class="level2_parent{% if childlink.active %} link_active{% endif %}"
+                        {% if childlink.current %} aria-current="page"{% endif %}
+                      >
+                        <span class="label h3">{{ childlink.title | escape }}{% if childlink.links != blank %} {% include 'icon-navarrow' %} {% endif %}</span>
+                      </a>
+
+                      {% if childlink.links != blank %}
+                        <ul class="level3">
+                        {% for grandchildlink in childlink.links %}
+                          <li class="level3_item">
+                            <a href="{{ grandchildlink.url }}"
+                            class="link{% if grandchildlink.active %} link_active{% endif %}"
+                            {% if grandchildlink.current %} aria-current="page"{% endif %}
+                          >
+                              <span class="label">{{ grandchildlink.title | escape }}</span>
+                            </a>
+                          </li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endif %}
+                  {% endfor %}
+                  {% assign loopy = link.links | size %}
+                  {% if loopy == 1 %}
+                  <li class="four_image nav_image"></li>
+                  {% endif %}
+                  {% if loopy == 2 %}
+                  <li class="three_image nav_image"></li>
+                  {% endif %}
+                  {% if loopy == 3 %}
+                  <li class="two_image nav_image"></li>
+                  {% endif %}
+                {% endif %}
+              </ul>
+          </div>
+        </div>
+      </li>
+    {% else %}
+      <li class="column level1_item{% if link.active %} li_active{% endif %}">
+        <a href="{{ link.url }}" class="link link_main{% if link.active %} link_active{% endif %}" {% if link.current %} aria-current="page"{% endif %}>
+          <span class="label">{{ link.title | escape }}</span>
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  <li class="nav_footer flex justify-between">
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <a class="flex justify-start content-center" href="{{ routes.account_url }}" class="nav_footer-icon">
+          {% include 'icon-account' %}
+          <span>My Account</span>
+        </a>
+      {% else %}
+        <a class="flex justify-start content-center" href="{{ routes.account_login_url }}" class="nav_footer-icon">
+          {% include 'icon-account' %}
+          <span>Sign in</span>
+        </a>
+      {% endif %}
+    {% endif %}
+    <a class="wishlist flex justify-start content-center" href="#">
+      {% include 'icon-heart' %}
+      <span>Wishlist</span>
+    </a>
+  </li>
+</ul>

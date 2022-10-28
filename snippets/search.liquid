@@ -1,6 +1,7 @@
 <div class="predictivesearchresults custom_scroll" id="predictiveSearchResults">
   <div class="incider">
     <form class="search-form" action="{{ routes.search_url }}" method="get" role="search">
+      {% include 'icon-search' %}
         <input
           type="text"
           name="q"
@@ -18,8 +19,7 @@
     
       <button class="button search-form_submit nude visually-hidden"
         type="submit"
-        data-search-form-submit data-no-swup>
-        {% include 'icon-search' %}
+        data-search-form-submit>
         <span class="visually-hidden">Submit</span>
       </button>
     </form>

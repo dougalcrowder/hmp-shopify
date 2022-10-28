@@ -7,14 +7,7 @@
       </a>
     </span>
     <nav class="navigation" id="accessibleNav" role="navigation">
-      {% include 'site-nav' %}
-      <div class="menu_toggle">
-        <button id="menuTrigger" class="button nude menuburger flex">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </button>
-      </div>
+      {% include 'mega-nav' %}
     </nav>
     <div class="customer_actions flex nowrap">
       {% if shop.customer_accounts_enabled %}
@@ -36,12 +29,19 @@
         <span class="icon_fallback-text">Search</span>
       </button>
       
-      <a href="{{ routes.cart_url }}" alt="Your Shopping Cart" id="cartToggle">
+      <a class="carttoggle" href="{{ routes.cart_url }}" alt="Your Shopping Cart" id="cartToggle">
         {% include 'icon-cart' %}
         <div data-ajax-cart-bind-state="cart.item_count" class="cart_number">
           {{ cart.item_count }}
         </div>
       </a>
+    </div>
+    <div class="menu_toggle">
+      <button id="menuTrigger" class="button nude menuburger flex">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </button>
     </div>
   </header>
 </div>
