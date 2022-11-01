@@ -1,75 +1,47 @@
-{% paginate search.results by 10 %}
+{{ 'styles-searchpage.css' | asset_url | stylesheet_tag }}
+{% paginate search.results by 30 %}
 
-<div class="page-width">
-  {% if search.performed == false %}
-    <div class="text-center">
-      <h1 class="h2">{{ 'general.search.title' | t }}</h1>
-  {% else %}
-    <div class="text-center">
-      <h1 class="h2">
-        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
-        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
-      </h1>
-  {% endif %}
-      <div class="grid">
-        <div class="grid__item medium-up--six-tenths medium-up--push-two-tenths">
+<div class="inner search_page {% if search.results_count > 0 %} results {% endif %}">
+      <h1 class="text-center">Search</h1>
+
+        <div class="flex">
           {% if search.performed and search.results_count == 0 %}
-            <div class="rte search--no-results-found">
-              <p>{{ 'general.search.no_results' | t }}</p>
+            <div class="rte">
+              <p>No results found</p>
             </div>
           {% endif %}
-          <form action="{{ routes.search_url }}" method="get" role="search" class="search-form search-page-form">
-            <div class="input-group input-group--nowrap">
-              <div class="input-group__field input-group__field--connected search-form__input-wrapper">
+          <form action="{{ routes.search_url }}" method="get" role="search" class="flex search_page_form">
                 <input
                   type="search"
                   name="q"
                   value="{{ search.terms | escape }}"
-                  placeholder="{{ 'general.search.placeholder' | t }}"
+                  placeholder="Search here"
                   role="combobox"
-                  aria-autocomplete="list"
-                  aria-owns="predictive-search-results"
-                  aria-expanded="false"
-                  aria-label="{{ 'general.search.placeholder' | t }}"
-                  aria-haspopup="listbox"
-                  class="search-form__input"
-                  data-search-page-predictive-search-input
                 />
-
-                <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
-
-                <button type="reset" class="search-form__clear-action" aria-label="{{ 'general.search.clear_search_term' | t }}" data-search-page-predictive-search-clear>
-                  {% include 'icon-close' %}
-                </button>
-
-                <div class="predictive-search-wrapper" data-predictive-search-mount="default"></div>
-              </div>
-
-              <button type="submit" class="search-form__connected-submit" aria-label="{{ 'general.search.submit' | t }}" data-search-page-predictive-search-submit>
+              <button type="submit" class="button nude" aria-label="{{ 'general.search.submit' | t }}" data-search-page-predictive-search-submit>
                 {% include 'icon-search' %}
               </button>
-            </div>
+              <input type="hidden" name="options[prefix]" value="last" aria-hidden="true" />
+
           </form>
         </div>
-      </div>
-  </div>
+
 </div>
 
 
 {% if search.performed %}
   {% if search.results_count > 0 %}
-    <hr aria-hidden="true" />
+    <div class="text-center">{{ search.results_count }} results</div>
   {% endif %}
 
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
 
-  <ul class="page-width list-view-items">
+  <div class="inner search_results collection_grid product-grid">
     {% for item in search.results %}
-      <li class="list-view-item">
         {% if item.object_type == 'product' %}
-          {% include 'product-card-list', product: item %}
+          {% include 'product-card-grid', product: item %}
         {% else %}
-          <div class="product-card product-card--list">
+          <div class="product-card">
             <a href="{{ item.url }}" class="full-width-link">
               <span class="visually-hidden">{{ item.title }}</span>
             </a>
@@ -85,10 +57,6 @@
               <div class="list-view-item__title-column">
                 <div class="list-view-item__title" aria-hidden="true">
                   <span class="product-card__title">{{ item.title }}</span>
-                </div>
-                <div>
-                  {% if item.published_at %}{{ item.published_at | date: format: "date" }} &#8212; {% endif %}
-                  {{ item.content | strip_html | truncate: 200 }}
                 </div>
               </div>
             </div>
