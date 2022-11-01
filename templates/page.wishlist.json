@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "78820d97-6b83-49b4-8843-efd335b633d9": {
+      "type": "banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hmp-banner-02.jpg",
+        "mobimage": "shopify:\/\/shop_images\/hmp-banner-02.jpg"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "sidenav": "",
+        "hidetitle": true,
+        "hidetext": false,
+        "margin_top": "m",
+        "margin_bot": "m"
+      }
+    }
+  },
+  "order": [
+    "78820d97-6b83-49b4-8843-efd335b633d9",
+    "main"
+  ]
+}
