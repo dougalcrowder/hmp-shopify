@@ -1,10 +1,1 @@
-export default {
-  "moveToCart": false,
-  "loginRequired": false,
-  "sharedWishlistPageHandle": "shared-wishlist",
-  "wishlistPageHandle": "wishlist",
-  "appmateAnalytics": true,
-  "klaviyo": false,
-  "facebookPixel": false,
-  "googleAnalytics": false
-}
+export default {"facebookPixel":false,"googleAnalytics":false,"klaviyo":false,"loginRequired":false,"moveToCart":true,"sharedWishlistPageHandle":"shared-wishlist","wishlistPageHandle":"wishlist"}
