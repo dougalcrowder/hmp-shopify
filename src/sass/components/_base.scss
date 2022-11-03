@@ -39,12 +39,28 @@ html.no-js .no-js-hidden, .no-js:not(html) {
   transform: translateX(-50%);
   border: 1px solid var(--color-black);
   border-radius: 12px;
+  text-align: center;
 }
 [data-tooltip]:hover {
   &:after {
     bottom: 110%;
     height: 24px;
     opacity: 1;
+  }
+  &.tool-sm:after {
+    width: 200px;
+  }
+  &.tool-ml:after {
+    height: 40px;
+    width: 200px;
+  }
+  &.tool-l:after {
+    height: 60px;
+    width: 180px;
+  }
+  &.tool-l:after {
+    height: 60px;
+    width: 200px;
   }
 }
 

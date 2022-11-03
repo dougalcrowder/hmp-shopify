@@ -1,8 +1,52 @@
+{% assign shipping_time =  product.metafields.custom.shipping_time.value %}
+{% if shipping_time != blank %}
+<div class="shipping_time uppercase">{{ shipping_time }}</div>
+{% endif %}
+
+{% assign alt_colours =  product.metafields.custom.alt_colours.value %}
+{% if product.metafields.custom.alt_colours != blank %}
+  <div class="alt_colours">
+    <div class="title uppercase">Colour</div>
+    <div class="flex justify-start">
+    {% for producter in alt_colours %}
+    {% assign titsize =  producter.title | size %}
+    {% assign tipsize =  's' %}
+    {% if titsize > 50 %}{% assign tipsize =  'xl' %}
+    {% elsif titsize > 40 %}{% assign tipsize =  'l' %}
+    {% elsif titsize > 30 %}{% assign tipsize =  'ml' %}
+    {% elsif titsize > 20 %}{% assign tipsize =  'm' %}
+    {% elsif titsize > 15 %}{% assign tipsize =  'sm' %}
+    {% endif %}
+      <a href="{{ producter.url }}" class="alternative_colour tool-{{ tipsize }}{% if producter.title == product.title %} current{% endif %}" data-tooltip="{{ producter.title }}">
+        {% assign colour_ref = producter.metafields.custom.colour_ref.value %}
+        {% if colour_ref != blank %}
+        <div class="swatch" style="background-color: {{ colour_ref }}"></div>
+        {% else %}
+        <div class="swatch simage">
+          {% assign alt_image =  producter.featured_image %}
+          <picture>
+            <source srcset="{{ alt_image | img_url: '32x32', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '32x32', crop: 'center' }} 1x" media="(min-width: 768px)" />
+            <source srcset="{{ alt_image | img_url: '32x32', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '32x32', crop: 'center' }} 1x" media="(min-width: 375px)" />
+            <source srcset="{{ alt_image | img_url: '32x32', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '32x32', crop: 'center' }} 1x" media="(min-width: 200px)" />
+            <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navProduct.title }}" width="32" height="32" />
+          </picture>
+        </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+
+
+
 <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-{{ product.handle }}">  
   {% if product.variants.size > 1 %}
   <div class="variant_options">
     {% if product.options[0] %}
     {% assign used = '' %}
+    {% assign optionName0 = product.options[0] | handleize %}
     <div class="radio_container {{ product.options[0] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
       <strong>{{ product.options[0] }}</strong>
       <fieldset id='select-one' onchange="letsDoThis()">
@@ -12,7 +56,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option1 | handleize }}" for="{{ variant.option1 }}-{{ product.handle }}"  data-tooltip="{{ variant.option1 }}"><span class="visually-hidden">{{ variant.option1 }}</span></label>
+        <label class="{{ variant.option1 | handleize }}" for="{{ variant.option1 }}-{{ product.handle }}" {% if optionName0 == 'color' or optionName0 == 'colour' %} data-tooltip="{{ variant.option1 }}">{% endif %}<span class="label_text">{{ variant.option1 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -22,6 +66,7 @@
     
     {% if product.options[1] %}
     {% assign used = '' %}
+    {% assign optionName1 = product.options[1] | handleize %}
     <div class="radio_container {{ product.options[1] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
       <strong>{{ product.options[1] }}</strong>
       <fieldset id='select-two' onchange="letsDoThis()">
@@ -31,7 +76,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}"  data-tooltip="{{ variant.option2 }}"><span class="visually-hidden">{{ variant.option2 }}</span></label>
+        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}" {% if optionName1 == 'color' or optionName1 == 'colour' %} data-tooltip="{{ variant.option2 }}">{% endif %}<span class="label_text">{{ variant.option2 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -40,6 +85,7 @@
     {% endif %}
     {% if product.options[2] %}
     {% assign used = '' %}
+    {% assign optionName2 = product.options[2] | handleize %}
     <div class="radio_container {{ product.options[2] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
       <strong>{{ product.options[2] }}</strong>
       <select id='select-three' onchange="letsDoThis()">
@@ -49,18 +95,14 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}" data-tooltip="{{ variant.option3 }}"><span class="visually-hidden">{{ variant.option3 }}</span></label>
+        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}" {% if optionName2 == 'color' or optionName2 == 'colour' %} data-tooltip="{{ variant.option3 }}">{% endif %}<span class="label_text">{{ variant.option3 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
       </select>
     </div>
     {% endif %}
-    
-    {% if product.metafields.custom.model_size != blank %}
-      {% assign modelInfo = product.metafields.custom.model_size.value  %}
-      <span class="size-help small">{{ modelInfo}} - <a href="#sizeguide">Size guide</a></span>
-    {% endif %}
+
     
     </div>
   {% endif %}

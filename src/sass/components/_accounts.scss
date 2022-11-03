@@ -1,10 +1,25 @@
 .account_area {
   padding: 160px 12px 120px 12px;
+  input[type="email"], input[type="password"], input[type="text"] {
+    padding: 14px 4px;
+    border-color: var(--color-lightgrey);
+  }
 }
 
 .account_header {
   margin-bottom: 24px;
 }
+
+.grey_link {
+  font-size: 81.25%;
+  padding: 24px 0;
+  a {
+    color: var(--color-lightgrey);
+    text-decoration: underline;
+  }
+}
+
+
 
 .please_login {
   padding-bottom: 60px;
@@ -14,7 +29,7 @@
   width: 100%;
   .text-center {
     input[type="submit"] {
-      width: 100%;
+      min-width: 296px;
     }
   }
 }
@@ -87,7 +102,7 @@
       &:last-child th,
       &:last-child td {
         border-top: 1px solid var(--color-grey);
-        font-weight: 400
+        font-weight: 400;
         padding-top: 1.25em;
         padding-bottom: 1.25em;
         text-transform: uppercase;
@@ -239,7 +254,7 @@
   padding-left: 8px;
 
   @media screen and (min-width: 768px) {
-    padding-left: $gutter-site;
+    padding-left: 16px;
     min-width: 150px;
   }
 }

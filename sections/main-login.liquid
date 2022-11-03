@@ -1,3 +1,4 @@
+{{ 'styles-accounts.css' | asset_url | stylesheet_tag }}
 <div class="container account_area">
   <div class="constrain flex">
 
@@ -8,7 +9,7 @@
 
       <div id="CustomerLoginForm" class="form-vertical">
 
-        <h1 id="LoginHeading" class="text-center">{{ 'customer.login.title' | t }}</h1>
+        <h1 id="LoginHeading" class="h2">{{ 'customer.login_page.title' | t }}</h1>
 
         {% form 'customer_login', novalidate: 'novalidate' %}
 
@@ -19,10 +20,11 @@
             </div>
           {%- endif -%}
 
-          <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+          <label for="CustomerEmail" class="visually-hidden">{{ 'customer.login_page.email' | t }}</label>
           <input
             type="email"
             name="customer[email]"
+            placeholder="{{ 'customer.login_page.email' | t }}"
             id="CustomerEmail"
             autocomplete="email"
             autocorrect="off"
@@ -34,11 +36,12 @@
             >
 
           {% if form.password_needed %}
-            <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+            <label for="CustomerPassword"  class="visually-hidden">{{ 'customer.login_page.password' | t }}</label>
             <input
               type="password"
               value=""
               name="customer[password]"
+              placeholder="{{ 'customer.login_page.password' | t }}"
               id="CustomerPassword"
               {%- if form.errors contains 'form' -%}
                 class="input--error"
@@ -49,13 +52,13 @@
 
           <div class="text-center">
             {% if form.password_needed %}
-              <p><a href="#" id="RecoverPassword" data-no-swup>{{ 'customer.login.forgot_password' | t }}</a></p>
+              <p class="grey_link uppercase"><a href="#" id="RecoverPassword" data-no-swup>{{ 'customer.login_page.forgot_password' | t }}</a></p>
             {% endif %}
 
-            <input type="submit" class="btn" value="{{ 'customer.login.sign_in' | t }}">
+            <input type="submit" class="btn" value="{{ 'customer.login_page.sign_in' | t }}">
 
-            <p>
-              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            <p class="uppercase grey_link">
+              {{ 'customer.login_page.create_account' | t | customer_register_link }}
             </p>
           </div>
 
@@ -79,11 +82,12 @@
               <span class="hide reset-password-success"></span>
             {% endif %}
 
-            <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+            <label for="RecoverEmail"  class="visually-hidden">{{ 'customer.login_page.email' | t }}</label>
             <input
               type="email"
               value=""
               name="email"
+              placeholder="{{ 'customer.login_page.email' | t }}"
               id="RecoverEmail"
               class="input-full{% if form.errors %} input--error{% endif %}"
               autocorrect="off"
@@ -103,10 +107,10 @@
 
             <div class="text-center">
               <p>
-                <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+                <input type="submit" class="btn" value="{{ 'customer.login_page.submit' | t }}">
               </p>
 
-              <a href="#" id="HideRecoverPasswordLink" data-no-swup>{{ 'customer.recover_password.cancel' | t }}</a>
+              <a href="#" id="HideRecoverPasswordLink" data-no-swup>{{ 'customer.login_page.cancel' | t }}</a>
             </div>
           {% endform %}
         </div>
