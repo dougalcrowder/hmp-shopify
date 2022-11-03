@@ -250,7 +250,7 @@
     .triangle {
       @media screen and (min-width: 960px) {
         left: calc(50% - 10px);
-        position: relative;
+        position: absolute;
         //transition: transform 0.3s ease;
         width: 19px;
         height: 19px;
@@ -259,7 +259,7 @@
         transform-origin: center;
         box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
         margin: 0;
-        bottom: 19px;
+        bottom: 0;
         opacity: 0;
         &:after {
           display: block;
