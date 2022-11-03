@@ -139,7 +139,6 @@ function loadeded() {
 }
 
 function bodyCloser() {
-
   const nav = document.getElementById('accessibleNav');
   const heeder = document.querySelector('.site-header');
   const button = document.getElementById('menuTrigger');
@@ -217,23 +216,6 @@ function mobNavigation() {
   
 }
 
-// function setNavigation() {
-//   var nav = document.getElementById("SiteNav"),
-//   anchor = nav.getElementsByTagName("a"),
-//   current = window.location;
-//   
-//   // console.log("anchor = ",anchor,"current = ",current);
-//   
-//   for (var i = 0; i < anchor.length; i++) {
-//   if(anchor[i].href == current) {
-//     anchor[i].className = "site-nav--active";
-//   } else {
-//     anchor[i].className = "site-nav--not_active";
-//   }
-//   
-//   }
-//   
-// }
 
 // account pages stuff
 function accounts() {
@@ -325,29 +307,58 @@ closeCart.addEventListener('click', function (event){
   }
 });
 
-// // Shop
-// let navToggleShop= document.getElementById('navToggle-shop');
-// let dropNavs= document.getElementById('dropNavs').innerHTML;
-// let navDropShop= document.getElementById('shopify-section-nav-drop-shop');
-// 
-// navToggleShop.innerHTML = navToggleShop.innerHTML + dropNavs;
-// navToggleShop.classList.add('hasmega');
-// 
-// //Create Your Own
-// let navToggleCyo= document.getElementById('navToggle-create-your-own');
-// let dropNavsCyo= document.getElementById('dropNavsCyo').innerHTML;
-// let navDropCyo= document.getElementById('shopify-section-nav-drop-create');
-// 
-// navToggleCyo.innerHTML = navToggleCyo.innerHTML + dropNavsCyo;
-// navToggleCyo.classList.add('hasmega');
-// 
-// //Guide
-// let navToggleGuide= document.getElementById('navToggle-guide');
-// let dropNavsGuide= document.getElementById('dropNavsGuide').innerHTML;
-// let navDropGuide= document.getElementById('shopify-section-nav-drop-guide');
-// 
-// navToggleGuide.innerHTML = navToggleGuide.innerHTML + dropNavsGuide;
-// navToggleGuide.classList.add('hasmega'); 
+// // Filters Toggle
+if (document.getElementById('filterToggle')) {
+  let filterToggle = document.getElementById('filterToggle');
+  let closeFilter = document.getElementById('closeFilter');
+  let filterCloser = document.getElementById('filterCloser');
+  let filters= document.getElementById('main-collection-filters');
+  
+  filterToggle.addEventListener('click', function (event){
+    if (filters.classList.contains('active')) {
+      filterToggle.classList.remove('active');
+      filterCloser.classList.remove('active');
+      filters.classList.remove('active');
+      document.body.classList.remove("filter-active");
+      setTimeout(function() {
+        filters.classList.remove('alive');
+      }, 500);
+    } else {
+      filterToggle.classList.add('active');
+      filterCloser.classList.add('active');
+      document.body.classList.add("filter-active");
+      filters.classList.add('alive');
+      setTimeout(function() {
+        filters.classList.add('active');
+      }, 50);
+      
+    }
+   //event.preventDefault();
+  });
+  closeFilter.addEventListener('click', function (event){
+    if (filters.classList.contains('active')) {
+      filterToggle.classList.remove('active');
+      filterCloser.classList.remove('active');
+      filters.classList.remove('active');
+      document.body.classList.remove("filter-active");
+      setTimeout(function() {
+        filters.classList.remove('alive');
+      }, 500);
+    }
+  });
+  filterCloser.addEventListener('click', function (event){
+    if (filters.classList.contains('active')) {
+      filterToggle.classList.remove('active');
+      filterCloser.classList.remove('active');
+      filters.classList.remove('active');
+      document.body.classList.remove("filter-active");
+      setTimeout(function() {
+        filters.classList.remove('alive');
+      }, 500);
+    }
+  });
+};
+
 
 // Swup *****************************************************
 ///////////////////////////////////////////////////////////////////////////////////////

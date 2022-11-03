@@ -141,6 +141,18 @@
       target.insertBefore(WishlistKing.createComponent("wishlist-link"));
     }
   );
+  
+
+  // Mob Nav link
+  
+  WishlistKing.observe(
+    {
+      selector: ".site-nav .wishlist",
+    },
+    (target) => {
+      target.prepend(WishlistKing.createComponent("wishlist-link"));
+    }
+  );
 
 
   // Wishlist button on product page

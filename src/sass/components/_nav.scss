@@ -8,7 +8,7 @@
     position: relative;
     font-weight: 700;
     transition: all 0.3s ease;
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 960px) {
       font-size: 87.5%;
       color: var(--color-lightgrey);
       font-weight: 400;
@@ -16,7 +16,7 @@
     > span {
       display: block;
       line-height: 48px;
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 960px) {
         line-height: 88px;
         padding: 0 16px;
       }
@@ -39,11 +39,11 @@
     margin-bottom: -3px;
     transform: rotate(-90deg);
     transition: all 0.3s ease;
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 960px) {
       display: none;
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 960px) {
     overflow-y: auto;
     flex-wrap: wrap;
     position: absolute;
@@ -89,7 +89,7 @@
 
 .navigation.active {
   .site-nav {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 960px) {
       transform: translateX(385px);
       li.level1_item {
         animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.4s both;
@@ -140,17 +140,17 @@
 
 .dropdown-nav {
   padding: 0 0 24px 24px;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 960px) {
     padding: 0 32px;
     max-width: 1260px;
     margin: 0 auto;
   }
   ul.flex {
     gap: 8px 24px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 960px) {
       justify-content: flex-start;
     }
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 960px) {
       //flex-wrap: nowrap;
     }
     span.h3 {
@@ -176,13 +176,13 @@
       opacity: 1;
       flex: 1 1 100%;
       min-width: 100%;
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 960px) {
         > a {
           display: block;
           line-height: 48px;
         }
       }
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 960px) {
         flex: 0 1 20%;
         flex-basis: calc(20% - 20px);
         min-width: calc(20% - 20px);
@@ -198,14 +198,14 @@
           line-height: 1.2;
         }
       }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 960px) {
         flex: 0 1 50%;
         flex-basis: calc(50% - 20px);
         min-width: calc(50% - 20px);
       }
     }
     ul.level3 {
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 960px) {
         padding-left: 24px;
       }
     }
@@ -220,11 +220,11 @@
     opacity: 0;
     width: 100%;
     padding: 0;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 960px) {
       max-height: 0px;
       overflow: hidden;
     }
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 960px) {
       display: none;
       visibility: hidden;
       transition: opacity 0.2s ease-in;
@@ -248,7 +248,7 @@
   .level1_parent {
     position: relative;
     .triangle {
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 960px) {
         left: calc(50% - 10px);
         position: relative;
         //transition: transform 0.3s ease;
@@ -275,14 +275,14 @@
           width: 33px;
         }
       }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 960px) {
         display: none;
         visibility: hidden;
       }
     }
   }
   ul.level3 {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 960px) {
       transition: all 0.3s ease-in;
       opacity: 0;
       max-height: 0px;
@@ -290,7 +290,7 @@
     }
   }
   .level2_item.isparent {
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 960px) {
       &.active {
         span .navarrow {
           margin-bottom: -1px;
@@ -349,7 +349,7 @@
           margin-bottom: -1px;
         }
         .triangle {
-          @media screen and (min-width: 800px) {
+          @media screen and (min-width: 960px) {
             animation: fade-in-reg 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.3s both;
             opacity: 1;
           }
@@ -357,11 +357,11 @@
       }
     .dropdown {
       opacity: 1;
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 960px) {
         max-height: 150vh;
         overflow: visible;
       }
-      @media screen and (min-width: 800px) {
+      @media screen and (min-width: 960px) {
         display: block;
         visibility: visible;
         animation: fade-in-reg 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
@@ -372,30 +372,30 @@
       ul.flex {
         > li {
           animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
-          @media screen and (min-width: 800px) {
+          @media screen and (min-width: 960px) {
             animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.4s both;
           }
           &:nth-child(2){
             animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 960px) {
               animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
             }
           }
           &:nth-child(3){
             animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 960px) {
               animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.6s both;
             }
           }
           &:nth-child(4){
             animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.7s both;
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 960px) {
               animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.7s both;
             }
           }
           &:nth-child(5){
             animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
-            @media screen and (min-width: 800px) {
+            @media screen and (min-width: 960px) {
               animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
             }
           }
@@ -403,10 +403,10 @@
           
         }
         li.nav_image {
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 960px) {
             display: none;
           }
-          @media screen and (min-width: 800px) {
+          @media screen and (min-width: 960px) {
             background-color: var(--color-grey);
             min-height: 200px;
             &.four_image {

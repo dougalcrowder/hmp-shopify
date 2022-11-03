@@ -100,9 +100,11 @@
         </a>
       {% endif %}
     {% endif %}
-    <a class="wishlist flex justify-start content-center" href="#">
+    <div class="wishlist flex justify-start content-center" href="#">
+      {% comment %}
       {% include 'icon-heart' %}
       <span>Wishlist</span>
-    </a>
+      {% endcomment %}
+    </div>
   </li>
 </ul>

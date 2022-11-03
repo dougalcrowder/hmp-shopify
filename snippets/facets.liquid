@@ -24,7 +24,7 @@
 
 <div class="facets-container">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
-    <facet-filters-form class="facets small-hide">
+    <facet-filters-form class="facets">
       <form id="FacetFiltersForm" class="{% if filter_type == 'horizontal' %}facets__form{% else %}facets__form-vertical{% endif %}">
         {%- if results.terms -%}
           <input type="hidden" name="q" value="{{ results.terms | escape }}">
@@ -766,3 +766,9 @@
     {% endcomment %}
   {%- endif -%}
 </div>
+<button class="button nude closeFilter" id="closeFilter">
+  <span class="icon_fallback-text">
+    Close the filter dialogue
+  </span>
+  {% render 'close' %}
+</button>

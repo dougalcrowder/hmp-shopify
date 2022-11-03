@@ -44,7 +44,7 @@
   {% endif %}
   
   <div class="filters">
-    <button id="mob_filter-toggle" class="mob_filter-toggle button nude plus_left">Refine Elements</button>
+    <button id="filterToggle" class="mob_filter-toggle button nude plus_left">Refine Elements</button>
     <aside aria-labelledby="verticalTitle" class="facets-wrapper" id="main-collection-filters" data-id="{{ section.id }}">
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
     </aside>
@@ -71,7 +71,7 @@
   {% endpaginate %}
 </div>
 
-
+<button id="filterCloser" class="filterCloser button nude"><span class="visually-hidden">Close filter dialogue</span></button>
 
 
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
