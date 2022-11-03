@@ -1,8 +1,19 @@
 .text_and_title {
+  grid-column: 1 / span 12;
   @media screen and (min-width: 768px) {
     grid-column: 3 / span 8;
   }
+  @media screen and (min-width: 1024px) {
+    grid-column: 3 / span 8;
+  }
   .flex {
+    align-content: flex-start;
+    .title {
+      flex: 1 0 100%;
+    }
+    .text {
+      flex: 1 0 100%;
+    }
     @media screen and (min-width: 768px) {
       gap: 24px;
       flex-wrap: nowrap;
@@ -14,6 +25,30 @@
         flex: 0 0 75%;
       }
     }
+  }
+}
+
+.rte {
+  font-weight: 300;
+}
+
+.page_nav {
+  display: none;
+  visibility: hidden;
+  li {
+    a {
+      font-family: var(--font-heading-family);
+      font-weight: 700;
+      color: var(--color-black);
+      text-transform: uppercase;
+      font-style: normal;
+      margin: 0 0 8px 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    visibility: visible;
+    grid-column: 1 / span 2;
   }
 }
 
