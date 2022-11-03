@@ -1,4 +1,3 @@
-{% render 'app_wishlist-king' %}
 {{ 'styles-collections.css' | asset_url | stylesheet_tag }}
 
 <div id="shopify-section-collection-template" class="collection-template">
@@ -45,6 +44,7 @@
   {% endif %}
   
   <div class="filters">
+    <button id="mob_filter-toggle" class="mob_filter-toggle button nude plus_left">Refine Elements</button>
     <aside aria-labelledby="verticalTitle" class="facets-wrapper" id="main-collection-filters" data-id="{{ section.id }}">
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
     </aside>

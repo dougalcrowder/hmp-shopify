@@ -1,15 +1,15 @@
-{% render 'app_wishlist-king' %}
+
 {{ 'styles-page.css' | asset_url | stylesheet_tag }}
 
 <div class="page">
   <div class="section-header {{ page.handle }}{% if section.settings.hidetitle %} visually-hidden{% endif %}">
     <h1>{{ page.title }}</h1>
   </div>
-  {% if section.settings.hidetext %}
-  <div class="rte">
+  {% unless section.settings.hidetext %}
+  <div class="rte inner">
     {{ page.content }}
   </div>
-  {% endif %}
+  {% endunless %}
   <div class="grid">
     {% if section.settings.sidenav != blank %}
     {%- assign page_linklist = section.settings.sidenav -%}

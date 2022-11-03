@@ -21,4 +21,20 @@
   > .grid {
     padding-top: 56px;
   }
+  &.basic {
+    padding-top: 56px;
+    @media screen and (min-width: 960px) {
+      padding-top: 120px;
+    }
+  }
+}
+
+.template-page-wishlist {
+  .wk-page {
+    max-width: 1352px;
+    padding: 0 16px;
+  }
+  .wk-product-title.wk-product-title {
+    font-weight: 400;
+  }
 }

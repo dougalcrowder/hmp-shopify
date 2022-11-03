@@ -1,14 +1,14 @@
 {
-  "\/products.js": "\/products.js",
-  "\/scripts.js": "\/scripts.js",
-  "\/styles-top.css": "\/styles-top.css",
-  "\/styles-bot.css": "\/styles-bot.css",
-  "\/styles-article.css": "\/styles-article.css",
-  "\/styles-blog.css": "\/styles-blog.css",
-  "\/styles-cart.css": "\/styles-cart.css",
-  "\/styles-collections.css": "\/styles-collections.css",
-  "\/styles-page.css": "\/styles-page.css",
-  "\/styles-product.css": "\/styles-product.css",
-  "\/styles-swiffy.css": "\/styles-swiffy.css",
-  "\/styles-searchpage.css": "\/styles-searchpage.css"
+    "/products.js": "/products.js",
+    "/scripts.js": "/scripts.js",
+    "/styles-top.css": "/styles-top.css",
+    "/styles-bot.css": "/styles-bot.css",
+    "/styles-article.css": "/styles-article.css",
+    "/styles-blog.css": "/styles-blog.css",
+    "/styles-cart.css": "/styles-cart.css",
+    "/styles-collections.css": "/styles-collections.css",
+    "/styles-page.css": "/styles-page.css",
+    "/styles-product.css": "/styles-product.css",
+    "/styles-swiffy.css": "/styles-swiffy.css",
+    "/styles-searchpage.css": "/styles-searchpage.css"
 }

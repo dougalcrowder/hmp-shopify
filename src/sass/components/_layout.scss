@@ -26,7 +26,23 @@ html {
     max-width: 100%;
   }
 }
-
+.mininner {
+  margin: 0 auto;
+  padding: 0 16px;
+  @media screen and (min-width: 768px) {
+    padding: 0 16px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 0 24px;
+    max-width: 840px;
+  }
+  @media screen and (min-width: 1320px) {
+    padding: 0 32px;
+  }
+  &.no-max {
+    max-width: 100%;
+  }
+}
 
 /*================ #Grid Layouts ================*/
 .grid {

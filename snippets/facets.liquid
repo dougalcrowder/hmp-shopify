@@ -130,7 +130,7 @@
               {% case filter.type %}
               {% when 'boolean' or 'list' %} 
               {% unless thetype == 'type' or thetype == 'body-placement' %}
-                <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{{ filter.type }} filter-{{ filter.label | handleize }} js-filter" data-index="{{ forloop.index }}"{% if filter_type == 'vertical' and forloop.index == 1 %} open{% endif %}>
+                <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{{ filter.type }} filter-{{ filter.label | handleize }} js-filter" data-index="{{ forloop.index }}">
                   <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
                     
                       <span class="facet_name plus_left">{{ filter.label | escape }}
