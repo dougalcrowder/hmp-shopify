@@ -110,8 +110,20 @@ html {
 .items-center {
   align-items: center;
 }
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
 .content-center {
   align-content: center;
+}
+.content-start {
+  align-content: flex-start;
+}
+.content-end {
+  align-content: flex-end;
 }
 .nowrap {
   flex-wrap: nowrap; 
