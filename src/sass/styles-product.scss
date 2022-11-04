@@ -1,9 +1,15 @@
 .product-template {
   .product_grid {
     padding-top: 80px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     display: grid;
     gap: 16px;
+    .product-detail {
+      padding: 12px;
+      .product-description {
+        padding-top: 32px;
+      }
+    }
     @media screen and (min-width: 768px) {
       gap: 24px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -16,15 +22,9 @@
       .product-detail {
         grid-column: 3 / span 1;
         padding: 4px 10px 0 10px;
-        @media screen and (min-width: 768px) {
-          padding: 4px 24px 0;
-        }
         .price {
           font-size: 81.25%;
           font-style: normal;
-        }
-        .product-description {
-          padding-top: 32px;
         }
       }
     }
@@ -55,9 +55,16 @@
     flex-wrap: nowrap;
     margin-bottom: 16px;
     strong {
-      flex: 1 1 60px;
       font-weight: 400;
       font-size: 81.25%;
+      padding: 0 0 16px 0;
+      display: block;
+    }
+    &.flex {
+      strong {
+        flex: 1 1 60px;
+        padding: 0;
+      }
     }
     fieldset {
       flex: 1 1 100%;
@@ -69,8 +76,8 @@
         height: 1px;
         width: 1px;
         &+label {
-          font-size: 100%;
-          border: 1px solid var(--color-black);
+          font-size: 75%;
+          border-bottom: 1px solid transparent;
           color: white;
           display: inline-block;
           padding: 0 10px;
@@ -85,8 +92,8 @@
           font-style: normal;
         }
         &:checked+label {
-          background-color: var(--color-black);
-          color: white;
+          border-bottom: 1px solid var(--color-black);
+          //color: white;
         }
       }
     }
@@ -208,7 +215,7 @@
     gap: 16px;
   }
   .title {
-    margin-bottom: 8px;
+    padding-bottom: 16px;
     font-size: 81.25%;
   }
   .swatch {

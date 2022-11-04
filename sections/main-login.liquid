@@ -67,7 +67,7 @@
 
       <div id="RecoverPasswordForm" class="hide">
 
-        <div class="text-center">
+        <div class="recover_pass">
           <h2 id="RecoverHeading">{{ 'customer.recover_password.title' | t }}</h2>
           <p>{{ 'customer.recover_password.subtext' | t }}</p>
         </div>
@@ -105,9 +105,9 @@
               </span>
             {%- endif -%}
 
-            <div class="text-center">
+            <div class="text-center recover_pass">
               <p>
-                <input type="submit" class="btn" value="{{ 'customer.login_page.submit' | t }}">
+                <input type="submit" class="button" value="{{ 'customer.login_page.submit' | t }}">
               </p>
 
               <a href="#" id="HideRecoverPasswordLink" data-no-swup>{{ 'customer.login_page.cancel' | t }}</a>

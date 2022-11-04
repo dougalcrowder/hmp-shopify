@@ -1,22 +1,23 @@
+{{ 'styles-accounts.css' | asset_url | stylesheet_tag }}
 <div class="container account_area">
   <div class="constrain flex">
     <div class="login_form">
 
       <div class="form-vertical">
 
-        <h1 class="text-center">{{ 'customer.register.title' | t }}</h1>
+        <h1 class="h2">{{ 'customer.register.title' | t }}</h1>
 
         {%- assign formId = 'RegisterForm' -%}
         {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
           {% include 'form-status', form: form, form_id: formId %}
 
-          <label for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
-          <input type="text" name="customer[first_name]" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocomplete="given-name">
+          <label class="visually-hidden" for="{{ formId }}-FirstName">{{ 'customer.register.first_name' | t }}</label>
+          <input type="text" placeholder="{{ 'customer.register.first_name' | t }}" name="customer[first_name]" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocomplete="given-name">
 
-          <label for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
-          <input type="text" name="customer[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocomplete="family-name">
+          <label class="visually-hidden" for="{{ formId }}-LastName">{{ 'customer.register.last_name' | t }}</label>
+          <input type="text" placeholder="{{ 'customer.register.last_name' | t }}" name="customer[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocomplete="family-name">
 
-          <label for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
+          <label class="visually-hidden" for="{{ formId }}-email">{{ 'customer.register.email' | t }}</label>
           <input
             type="email"
             name="customer[email]"
@@ -26,6 +27,7 @@
             autocorrect="off"
             autocapitalize="off"
             autocomplete="email"
+            placeholder="{{ 'customer.register.email' | t }}"
             aria-required="true"
             {%- if form.errors contains 'email' -%}
               class="input--error"
@@ -40,10 +42,11 @@
             </span>
           {%- endif -%}
 
-          <label for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
+          <label class="visually-hidden" for="{{ formId }}-password">{{ 'customer.register.password' | t }}</label>
           <input
             type="password"
             name="customer[password]"
+            placeholder="{{ 'customer.register.password' | t }}"
             id="{{ formId }}-password"
             class="{% if form.errors contains 'password' %} input--error{% endif %}"
             aria-required="true"
@@ -58,8 +61,16 @@
               <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
             </span>
           {%- endif -%}
-
-          <p class="text-center">
+          <div class="accepts-marketing">
+            <input type="hidden" name="customer[accepts_marketing]" value="false" />
+            <label class="custom_box">
+              <input type="checkbox" name="customer[accepts_marketing]" />
+              <span class="checkmark"></span>
+              <span>Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.</span>
+            </label> 
+          </div>
+          <div class="terms"><p>By signing up you agree to <a href="/pages/terms-and-conditions">Terms of Service</a> and <a href="/pages/privacy-policy">Privacy Policy</a></p></div>
+          <p class="text-center recover_pass">
             <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
           </p>
 

@@ -42,17 +42,18 @@
             {%- for image in product.images -%}
             <li class="product_shot  glide__slide">
               <picture class="productShots">
-                  <source srcset="{{ image | img_url: '1024x1024', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1440x1440', crop: 'center' }}" media="(min-width: 1600px)" />
-                  <source srcset="{{ image | img_url: '1001x1001', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1001x1001', crop: 'center' }}" media="(min-width: 1320px)" />
-                  <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 1200px)" />
-                  <source srcset="{{ image | img_url: '601x601', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '601x601', crop: 'center' }}" media="(min-width: 1024px)" />
-                  <source srcset="{{ image | img_url: '540x540', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '540x540', crop: 'center' }}" media="(min-width: 769px)" />
-                  <source srcset="{{ image | img_url: '721x721', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '721x721', crop: 'center' }}" media="(min-width: 660px)" />
-                  <source srcset="{{ image | img_url: '613x613', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '613x613', crop: 'center' }}" media="(min-width: 550px)" />
-                  <source srcset="{{ image | img_url: '503x503', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '503x503', crop: 'center' }}" media="(min-width: 450px)" />
-                  <source srcset="{{ image | img_url: '403x403', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '403x403', crop: 'center' }}" media="(min-width: 375px)" />
-                  <source srcset="{{ image | img_url: '328x328', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '328x328', crop: 'center' }}" media="(min-width: 320px)" />
-                <img class="prod-shot" src="{{ image | img_url: '304x304', crop: 'center' }}" alt="{{ image.alt | escape }}" width="image.width" height="image.height" />
+                  <source srcset="{{ image | img_url: '1400x1050', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1400x1050', crop: 'center' }}" media="(min-width: 1681px)" />
+                  <source srcset="{{ image | img_url: '1102x827', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '1102x827', crop: 'center' }}" media="(min-width: 1441px)" />
+                  <source srcset="{{ image | img_url: '942x707', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '942x707', crop: 'center' }}" media="(min-width: 1320px)" />
+                  <source srcset="{{ image | img_url: '862x647', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '862x647', crop: 'center' }}" media="(min-width: 1200px)" />
+                  <source srcset="{{ image | img_url: '782x587', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '782x587', crop: 'center' }}" media="(min-width: 1025px)" />
+                  <source srcset="{{ image | img_url: '665x499', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '665x499', crop: 'center' }}" media="(min-width: 768px)" />
+                  <source srcset="{{ image | img_url: '767x1023', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '767x1023', crop: 'center' }}" media="(min-width: 661px)" />
+                  <source srcset="{{ image | img_url: '660x880', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '660x880', crop: 'center' }}" media="(min-width: 551px)" />
+                  <source srcset="{{ image | img_url: '550x733', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '550x733', crop: 'center' }}" media="(min-width: 451px)" />
+                  <source srcset="{{ image | img_url: '450x600', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '450x600', crop: 'center' }}" media="(min-width: 376px)" />
+                  <source srcset="{{ image | img_url: '375x500', scale: 2, crop: 'center' }} 2x, {{ image | img_url: '375x500', crop: 'center' }}" media="(min-width: 321px)" />
+                <img class="prod-shot" src="{{ image | img_url: '320x427', crop: 'center' }}" alt="{{ image.alt | escape }}" width="image.width" height="image.height" />
               </picture>
             </li>
             {%- endfor -%}

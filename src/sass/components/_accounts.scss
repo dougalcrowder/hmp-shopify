@@ -1,8 +1,33 @@
 .account_area {
+  h1.h2 {
+    margin-bottom: 16px;
+  }
   padding: 160px 12px 120px 12px;
   input[type="email"], input[type="password"], input[type="text"] {
     padding: 14px 4px;
     border-color: var(--color-lightgrey);
+    font-size: 87.5%;
+    margin-bottom: 16px;
+  }
+  label, p {
+    font-size: 87.5%;
+  }
+  p {
+    color: var(--color-midgrey);
+    a {
+      color: var(--color-black);
+    }
+  }
+  .grey_link {
+    font-size: 81.25%;
+    padding: 24px 0;
+    p a, a {
+      color: var(--color-lightgrey);
+      text-decoration: underline;
+    }
+  }
+  label.custom_box .checkmark {
+    top: 3px;
   }
 }
 
@@ -10,14 +35,7 @@
   margin-bottom: 24px;
 }
 
-.grey_link {
-  font-size: 81.25%;
-  padding: 24px 0;
-  a {
-    color: var(--color-lightgrey);
-    text-decoration: underline;
-  }
-}
+
 
 
 
@@ -25,7 +43,7 @@
   padding-bottom: 60px;
 }
 .login_form {
-  max-width: 380px;
+  max-width: 490px;
   width: 100%;
   .text-center {
     input[type="submit"] {
@@ -33,7 +51,11 @@
     }
   }
 }
-
+.recover_pass {
+  input[type="submit"] {
+    margin-top: 24px;
+  }
+}
 .myaccount {
 
 }

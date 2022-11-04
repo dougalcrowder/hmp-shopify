@@ -48,7 +48,7 @@
     {% assign used = '' %}
     {% assign optionName0 = product.options[0] | handleize %}
     <div class="radio_container {{ product.options[0] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
-      <strong>{{ product.options[0] }}</strong>
+      <strong class="title uppercase">{{ product.options[0] }}</strong>
       <fieldset id='select-one' onchange="letsDoThis()">
         {% for variant in product.variants %}
         {% unless used contains variant.option1 %}
@@ -68,7 +68,7 @@
     {% assign used = '' %}
     {% assign optionName1 = product.options[1] | handleize %}
     <div class="radio_container {{ product.options[1] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
-      <strong>{{ product.options[1] }}</strong>
+      <strong class="title uppercase">{{ product.options[1] }}</strong>
       <fieldset id='select-two' onchange="letsDoThis()">
         {% for variant in product.variants %}
         {% unless used contains variant.option2 %}
@@ -87,7 +87,7 @@
     {% assign used = '' %}
     {% assign optionName2 = product.options[2] | handleize %}
     <div class="radio_container {{ product.options[2] | handleize }}{% if section.settings.ownline %} flex{% endif %}">
-      <strong>{{ product.options[2] }}</strong>
+      <strong class="title uppercase">{{ product.options[2] }}</strong>
       <select id='select-three' onchange="letsDoThis()">
         {% for variant in product.variants %}
         {% unless used contains variant.option3 %}
