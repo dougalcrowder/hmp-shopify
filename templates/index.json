@@ -110,7 +110,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "New Arrivals",
-        "collection": "latest-products",
+        "collection": "shop",
         "margin_top": "m",
         "margin_bot": "m"
       }
