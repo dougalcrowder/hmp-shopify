@@ -2,6 +2,37 @@
   <a href="{{ product.url }}">
     {% include 'product-card-image' %}
     <div class="text">
+      
+      {% assign alt_colours =  product.metafields.custom.alt_colours.value %}
+      {% if product.metafields.custom.alt_colours != blank %}
+        <div class="collection_alt_colours">
+          <div class="flex justify-start">
+          {% for producter in alt_colours %}
+          {% comment %}
+            <a href="{{ producter.url }}" class="alternative_colour{% if producter.title == product.title %} current{% endif %}">
+          {% endcomment %}
+              {% assign colour_ref = producter.metafields.custom.colour_ref.value %}
+              {% if colour_ref != blank %}
+              <div class="swatch" style="background-color: {{ colour_ref }}"></div>
+              {% else %}
+              <div class="swatch simage">
+                {% assign alt_image =  producter.featured_image %}
+                <picture>
+                  <source srcset="{{ alt_image | img_url: '10x10', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '10x10', crop: 'center' }} 1x" media="(min-width: 768px)" />
+                  <source srcset="{{ alt_image | img_url: '10x10', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '10x10', crop: 'center' }} 1x" media="(min-width: 375px)" />
+                  <source srcset="{{ alt_image | img_url: '10x10', crop: 'center', scale: 2 }} 2x, {{ alt_image | img_url: '10x10', crop: 'center' }} 1x" media="(min-width: 200px)" />
+                  <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navProduct.title }}" width="10" height="10" />
+                </picture>
+              </div>
+              {% endif %}
+              {% comment %}
+            </a>
+            {% endcomment %}
+          {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      
       <h2 class="h4">{{ product.title }}</h2>
       {% include 'product-price' %}
     </div>

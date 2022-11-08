@@ -47,6 +47,7 @@
                   {%- endunless -%}
                 </div>
                 {%- for filter in results.filters -%}
+                {% comment %}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button">
@@ -58,6 +59,7 @@
                       </a>
                     </facet-remove>
                   {%- endfor -%}
+                  {% endcomment %}
                   {% if filter.type == "price_range" %}
                     {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
                       <facet-remove>
@@ -82,7 +84,6 @@
               
               {% assign thetype = filter.label | handleize %}
               {% if thetype == 'type' or thetype == 'body-placement' %}
-              
               <fieldset class="facets-wrap statics">
                 <legend class="h3">{{ filter.label | escape }}</legend>
                 <ul class="list-unstyled no-js-hidden" role="list">
@@ -129,7 +130,9 @@
               {%- for filter in results.filters -%}
               {% case filter.type %}
               {% when 'boolean' or 'list' %} 
-              {% unless thetype == 'type' or thetype == 'body-placement' %}
+              {% assign thetype = filter.label | handleize %}
+              {% if thetype == 'type' or thetype == 'body-placement' %}
+              {% else %}
                 <details id="Details-{{ forloop.index }}-{{ section.id }}" class="{{ filter.type }} filter-{{ filter.label | handleize }} js-filter" data-index="{{ forloop.index }}">
                   <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
                     
@@ -194,7 +197,7 @@
                   </div>
                 </details>
                 
-              {% endunless %}
+              {% endif %}
               
               {% when 'price_range' %}
                 {% liquid

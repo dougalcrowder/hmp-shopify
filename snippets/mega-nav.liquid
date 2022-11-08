@@ -34,7 +34,25 @@
                       <source srcset="{{ image | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
                       <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navProduct.title }}" width="300" height="400" />
                     </picture>
+                    {% unless childlink.title == 'hidden' %}
                     <div class="uppercase text-center">{{ navProduct.title }}</div>
+                    {% endunless %}
+                    </a>
+                  </li>
+                  {% elsif childlink.type == 'collection_link' and childlink.title contains 'image_style' %}
+                  {% assign navCollection = childlink.object %} 
+                  <li class="product level2_item">
+                    <a href="{{ navCollection.url }}" class="link">
+                    {% assign nav_image =  navCollection.image %}
+                    <picture>
+                      <source srcset="{{ nav_image | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+                      <source srcset="{{ nav_image | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
+                      <source srcset="{{ nav_image | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
+                      <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navCollection.title }}" width="300" height="400" />
+                    </picture>
+                    {% unless childlink.title == 'hidden' %}
+                    <div class="uppercase text-center">{{ navCollection.title }}</div>
+                    {% endunless %}
                     </a>
                   </li>
                   {% else %}

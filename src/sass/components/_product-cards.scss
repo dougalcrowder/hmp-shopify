@@ -1,4 +1,16 @@
 .product_card {
+  .collection_alt_colours {
+    padding-bottom: 4px;
+    .flex {
+      gap: 8px;
+    }
+  }
+  .swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transition: opacity 0.2s ease-in;
+  }
   a {
     display: block;
     position: relative;
@@ -11,12 +23,18 @@
       }
     }
     .hover & {
+      .swatch {
+        opacity: 0;
+      }
       h2 {
         font-size: 81.25%;
         transition: opacity 0.2s ease-in;
         opacity: 0;
       }
       &:hover {
+        .swatch {
+          opacity: 1;
+        }
         h2 {
           opacity: 1;
         }

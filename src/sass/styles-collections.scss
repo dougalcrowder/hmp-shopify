@@ -62,6 +62,18 @@
   }
 }
 
+.collection_alt_colours {
+  padding-bottom: 4px;
+  .flex {
+    gap: 8px;
+  }
+}
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
 html {
   div {
     .product_card {
