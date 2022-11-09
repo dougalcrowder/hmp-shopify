@@ -1,5 +1,9 @@
 {
   "current": {
+    "menu1": "guide",
+    "bg_image1": "shopify:\/\/shop_images\/guide_bg.jpg",
+    "menu2": "about-us",
+    "bg_image2": "shopify:\/\/shop_images\/hmp-banner-03.jpg",
     "sections": {
       "header": {
         "type": "header",
