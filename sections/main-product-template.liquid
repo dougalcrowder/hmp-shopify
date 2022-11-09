@@ -38,7 +38,8 @@
       
     </script>
   <div class="product_grid">
-    <ul id="productImages" class="product-images" >
+    <div class="product-images">
+    <ul id="productImages">
             {%- for image in product.images -%}
             <li class="product_shot  glide__slide">
               <picture class="productShots">
@@ -68,6 +69,8 @@
             </li>
             {% endif %}
           </ul>
+        {% render 'breadcrumbs' %}
+    </div>
     <div class="product-detail" id="addto">
       <div class="sticky">
       <div class="detail-inner">

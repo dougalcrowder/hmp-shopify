@@ -1,7 +1,7 @@
 /*================ #Basic Styles ================*/
 body,
 html {
-  background-color: var(--color-white);
+  background-color: var(--color-bg);
   scroll-behavior: smooth;
 }
 .container {
@@ -66,13 +66,13 @@ html {
   gap: 16px;
   @media screen and (min-width: 768px) {
     gap: 56px;
+  }
+  @media screen and (min-width: 960px) {
+    gap: 64px;
     grid-template-columns: repeat(3, 1fr);
   }
-  @media screen and (min-width: 1024px) {
-    gap: 64px;
-  }
   &.four {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 960px) {
       grid-template-columns: repeat(4, 1fr);
     }
   }

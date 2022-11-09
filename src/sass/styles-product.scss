@@ -4,6 +4,18 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
     display: grid;
     gap: 16px;
+    .product-images { 
+      position: relative;
+      .breadcrumbs {
+        position: absolute;
+        top: 16px;
+        left: 24px;
+        @media screen and (min-width: 1260px) {
+          top: 24px;
+          left: 48px;
+        }
+      }
+    }
     .product-detail {
       padding: 12px;
       .product-description {
@@ -28,6 +40,13 @@
         }
       }
     }
+    @media screen and (min-width: 960px) {
+      padding-top: 104px;
+      gap: 32px;
+    }
+    @media screen and (min-width: 1260px) {
+      gap: 48px;
+    }
   }
   form {
     margin-top: 32px;
@@ -38,6 +57,12 @@
     align-items: stretch; 
     align-content: stretch;
     gap: 8px;
+    @media screen and (min-width: 960px) {
+      max-width: 310px;
+    }
+    @media screen and (min-width: 1440px) {
+      max-width: 500px;
+    }
   }
   .variant_options {
     flex: 0 1 100%;
@@ -229,3 +254,5 @@
     }
   }
 }
+
+@import "components/breadcrumbs";

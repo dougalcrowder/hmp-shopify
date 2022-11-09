@@ -51,7 +51,7 @@
     width: 375px;
     padding: 140px 20px 20px 20px;
     height: 100vh;
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
     align-content: flex-start;
     transition: all 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000);
@@ -74,7 +74,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-bg);
   padding: 24px;
   display: none;
   visibility: hidden;
@@ -243,7 +243,7 @@
         content: " ";
         position: absolute;
         inset: 0;
-        background-color: var(--color-white);
+        background-color: var(--color-bg);
         box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
         animation: fadeoutDelay 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.1s both;
       }
@@ -258,7 +258,7 @@
         //transition: transform 0.3s ease;
         width: 19px;
         height: 19px;
-        background-color: var(--color-white);
+        background-color: var(--color-bg);
         transform: rotate(45deg) translateY(0) ;
         transform-origin: center;
         box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.2);
@@ -269,7 +269,7 @@
           display: block;
           transform: rotate(-45deg);
           content: " ";
-          background-color: var(--color-white);
+          background-color: var(--color-bg);
           // background-color: red;
           height: 17px;
           position: absolute;
