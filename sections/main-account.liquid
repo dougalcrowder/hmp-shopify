@@ -2,11 +2,6 @@
   <div class="constrain account_header">
     <h1>{{ 'customer.account.title' | t }}</h1>
     <a href="/account/logout" class="button nude">{{ 'layout.customer.log_out' | t }}</a>
-    {% if customer.tags contains 'wholesale' %}
-    <a href="/collections/wholesale" class="button nude boom" data-no-swup>
-      Wholesale Orders Portal
-    </a>
-    {% endif %}
   </div>
 
   <div class="myaccount constrain flex">
@@ -50,10 +45,7 @@
           {% include 'pagination', paginate: paginate %}
         {%- endif -%}
       {% endpaginate %}
-      <h2>Subscriptions</h2>
-      <div class=subs_link">
-      <p><a href="/tools/checkout/api/manage/subscription/app" class="text-link">Manage Subscriptions</a></p>
-      </div>
+      
     </div>
     <div class="account_details">
       <h2>{{ 'customer.account.details' | t }}</h2>
