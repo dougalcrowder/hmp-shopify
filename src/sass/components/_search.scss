@@ -24,7 +24,7 @@
   top: 80px;
   overflow-y: auto;
   .incider {
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
     @media screen and (min-width: 800px) {
       background-color: white;
     }
@@ -226,7 +226,7 @@
     }
   }
   input[type="text"] {
-    background-color: var(--color-white);
+    background-color: var(--color-bg);
     width: calc(100% - 24px);
     @media screen and (min-width: 800px) {
       background-color: white;

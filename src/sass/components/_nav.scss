@@ -200,12 +200,17 @@
       a {
         div {
           line-height: 1.2;
+          padding-top: 12px;
         }
       }
       @media screen and (max-width: 960px) {
         flex: 0 1 50%;
         flex-basis: calc(50% - 20px);
         min-width: calc(50% - 20px);
+        &.hide_this {
+          display: none;
+          visibility: hidden;
+        }
       }
     }
     ul.level3 {

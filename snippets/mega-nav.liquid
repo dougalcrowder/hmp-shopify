@@ -26,7 +26,7 @@
                   {% if childlink.type == 'product_link'  %}
                   {% assign navProduct = childlink.object %} 
                   <li class="product level2_item">
-                    <a href="{{ navProduct.url }}" class="link">
+                    <a href="{{ navProduct.url }}" class="link{% if childlink.title == 'hidden' %} hide_this{% endif %}">
                     {% assign image =  childlink.object.featured_image %}
                     <picture>
                       <source srcset="{{ image | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
