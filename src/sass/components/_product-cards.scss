@@ -20,6 +20,16 @@
       bottom: 16px;
       .price {
         font-size: 68.75%;
+        font-style : normal;
+      }
+      h2 {
+        font-size: 68.75%;
+        @media screen and (min-width: 768px) {
+          font-size: 100%;
+        }
+        @media screen and (min-width: 960px) {
+          font-size: 125%;
+        }
       }
     }
     .hover & {
