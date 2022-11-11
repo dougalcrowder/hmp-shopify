@@ -157,6 +157,8 @@ function bodyCloser() {
   }
 }
 
+var mobNav = window.matchMedia("(max-width: 960px)")
+
 function closeNav() {
   const nav = document.getElementById("accessibleNav");
   const button = document.getElementById('menuTrigger');
@@ -201,7 +203,9 @@ function mobNavigation() {
       } else {
         dropLevel1.classList.add("active");
       };
-      event.preventDefault();
+      if (mobNav.matches) {
+        event.preventDefault();
+      }
     });
   });
   
