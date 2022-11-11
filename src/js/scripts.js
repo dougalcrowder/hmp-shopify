@@ -200,7 +200,8 @@ function mobNavigation() {
         dropLevel1.classList.remove("active");
       } else {
         dropLevel1.classList.add("active");
-      }
+      };
+      event.preventDefault();
     });
   });
   
