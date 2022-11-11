@@ -56,6 +56,11 @@
   @media screen and (min-width:960px) {
     grid-row: 1 / span 2;
   }
+  &.no-image {
+    @media screen and (min-width:768px) {
+      grid-row: 1 / span 2;
+    }
+  }
 }
 .product-grid-container {
   grid-column: 1 / span 12;
