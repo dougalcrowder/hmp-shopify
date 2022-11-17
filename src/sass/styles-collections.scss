@@ -12,10 +12,10 @@
 .collectionpage.grid {
   gap: 24px;
   @media screen and (min-width: 768px) {
-    gap: 32px;
+    gap: 16px 32px;
   }
   @media screen and (min-width:1024px) {
-    gap: 40px;
+    gap: 16px 40px;
   }
 }
 .collection_banner {

@@ -45,7 +45,7 @@
   
   <div class="filters{% unless collection.image %} no-image{% endunless %}">
     <button id="filterToggle" class="mob_filter-toggle button nude plus_left">Refine Elements</button>
-    <aside aria-labelledby="verticalTitle" class="facets-wrapper" id="main-collection-filters" data-id="{{ section.id }}">
+    <aside aria-labelledby="verticalTitle" class="facets-wrapper custom_scroll" id="main-collection-filters" data-id="{{ section.id }}">
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical' %}
     </aside>
     
