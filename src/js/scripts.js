@@ -364,6 +364,49 @@ if (document.getElementById('filterToggle')) {
   });
 };
 
+function mainMenuStates() {
+  let navItems = document.querySelector('#accessibleNav .site-nav.level1');
+  document.querySelectorAll('.site-nav.level1 .level1_item').forEach( function(navver) {
+    navver.addEventListener('mouseenter', function (e) {
+      navver.classList.add('mainhover');
+      navItems.classList.add('mainover');
+    });
+    navver.addEventListener('mouseleave', function (e) {
+      navver.classList.remove('mainhover');
+      navItems.classList.remove('mainover');
+    });
+  });
+}
+
+function menuStates() {
+  let navItems = document.querySelector('#accessibleNav .site-nav');
+  document.querySelectorAll('.site-nav li div a').forEach( function(navver) {
+    navver.addEventListener('mouseenter', function (e) {
+      navver.classList.add('hover');
+      navItems.classList.add('over');
+    });
+    navver.addEventListener('mouseleave', function (e) {
+      navver.classList.remove('hover');
+      navItems.classList.remove('over');
+    });
+  });
+}
+
+function footNavStates() {
+  let navItems = document.querySelector('.site-footer .footer_item');
+  document.querySelectorAll('.footer_item .footer_linklist li a').forEach( function(navver) {
+    navver.addEventListener('mouseenter', function (e) {
+      navver.classList.add('hover');
+      navItems.classList.add('over');
+    });
+    navver.addEventListener('mouseleave', function (e) {
+      navver.classList.remove('hover');
+      navItems.classList.remove('over');
+    });
+  });
+  
+}
+
 
 // Swup *****************************************************
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -378,7 +421,9 @@ function init() {
   viewport();
   distanceScrolled();
   loaded();
-
+  mainMenuStates();
+  menuStates();
+  footNavStates();
   //setNavigation();
   mobNavigation();
 

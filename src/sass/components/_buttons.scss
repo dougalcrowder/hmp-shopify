@@ -39,7 +39,7 @@ button, input[type="submit"],.btn, .button {
     border-color: black;
     background-color: black;
   }
-
+  
   &[disabled],
   &[aria-disabled] {
     cursor: default;
@@ -63,11 +63,20 @@ button, input[type="submit"],.btn, .button {
     border-color: currentcolor;
     background-color: transparent;
     box-shadow: none;
+    transition: all 0.3s ease;;
     &:not([disabled]):hover,
     &:focus {
       color: currentcolor;
       background-color: transparent;
       border-color: currentcolor;
+    }
+    &.hovdark {
+      &:not([disabled]):hover,
+      &:focus {
+        color: var(--color-white);
+        background-color: var(--color-black);
+        border-color: var(--color-black);
+      }
     }
   }
 }

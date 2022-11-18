@@ -58,7 +58,7 @@
                   {% else %}
                     <li class="level2_item{% if childlink.links == blank %} noparentsallowed{% else %} isparent{% endif %}">
                       <a href="{{ childlink.url }}"
-                        class="level2_parent{% if childlink.active %} link_active{% endif %}"
+                        class="level2_parent{% if childlink.active %} link_active{% endif %}{% if childlink.url == "#" %} nogo{% endif %}"
                         {% if childlink.current %} aria-current="page"{% endif %}
                       >
                         <span class="label h3">{{ childlink.title | escape }}{% if childlink.links != blank %} {% include 'icon-navarrow' %} {% endif %}</span>

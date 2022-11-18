@@ -27,13 +27,48 @@
       }
     }
   }
-  > li {
-    &:hover {
-      a {
-        color: var(--color-black);
+  li a span {
+    transition: all 0.3s ease;
+  }
+  // hover effects
+  &.over {
+    ul li {
+      a:not(.nogo) {
+        span {
+          color: var(--color-lightgrey);
+        }
+        &.hover {
+          span {
+            color: var(--color-black);
+          }
+        }
       }
     }
   }
+  > li {
+    &:hover {
+      div a:not(.nogo) {
+        color: var(--color-black);
+      }
+      div a.nogo {
+        cursor: default;
+      }
+    }
+  }
+  &.mainover {
+    li.level1_item {
+      > a > span {
+        color: var(--color-lightgrey);
+        opacity: 0.4;
+      }
+      &.mainhover {
+        > a > span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
   span .navarrow {
     margin-left: 16px;
     margin-bottom: -3px;
@@ -148,6 +183,7 @@
     padding: 0 32px;
     max-width: 1260px;
     margin: 0 auto;
+    min-height: calc(397px - 64px);
   }
   ul.flex {
     gap: 8px 24px;
@@ -155,17 +191,21 @@
       justify-content: flex-start;
     }
     @media screen and (min-width: 960px) {
-      //flex-wrap: nowrap;
+      height: 100%;
+      min-height: calc(397px - 64px);
+    }
+    @media screen and (min-width: 1240px) {
+      gap: 8px 40px;
     }
     span.h3 {
       font-size: 81.25%;
     }
     a.link {
-      font-size: 75%;
+      font-size: 68.75%;
       padding: 0;
       text-transform: uppercase;
       display: block;
-      line-height: 48px;
+      line-height: 32px;
       &.link_active {
         > span {
           text-decoration: underline;
@@ -190,6 +230,10 @@
         flex: 0 1 20%;
         flex-basis: calc(20% - 20px);
         min-width: calc(20% - 20px);
+      }
+      @media screen and (min-width: 1240px) {
+        flex-basis: calc(20% - 32px);
+        min-width: calc(20% - 40px);
       }
       &.noparentsallowed {
         flex: 1 1 100%;
@@ -373,6 +417,7 @@
       @media screen and (min-width: 960px) {
         display: block;
         visibility: visible;
+        min-height: 397px;
         animation: fade-in-reg 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
         &:before {
           animation: fade-in-reg 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.05s both;
