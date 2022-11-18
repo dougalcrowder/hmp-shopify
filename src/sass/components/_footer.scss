@@ -33,6 +33,17 @@
   }
 }
 
+footer {
+  .footer_item a {
+    transition: color 0.3s ease;
+  }
+  &.over {
+    .footer_item a:not(.hover) {
+      color: var(--color-lightgrey);
+    }
+  }
+}
+
 .footer_bar {
   padding: 24px 0 40px 0;
 }

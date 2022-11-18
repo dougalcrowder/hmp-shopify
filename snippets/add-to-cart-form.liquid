@@ -17,7 +17,7 @@
     {% elsif titsize > 15 %}{% assign tipsize =  'm' %}
     {% elsif titsize > 10 %}{% assign tipsize =  'sm' %}
     {% endif %}
-      <a href="{{ producter.url }}" class="alternative_colour tool-{{ tipsize }}{% if producter.title == product.title %} current{% endif %}" data-tooltip="{{ producter.title }}">
+      <a href="{{ producter.url }}" class="alternative_colour tool-{{ tipsize }}{% if producter.title == product.title %} current{% endif %}" title="{{ producter.title }}">
         {% assign colour_ref = producter.metafields.custom.colour_ref.value %}
         {% if colour_ref != blank %}
         <div class="swatch" style="background-color: {{ colour_ref }}"></div>
@@ -76,7 +76,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}" {% if optionName1 == 'color' or optionName1 == 'colour' %} data-tooltip="{{ variant.option2 }}">{% endif %}<span class="label_text">{{ variant.option2 }}</span></label>
+        <label class="{{ variant.option2 | handleize }}" for="{{ variant.option2 }}-{{ product.handle }}" {% if optionName1 == 'color' or optionName1 == 'colour' %} title="{{ variant.option2 }}">{% endif %}<span class="label_text">{{ variant.option2 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
         {% endunless %}
         {% endfor %}
@@ -95,7 +95,7 @@
         {% if forloop.index == 1 %}
           checked
         {% endif %}>
-        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}" {% if optionName2 == 'color' or optionName2 == 'colour' %} data-tooltip="{{ variant.option3 }}">{% endif %}<span class="label_text">{{ variant.option3 }}</span></label>
+        <label class="{{ variant.option3 | handleize }}" for="{{ variant.option3 }}-{{ product.handle }}" {% if optionName2 == 'color' or optionName2 == 'colour' %} title="{{ variant.option3 }}">{% endif %}<span class="label_text">{{ variant.option3 }}</span></label>
         {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
         {% endunless %}
         {% endfor %}

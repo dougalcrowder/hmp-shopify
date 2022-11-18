@@ -393,8 +393,8 @@ function menuStates() {
 }
 
 function footNavStates() {
-  let navItems = document.querySelector('.site-footer .footer_item');
-  document.querySelectorAll('.footer_item .footer_linklist li a').forEach( function(navver) {
+  let navItems = document.querySelector('.site-footer');
+  document.querySelectorAll('.site-footer .footer_item a').forEach( function(navver) {
     navver.addEventListener('mouseenter', function (e) {
       navver.classList.add('hover');
       navItems.classList.add('over');
