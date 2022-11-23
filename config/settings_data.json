@@ -45,7 +45,7 @@
             "type": "text",
             "settings": {
               "title": "Contact Us",
-              "text": "<p><a href=\"mailto:hello@hannahmartinpierced.com\" title=\"mailto:hello@hannahmartinpierced.com\">hello@hannahmartinpierced.com<\/a><\/p><p><a href=\"tel:447522620244\" title=\"tel:447522620244\">+44 7 522 620 244<\/a><\/p><p>74a Clerkenwell roadEC1M 5GA, London<\/p>"
+              "text": "<p><a href=\"mailto:info@hannahmartinpierced.com\" title=\"mailto:info@hannahmartinpierced.com\">info@hannahmartinpierced.com<\/a><\/p><p>T: <a href=\"tel:442072516700\" title=\"tel:442072516700\">+44 20 7251 6700<\/a><\/p><p>M: <a href=\"tel:447526116873\" title=\"tel:447526116873\">+44 75 2611 6873<\/a><\/p><p>74a Clerkenwell Road, London EC1M 5QA<\/p>"
             }
           }
         },
@@ -101,13 +101,13 @@
           "c00bc1bb-4818-49b8-91fd-baf4601b9dc0": {
             "type": "heading",
             "settings": {
-              "heading": "Sign up for updates"
+              "heading": "BE A PART OF IT"
             }
           },
           "1cdc603b-b3ad-4794-9065-65458dc9e3e8": {
             "type": "paragraph",
             "settings": {
-              "text": "<p>Sign up for exclusive early sale access and tailored new arrivals.<\/p>"
+              "text": "<p>Sign up and join us for the ride.<\/p>"
             }
           },
           "de978a78-4c9b-452b-b924-0a8d6fce0731": {
