@@ -67,6 +67,15 @@
     z-index: 0;
     display: block;
     aspect-ratio: 3/2;
+    img {
+      aspect-ratio: 3/2;
+    }
+    @media screen and (min-width: 768px) {
+      aspect-ratio: 2/3;
+      img {
+        aspect-ratio: 2/3;
+      }
+    }
     &:after {
       content: " ";
       position: absolute;
