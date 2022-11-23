@@ -32,3 +32,26 @@ video {
   width: 100%;
   height: auto;
 }
+
+// aspect ratio image helpers, designs are mostly 3/2 and 2/3
+.m-3by2 {
+  @media screen and (max-width: 768px) {
+    aspect-ratio: 3/2;
+  }
+}
+.d-3by2 {
+  @media screen and (min-width: 768px) {
+    aspect-ratio: 3/2;
+  }
+}
+
+.m-2by3 {
+  @media screen and (max-width: 768px) {
+    aspect-ratio: 2/3;
+  }
+}
+.d-2by3 {
+  @media screen and (min-width: 768px) {
+    aspect-ratio: 2/3;
+  }
+}

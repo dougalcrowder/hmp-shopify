@@ -69,7 +69,7 @@
                             {{ collection_image | img_url: '320x219', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 300px)"
                   />
-                <img loading="lazy" class="collection_img" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
+                <img loading="lazy" class="collection_img m-3by2 d-2by3" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
               </picture>
               {% endunless %}
               <div class="text {% if section.settings.titles_down %} titles_down{% else %} inpic{% endif %}">
