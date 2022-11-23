@@ -12,7 +12,8 @@
         "header_tag": "h2",
         "text_color": "white",
         "border": false,
-        "lightheader": false
+        "lightheader": false,
+        "notlazy": true
       }
     },
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9": {
@@ -86,7 +87,8 @@
         "header_tag": "h2",
         "text_color": "white",
         "border": false,
-        "lightheader": false
+        "lightheader": false,
+        "notlazy": false
       }
     },
     "ce4db669-7e9c-4025-90c1-3e79944c0301": {
@@ -163,7 +165,8 @@
         "header_tag": "h2",
         "text_color": "white",
         "border": true,
-        "lightheader": false
+        "lightheader": false,
+        "notlazy": false
       }
     },
     "118bb3a3-c417-4371-9422-7c401f439628": {
