@@ -11,6 +11,7 @@
             <blockquote>
               <a href="{{ block.settings.link }}">
               {% if block.settings.insta_image != blank %}
+              <span class="visually-hidden">See {{ the_image.alt | escape }} on {{ section.settings.title | escape }}</span>
               {% assign the_image = block.settings.insta_image %}
               {% if forloop.index == 1 %}
               <picture class="insta_shot larger">
