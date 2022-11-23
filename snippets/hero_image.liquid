@@ -8,5 +8,5 @@
             media="(min-width: 376px)" />
     <source srcset="{{ mobimage | img_url: '540x1037', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ mobimage | img_url: '540x1037', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 540px)" />
     <source srcset="{{ mobimage | img_url: '375x720', crop: 'center', format: 'pjpg', scale: 2 }} 2x, {{ mobimage | img_url: '375x720', crop: 'center', format: 'pjpg' }} 1x" media="(min-width: 320px)" />
-  <img {% unless section.settings.notlazy %}loading="lazy"{% endif %} class="heroshot_image loading" src="{{ the_image | img_url: '320x614' }}" alt="{{ mobimage.alt | escape }}" />
+  <img {% unless section.settings.notlazy %}loading="lazy"{% endunless %} class="heroshot_image loading" src="{{ the_image | img_url: '320x614' }}" alt="{{ mobimage.alt | escape }}" />
 </picture>
