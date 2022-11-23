@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  
   {%- if canonical_url != blank  -%}
     <link rel="canonical" href="{{ canonical_url }}">
   {%- endif -%}
@@ -39,9 +36,11 @@
   {%- if page_description -%}
     <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
-  {%- if request.page_type contains 'customers/' -%}
-    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
-  {%- endif -%}
+  
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preload" href="//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-Regular-Web.woff2?v=50633817073756614141665514258" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="//cdn.shopify.com/s/files/1/0584/9533/6495/t/2/assets/MarrSans-LightItalic-Web.woff2?v=93570896854908201691665514254" as="font" type="font/woff2" crossorigin>
   
   <link rel="preconnect" href="https://stats.g.doubleclick.net">
   <link rel="preconnect" href="https://www.facebook.com">
@@ -59,8 +58,12 @@
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
   
   <link rel="stylesheet" href="https://use.typekit.net/yhj4zca.css" />
+  
   {{ 'styles-top.css' | asset_url | stylesheet_tag }}
-  {{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  
   {{ content_for_header }}
   <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer>
 </head>
@@ -81,7 +84,9 @@
     {% section 'footer' %}
     {% include 'search' %}
     {% section 'sidecart' %}
-  
+    
+    
+{{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
 {{ 'nav_images.css' | asset_url | stylesheet_tag }} 
  {{ 'styles-bot.css' | asset_url | stylesheet_tag }} 
 <script src="{{ 'scripts.js' | asset_url }}" async="async"></script>
