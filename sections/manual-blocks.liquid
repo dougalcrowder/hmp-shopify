@@ -23,7 +23,7 @@
             <a href="{{ block.settings.block_url }}">
               {% endif %}
               {% unless collection_image == blank %}
-              <picture class="collection_img">
+              <picture class="collection_img m-3by2 d-2by3">
                   <source 
                     srcset="{{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
                             {{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg'}}" 
