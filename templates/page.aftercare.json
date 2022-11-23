@@ -39,7 +39,7 @@
       ],
       "settings": {
         "sidenav": "pages",
-        "hidetitle": false,
+        "hidetitle": true,
         "hidetext": true,
         "margin_top": "m",
         "margin_bot": "m"
