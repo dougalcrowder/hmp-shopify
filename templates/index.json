@@ -66,46 +66,6 @@
         "margin_bot": "m"
       }
     },
-    "3bf0625c-b590-4196-88c2-1b98ba354f5a": {
-      "type": "image-bar",
-      "blocks": {
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mens-anchor-bracelet.jpg",
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        },
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/house-plant-in-white-pot.jpg",
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        },
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/fashionable-man-by-textured-wall.jpg",
-            "alignment": "center",
-            "link": "",
-            "cta_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-0",
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-1",
-        "template--15484737093679__3bf0625c-b590-4196-88c2-1b98ba354f5a-1665572279309ab5c3-2"
-      ],
-      "settings": {
-        "section_height": "medium"
-      }
-    },
     "bb386705-e11f-4d44-a176-b860b833fbb9": {
       "type": "featured-collection",
       "settings": {
@@ -364,7 +324,6 @@
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
-    "3bf0625c-b590-4196-88c2-1b98ba354f5a",
     "bb386705-e11f-4d44-a176-b860b833fbb9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
     "ce4db669-7e9c-4025-90c1-3e79944c0301",
