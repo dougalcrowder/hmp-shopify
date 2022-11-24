@@ -58,7 +58,7 @@
   "newsletter": {
     "label": "Email",
     "success": "Thanks for subscribing",
-    "button_label": "Join",
+    "button_label": "Join the crew",
     "email_placeholder": "Email"
   },
   "accessibility": {
