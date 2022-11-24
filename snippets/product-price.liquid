@@ -14,7 +14,7 @@
 -%}
 <div class="price">
 {%- if product.price_varies -%}
-  <span class="grey">from:</span>{{ product.price_min | money_without_trailing_zeros }}
+  <span class="grey">from: </span>{{ product.price_min | money_without_trailing_zeros }}
 {%- else -%}
   {% assign variant = product.selected_or_first_available_variant %}
   {% if product.compare_at_price > product.price %}
