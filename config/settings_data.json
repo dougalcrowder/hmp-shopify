@@ -90,9 +90,8 @@
       "newsletter": {
         "type": "newsletter",
         "settings": {
-          "section_title": "Sign up for updates",
-          "subheading": "<p>Sign up for exclusive early sale access and tailored new arrivals.<\/p>",
-          "show_background": false
+          "section_title": "Be part of it",
+          "subheading": "<p>Sign up and join us for the ride.<\/p>"
         }
       },
       "mailchimp_newsletter": {
