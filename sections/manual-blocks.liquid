@@ -25,48 +25,48 @@
               {% unless collection_image == blank %}
               <picture class="collection_img m-3by2 d-2by3">
                   <source 
-                    srcset="{{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '560x882', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '560x840', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '560x840', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 1440px)"
                   />
                   <source 
-                    srcset="{{ collection_image | img_url: '480x756', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '480x756', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '480x720', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '480x720', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 1260px)"
                   />
                   <source 
-                    srcset="{{ collection_image | img_url: '427x673', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '427x673', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '430x645', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '430x645', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 768px)"
                   />
                   <source 
-                  srcset="{{ collection_image | img_url: '767x525', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                          {{ collection_image | img_url: '767x525', crop: 'center', format: 'pjpg'}}" 
+                  srcset="{{ collection_image | img_url: '768x512', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '768x512', crop: 'center', format: 'pjpg'}}" 
                   media="(min-width: 620px)"
                   />
                   <source 
-                  srcset="{{ collection_image | img_url: '620x425', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                          {{ collection_image | img_url: '620x425', crop: 'center', format: 'pjpg'}}" 
+                  srcset="{{ collection_image | img_url: '621x414', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '621x414', crop: 'center', format: 'pjpg'}}" 
                   media="(min-width: 560px)"
                   />
                   <source 
-                  srcset="{{ collection_image | img_url: '559x383', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                          {{ collection_image | img_url: '559x383', crop: 'center', format: 'pjpg'}}" 
+                  srcset="{{ collection_image | img_url: '558x372', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                          {{ collection_image | img_url: '558x372', crop: 'center', format: 'pjpg'}}" 
                   media="(min-width: 444px)"
                   />
                   <source 
-                    srcset="{{ collection_image | img_url: '443x304', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '443x304', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '444x296', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '444x296', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 360px)"
                   />
                   <source 
-                    srcset="{{ collection_image | img_url: '359x246', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '359x246', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '360x240', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '360x240', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 321px)"
                   />
                   <source 
-                    srcset="{{ collection_image | img_url: '320x219', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
-                            {{ collection_image | img_url: '320x219', crop: 'center', format: 'pjpg'}}" 
+                    srcset="{{ collection_image | img_url: '321x214', crop: 'center', format: 'pjpg', scale: 2 }} 2x,
+                            {{ collection_image | img_url: '321x214', crop: 'center', format: 'pjpg'}}" 
                     media="(min-width: 300px)"
                   />
                 <img loading="lazy" class="collection_img m-3by2 d-2by3" src="{{ collection_image | img_url: '3x2', crop: 'center', format: 'pjpg'}}" alt="{{ collection_image.alt | escape }}" width="300" height="200" />
