@@ -9,8 +9,8 @@
     {%- assign formId = 'Contact_' | append: section.id -%}
     {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form' %}
       {%- if form.posted_successfully? -%}
-        <p class="form-message form-message--success" tabindex="-1" data-form-status>
-          {{ 'general.newsletter.success' | t }}
+        <p class="form-message form-message--success text-center" tabindex="-1" data-form-status>
+          {{ 'newsletter.success' | t }}
         </p>
       {%- endif -%}
       <input type="hidden" name="contact[tags]" value="newsletter">
