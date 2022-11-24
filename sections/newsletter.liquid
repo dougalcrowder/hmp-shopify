@@ -1,29 +1,28 @@
-<div class="newsletter-section{% if section.settings.show_background %} index-section--newsletter-background{% endif %}">
-  <div class="page-width">
-    <div class="section-header text-center">
+<div class="static_newsletter inner pt-xl pb-xl">
+  <div class="signup">
       {% if section.settings.section_title != blank %}
-        <h2 class="h2">{{ section.settings.section_title | escape }}</h2>
+        <h2 class="h3 text-center">{{ section.settings.section_title | escape }}</h2>
       {% endif %}
       {% if section.settings.subheading != blank %}
-        <div class="rte">{{ section.settings.subheading }}</div>
+        <div class="newsletter__subheading rte  text-center">{{ section.settings.subheading }}</div>
       {% endif %}
-    </div>
     {%- assign formId = 'Contact_' | append: section.id -%}
-    {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form form-single-field' %}
+    {% form 'customer', id: formId, novalidate: 'novalidate', class: 'contact-form' %}
       {%- if form.posted_successfully? -%}
         <p class="form-message form-message--success" tabindex="-1" data-form-status>
-          {{ 'general.newsletter_form.confirmation' | t }}
+          {{ 'general.newsletter.success' | t }}
         </p>
       {%- endif -%}
       <input type="hidden" name="contact[tags]" value="newsletter">
-      <div class="input-group {% if form.errors %} input-group--error{% endif %}">
+      <div class="input-group flex{% if form.errors %} input-group--error{% endif %}">
+        <div class="email_fields">
         <input type="email"
           name="contact[email]"
           id="{{ formId }}-email"
           class="input-group__field{% if form.errors %} input--error{% endif %}"
           value="{{ form.email }}"
-          placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
-          aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
+          placeholder="{{ 'general.newsletter.email_placeholder' | t }}"
+          aria-label="{{ 'general.newsletter.email_placeholder' | t }}"
           aria-required="true"
           autocorrect="off"
           autocapitalize="off"
@@ -33,11 +32,12 @@
             data-form-status
           {% endif %}
           >
-        <span class="input-group__btn">
-          <button type="submit" class="btn" name="commit">
-            <span>{{ 'general.newsletter_form.submit' | t }}</span>
+        </div>
+        <div class="submit_fields">
+          <button type="submit" class="button nude" name="commit">
+            <span>{{ 'general.newsletter.button_label' | t }}</span>
           </button>
-        </span>
+        </div>
       </div>
       {%- if form.errors contains 'email' -%}
         <span id="{{ formId }}-email-error" class="input-error-message">
@@ -49,7 +49,6 @@
     {% endform %}
   </div>
 </div>
-
 
 
 {% schema %}
@@ -163,31 +162,6 @@
         "zh-CN": "<p>促销、新产品和销售。直接发送到您的收件箱。</p>",
         "zh-TW": "<p>讓您直接在收件匣內收取促銷活動、最新產品和特賣活動訊息。</p>"
       }
-    },
-    {
-      "id": "show_background",
-      "type": "checkbox",
-      "label": {
-        "da": "Vis baggrund",
-        "de": "Hintergrund anzeigen",
-        "en": "Show background",
-        "es": "Mostrar fondo",
-        "fi": "Näytä tausta",
-        "fr": "Afficher l'arrière-plan",
-        "hi": "पृष्ठभूमि दिखाएं",
-        "it": "Mostra sfondo",
-        "ja": "背景を表示する",
-        "ko": "배경 표시",
-        "nb": "Vis bakgrunn",
-        "nl": "Toon achtergrond",
-        "pt-BR": "Exibir plano de fundo",
-        "pt-PT": "Mostrar fundo",
-        "sv": "Visa bakgrund",
-        "th": "แสดงพื้นหลัง",
-        "zh-CN": "显示背景",
-        "zh-TW": "顯示背景"
-      },
-      "default": true
     },
     {
       "type": "paragraph",
