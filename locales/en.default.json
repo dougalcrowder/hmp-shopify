@@ -56,10 +56,10 @@
     }
   },
   "newsletter": {
-    "label": "Email",
-    "success": "Thanks for subscribing",
-    "button_label": "Subscribe",
-    "email_placeholder": "Email"
+    "label": "Email Address",
+    "success": "Thanks for Joining",
+    "button_label": "Join",
+    "email_placeholder": "Email Address"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",

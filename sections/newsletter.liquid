@@ -21,8 +21,8 @@
           id="{{ formId }}-email"
           class="input-group__field{% if form.errors %} input--error{% endif %}"
           value="{{ form.email }}"
-          placeholder="{{ 'general.newsletter.email_placeholder' | t }}"
-          aria-label="{{ 'general.newsletter.email_placeholder' | t }}"
+          placeholder="{{ 'newsletter.email_placeholder' | t }}"
+          aria-label="{{ 'newsletter.email_placeholder' | t }}"
           aria-required="true"
           autocorrect="off"
           autocapitalize="off"
@@ -35,7 +35,7 @@
         </div>
         <div class="submit_fields">
           <button type="submit" class="button nude" name="commit">
-            <span>{{ 'general.newsletter.button_label' | t }}</span>
+            {{ 'newsletter.button_label' | t }}
           </button>
         </div>
       </div>
