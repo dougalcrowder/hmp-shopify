@@ -221,7 +221,7 @@
     "404": {
       "title": "Page not found",
       "subtext": "404",
-      "link": "/"
+      "link": "\/"
     }
   },
   "sections": {
