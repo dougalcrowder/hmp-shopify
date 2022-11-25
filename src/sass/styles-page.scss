@@ -81,3 +81,23 @@
     font-weight: 400;
   }
 }
+
+.contact_page {
+  .the_form {
+    .field {
+      margin-top: 32px;
+      label {
+        margin: 0;
+        flex: 1 0 120px;
+        border-bottom: 1px solid var(--color-black);
+      }
+      input, textarea {
+        flex: 1;
+        flex-basis: calc(100% - 125px);
+      }
+    }
+    button {
+      margin-top: 32px;
+    }
+  }
+}

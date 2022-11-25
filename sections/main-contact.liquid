@@ -1,5 +1,5 @@
 {{ 'styles-page.css' | asset_url | stylesheet_tag }}
-<div class="page contact_page">
+<div class="page basic contact_page mininner">
   <div class="section-header">
   <h1>{{ page.title }}</h1>
   </div>
@@ -22,7 +22,7 @@
     {%- if form.errors -%}
     
       <div class="form-message form-message--error">
-        <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+        <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'templates.contact.form.error_heading' | t }}</h2>
         <ul>
           {% for error in error_order %}
             {% for field in form.errors %}
@@ -31,9 +31,9 @@
                 {% capture field_label %}
                   {% case field %}
                     {% when 'author' %}
-                      {{ 'contact.form.name' | t }}
+                      {{ 'templates.contact.form.name' | t }}
                     {% when 'body' %}
-                      {{ 'contact.form.message' | t }}
+                      {{ 'templates.contact.form.comment' | t }}
                     {% else %}
                       {{ form.errors.translated_fields[field] }}
                   {% endcase %}
@@ -56,12 +56,12 @@
       
   
       <div class="the_form{% if form.posted_successfully? %} hidden{% endif %}">
-        <div class="field">
-          <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
-          <input type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+        <div class="field flex">
+          <label for="{{ formId }}-name">{{ 'templates.contact.form.name' | t }}</label>
+          <input type="text" id="{{ formId }}-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
         </div>
-        <div class="field">
-          <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+        <div class="field flex">
+          <label for="{{ formId }}-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
           <input
             type="email"
             id="{{ formId }}-email"
@@ -85,14 +85,14 @@
           {%- endif -%}
         </div>
       
-      <div class="field">
-      <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
-      <input type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+      <div class="field flex">
+      <label for="{{ formId }}-phone">{{ 'templates.contact.form.phone' | t }}</label>
+      <input type="tel" id="{{ formId }}-phone" name="contact[{{ 'templates.contact.form.phone' | t }}]" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
       </div>
       
-      <div class="field">
+      <div class="field flex">
         <label for="{{ formId }}-message">Your Enquiry</label>
-        <textarea rows="6" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+        <textarea rows="6" id="{{ formId }}-message" name="contact[{{ 'templates.contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
       </div>
 
       <button type="submit" name="checkout" id="submit_button" class="button checkout">Submit</button>
