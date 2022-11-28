@@ -16,10 +16,37 @@
         "margin_top": "m",
         "margin_bot": "m"
       }
+    },
+    "4a596b6c-08d7-4cc5-8b92-a9e1bb7174ed": {
+      "type": "manual-blocks",
+      "blocks": {
+        "a2290ef8-e2bd-4194-b0b3-0392619905b0": {
+          "type": "manual_block",
+          "settings": {
+            "title_image": "",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "a2290ef8-e2bd-4194-b0b3-0392619905b0"
+      ],
+      "settings": {
+        "title": "Manual Blocks",
+        "constrain": false,
+        "gap": false,
+        "titles_down": false,
+        "margin_top": "m",
+        "margin_bot": "m"
+      }
     }
   },
   "order": [
     "78820d97-6b83-49b4-8843-efd335b633d9",
-    "main"
+    "main",
+    "4a596b6c-08d7-4cc5-8b92-a9e1bb7174ed"
   ]
 }
