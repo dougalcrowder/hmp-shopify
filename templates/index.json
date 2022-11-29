@@ -163,7 +163,7 @@
         "1c0a9baa-8f2e-4622-a0f4-d35bc93e1929": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-1.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -174,7 +174,7 @@
         "cd33c54a-526f-4410-b707-9231e76ca256": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-2.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -185,7 +185,7 @@
         "2b593da8-46d0-4a69-8004-13f7ff6d8925": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -196,7 +196,7 @@
         "3bfac53a-3162-4e05-bd79-891519a1357b": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-11.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -207,7 +207,7 @@
         "d402fadb-d7d2-48f2-9a87-a56ab1f16892": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-12.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -218,7 +218,7 @@
         "6b811507-83c9-4c99-ad42-d9e2bd628d2a": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ear_ear.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-13.png",
             "title_image": "Type 1",
             "description": "",
             "block_url": "",
@@ -229,12 +229,23 @@
         "461b246f-1e06-4405-a8b8-113f4ff85ab0": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red-apple-against-white-background.jpg",
+            "image": "shopify:\/\/shop_images\/Body_Parts-4.png",
             "title_image": "Say What",
             "description": "",
             "block_url": "",
             "colour": "black",
             "header_tag": "h3"
+          }
+        },
+        "69a61d03-2418-427a-a70a-f1d8b695d0d8": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Body_Parts-5.png",
+            "title_image": "",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
           }
         }
       },
@@ -245,7 +256,8 @@
         "3bfac53a-3162-4e05-bd79-891519a1357b",
         "d402fadb-d7d2-48f2-9a87-a56ab1f16892",
         "6b811507-83c9-4c99-ad42-d9e2bd628d2a",
-        "461b246f-1e06-4405-a8b8-113f4ff85ab0"
+        "461b246f-1e06-4405-a8b8-113f4ff85ab0",
+        "69a61d03-2418-427a-a70a-f1d8b695d0d8"
       ],
       "settings": {
         "title": "Buy some body parts",
