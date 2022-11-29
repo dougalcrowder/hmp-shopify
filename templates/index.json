@@ -23,9 +23,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-01.jpg",
-            "title_image": "Category",
+            "title_image": "NOSE",
             "description": "",
-            "block_url": "shopify:\/\/collections",
+            "block_url": "",
             "colour": "white",
             "header_tag": "h2"
           }
@@ -34,9 +34,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-02.jpg",
-            "title_image": "Category",
+            "title_image": "LOBES",
             "description": "",
-            "block_url": "shopify:\/\/collections",
+            "block_url": "",
             "colour": "white",
             "header_tag": "h3"
           }
@@ -45,7 +45,7 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-03.jpg",
-            "title_image": "Category",
+            "title_image": "CARTILAGE",
             "description": "",
             "block_url": "",
             "colour": "white",
