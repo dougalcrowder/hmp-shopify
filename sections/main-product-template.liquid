@@ -99,16 +99,6 @@
             <section id="accordion-panel-1" class="accordion_section" aria-labelledby="accordion-header-1" hidden>
               {{ product.description }}
             </section>
-            {% if section.settings.shipping_text %}
-            <h3 id="shipping">
-              <button id="accordion-header-2" class="accordion_button plus_left" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
-                  SHIPPING & RETURNS
-              </button>
-            </h3>
-            <section id="accordion-panel-2" class="accordion_section" aria-labelledby="accordion-header-2" hidden>
-              {{ section.settings.shipping_text }}
-            </section>   
-            {% endif %}
             
             {% assign composition = product.metafields.custom.composition %}
             {%- if composition != blank -%}
@@ -121,7 +111,18 @@
               <p>{{ composition }}</p>
             </section>   
             {% endif %}
-
+            
+            {% if section.settings.shipping_text %}
+            <h3 id="shipping">
+              <button id="accordion-header-2" class="accordion_button plus_left" aria-expanded="false" aria-controls="accordion-panel-2" data-accordion-header>
+                  SHIPPING & RETURNS
+              </button>
+            </h3>
+            <section id="accordion-panel-2" class="accordion_section" aria-labelledby="accordion-header-2" hidden>
+              {{ section.settings.shipping_text }}
+            </section>   
+            {% endif %}
+            
         </div>
       </div>
       </div>

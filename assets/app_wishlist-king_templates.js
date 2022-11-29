@@ -136,7 +136,7 @@ const templates = [
                       {% include "wishlist-button-floating" product: product %}
                     {% endunless %}
 
-                    <a href="{{ product | variant_url }}" class="wk-product-image" title="{{ locale.view_product }}" style="background-image: url({{ product | variant_img_url: '1000x' }})"></a>
+                    <a href="{{ product | variant_url }}" class="wk-product-image" title="{{ locale.view_product }}" style="background-image: url({{ product | variant_img_url: '300x400' }})"></a>
 
                     <div class="wk-product-info">
                       <a class="wk-product-title" href="{{ product | variant_url }}">
