@@ -93,12 +93,11 @@
     },
     "ce4db669-7e9c-4025-90c1-3e79944c0301": {
       "type": "manual-blocks",
-      "disabled": true,
       "blocks": {
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/house-plant-in-white-pot.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
             "title_image": "Type 1",
             "description": "",
             "block_url": "shopify:\/\/products\/choker-with-bead",
@@ -109,7 +108,7 @@
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fashionable-man-by-textured-wall.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.png",
             "title_image": "Type 2",
             "description": "",
             "block_url": "shopify:\/\/pages\/contact",
@@ -120,7 +119,7 @@
         "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red-apple-against-white-background.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2.png",
             "title_image": "Type 3",
             "description": "",
             "block_url": "shopify:\/\/products\/choker-with-gold-pendant",
