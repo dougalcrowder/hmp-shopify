@@ -23,9 +23,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-01.jpg",
-            "title_image": "NOSE",
+            "title_image": "Category",
             "description": "",
-            "block_url": "",
+            "block_url": "shopify:\/\/collections",
             "colour": "white",
             "header_tag": "h2"
           }
@@ -34,9 +34,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-02.jpg",
-            "title_image": "LOBES",
+            "title_image": "Category",
             "description": "",
-            "block_url": "",
+            "block_url": "shopify:\/\/collections",
             "colour": "white",
             "header_tag": "h3"
           }
@@ -45,7 +45,7 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/hmp-cat-03.jpg",
-            "title_image": "CARTILAGE",
+            "title_image": "Category",
             "description": "",
             "block_url": "",
             "colour": "white",
@@ -126,24 +126,12 @@
             "colour": "black",
             "header_tag": "h3"
           }
-        },
-        "c35be025-f767-45a7-a7fa-6607b64326a9": {
-          "type": "manual_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/white-warehouse-loading-bays.jpg",
-            "title_image": "Type 4",
-            "description": "",
-            "block_url": "",
-            "colour": "black",
-            "header_tag": "h3"
-          }
         }
       },
       "block_order": [
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101",
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06",
-        "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165",
-        "c35be025-f767-45a7-a7fa-6607b64326a9"
+        "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165"
       ],
       "settings": {
         "title": "Shop by Type",
