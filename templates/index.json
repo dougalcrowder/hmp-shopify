@@ -93,6 +93,7 @@
     },
     "ce4db669-7e9c-4025-90c1-3e79944c0301": {
       "type": "manual-blocks",
+      "disabled": true,
       "blocks": {
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
