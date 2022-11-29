@@ -12,6 +12,7 @@
       "blocks": {
         "41ed2659-9d89-49ef-b9c1-bd543d440343": {
           "type": "text_and_title",
+          "disabled": true,
           "settings": {
             "title": "Showroom",
             "description": "<p><strong>Hannah Martin Showroom London<\/strong><\/p><p>74a Clerkenwell Road, London EC1M 5QA<\/p>"
