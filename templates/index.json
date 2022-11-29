@@ -262,7 +262,7 @@
       "settings": {
         "title": "Buy some body parts",
         "constrain": false,
-        "titles_down": false,
+        "titles_down": true,
         "margin_top": "m",
         "margin_bot": "xl"
       }
