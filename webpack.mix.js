@@ -2,8 +2,14 @@ const mix = require('laravel-mix');
 
 mix.js('src/js/scripts.js', 'assets')
     .js('src/js/products.js', 'assets')
-    // .sourceMaps()
-    // .webpackConfig({devtool: 'inline-source-map'})
+    .sourceMaps()
+    .webpackConfig(
+      {
+        devtool: 'inline-source-map',
+        stats: {
+          children: true,
+        },
+      })
     .sass('src/sass/styles-top.scss', 'assets')
     .sass('src/sass/styles-bot.scss', 'assets')
     .sass('src/sass/styles-article.scss', 'assets')

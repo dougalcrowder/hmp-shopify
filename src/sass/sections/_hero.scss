@@ -78,24 +78,24 @@ picture.heroshot {
     display: block;
     content: "";
     width: 100%;
-    padding-top: (71 / 40) * 100%;
+    padding-top: calc(71 / 40  * 100%);
     @media screen and (min-width: 320px){
-      padding-top: (667 / 375) * 100%;
+      padding-top: calc(667 / 375 * 100%);
     }
     @media screen and (min-width: 376px){
-      padding-top: (812 / 375) * 100%;
+      padding-top: calc(812 / 375 * 100%);
     }
     @media screen and (min-width: 769px){
-      padding-top: (512 / 881) * 100%;
+      padding-top: calc(512 / 881 * 100%);
     }
     @media screen and (min-width: 881px){
-      padding-top: (1 / 1) * 100%;
+      padding-top: calc(1 / 1 * 100%);
     }
     @media screen and (min-width: 1025px){
-      padding-top: (5 / 8) * 100%;
+      padding-top: calc(5 / 8 * 100%);
     }
     @media screen and (min-width: 1440px){
-      padding-top: (5 / 8) * 100%;
+      padding-top: calc(5 / 8 * 100%);
     }
   }
   img {
