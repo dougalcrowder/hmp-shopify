@@ -261,6 +261,7 @@
         },
         "1c0a9baa-8f2e-4622-a0f4-d35bc93e1929": {
           "type": "manual_block",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Belly_Button.jpg",
             "title_image": "Belly Button",
