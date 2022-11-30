@@ -163,8 +163,8 @@
         "1c0a9baa-8f2e-4622-a0f4-d35bc93e1929": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-1.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Belly_Button.jpg",
+            "title_image": "Belly Button",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -174,8 +174,8 @@
         "cd33c54a-526f-4410-b707-9231e76ca256": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-2.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Bridge.jpg",
+            "title_image": "Bridge",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -185,8 +185,8 @@
         "2b593da8-46d0-4a69-8004-13f7ff6d8925": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Conch.jpg",
+            "title_image": "Conch",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -196,8 +196,8 @@
         "3bfac53a-3162-4e05-bd79-891519a1357b": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-11.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Daith.jpg",
+            "title_image": "Daith",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -207,8 +207,8 @@
         "d402fadb-d7d2-48f2-9a87-a56ab1f16892": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-12.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Eyebrow.jpg",
+            "title_image": "Eyebrow",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -218,8 +218,8 @@
         "6b811507-83c9-4c99-ad42-d9e2bd628d2a": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-13.png",
-            "title_image": "Type 1",
+            "image": "shopify:\/\/shop_images\/Helix.jpg",
+            "title_image": "Helix",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -229,8 +229,8 @@
         "461b246f-1e06-4405-a8b8-113f4ff85ab0": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-4.png",
-            "title_image": "Say What",
+            "image": "shopify:\/\/shop_images\/Lobe.jpg",
+            "title_image": "Lobe",
             "description": "",
             "block_url": "",
             "colour": "black",
@@ -240,8 +240,52 @@
         "69a61d03-2418-427a-a70a-f1d8b695d0d8": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Body_Parts-5.png",
-            "title_image": "",
+            "image": "shopify:\/\/shop_images\/Nipple.jpg",
+            "title_image": "Nipple",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "35114a9c-32c9-4b19-ae06-ec6db5fa97ce": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nostril.jpg",
+            "title_image": "Nostril",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "3a8aa97c-ad36-4ec1-a68e-88c5ff693a25": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rook.jpg",
+            "title_image": "Rook",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "f408ad75-ca60-4686-994d-93c15826e8b2": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Septum.jpg",
+            "title_image": "Septum",
+            "description": "",
+            "block_url": "",
+            "colour": "white",
+            "header_tag": "h2"
+          }
+        },
+        "9abd98d4-9d30-4162-a5b1-b278cd439bfb": {
+          "type": "manual_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tragus.jpg",
+            "title_image": "Tragus",
             "description": "",
             "block_url": "",
             "colour": "white",
@@ -257,7 +301,11 @@
         "d402fadb-d7d2-48f2-9a87-a56ab1f16892",
         "6b811507-83c9-4c99-ad42-d9e2bd628d2a",
         "461b246f-1e06-4405-a8b8-113f4ff85ab0",
-        "69a61d03-2418-427a-a70a-f1d8b695d0d8"
+        "69a61d03-2418-427a-a70a-f1d8b695d0d8",
+        "35114a9c-32c9-4b19-ae06-ec6db5fa97ce",
+        "3a8aa97c-ad36-4ec1-a68e-88c5ff693a25",
+        "f408ad75-ca60-4686-994d-93c15826e8b2",
+        "9abd98d4-9d30-4162-a5b1-b278cd439bfb"
       ],
       "settings": {
         "title": "Buy some body parts",
