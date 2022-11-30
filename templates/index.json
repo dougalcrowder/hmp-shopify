@@ -189,7 +189,7 @@
             "title_image": "Rook",
             "description": "",
             "block_url": "",
-            "colour": "white",
+            "colour": "black",
             "header_tag": "h2"
           }
         },
@@ -200,7 +200,7 @@
             "title_image": "Tragus",
             "description": "",
             "block_url": "",
-            "colour": "white",
+            "colour": "black",
             "header_tag": "h2"
           }
         },
@@ -244,7 +244,7 @@
             "title_image": "Nostril",
             "description": "",
             "block_url": "",
-            "colour": "white",
+            "colour": "black",
             "header_tag": "h2"
           }
         },
@@ -255,7 +255,7 @@
             "title_image": "Septum",
             "description": "",
             "block_url": "",
-            "colour": "white",
+            "colour": "black",
             "header_tag": "h2"
           }
         },
@@ -288,7 +288,7 @@
             "title_image": "Nipple",
             "description": "",
             "block_url": "",
-            "colour": "white",
+            "colour": "black",
             "header_tag": "h2"
           }
         }
