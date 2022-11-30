@@ -149,7 +149,7 @@
         "title": "THE HMp STUDIO",
         "text": "<p>An intimate, inclusive space to nourish your senses and connect.<\/p><p>HMp studios offer the best piercing artists, piercing consultation and curation, as well as education and aftercare.<\/p><p>*Hand-holding optional<\/p>",
         "button_label": "BOOK AN APPOINTMENT",
-        "button_link": "shopify:\/\/collections\/latest-products",
+        "button_link": "shopify:\/\/pages\/appointment",
         "header_tag": "h2",
         "text_color": "white",
         "border": true,
