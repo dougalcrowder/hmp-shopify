@@ -3,7 +3,7 @@
     "main": {
       "type": "main-product-template",
       "settings": {
-        "shipping_text": "<p>Free shipping for orders over £50 within the UK.<\/p><p>Free shipping worldwide on orders above €200. Product prices do not include import tax.<\/p><p>Free returns and exchanges within the UK, within 15 days of original purchase. Items must be unworn, unwashed, and undamaged with original and detachable labels intact.<\/p><p>Items may be exchanged for a different size or colour of the same style.<\/p><p><strong>* <\/strong>Visit our <a href=\"\/pages\/contact\" title=\"Contact\">Shipping & Returns<\/a> page for more info<\/p>",
+        "shipping_text": "<p>Standard Worldwide Shipping is free on all orders.<\/p><p>Priority Worldwide Shipping and our London Premier Same-Day Service are free on orders over £800.<\/p><p>For detailed information on delivery times and costs please refer to: <a href=\"\/pages\/delivery\" title=\"Delivery & Returns\">Delivery & Returns<\/a><\/p><p>If you are not satisfied with your purchase we are able to offer you a refund or exchange within 14 days of purchase.<\/p><p><strong>* <\/strong>Sales of all jewellery that has been pierced with are final.<\/p>",
         "sustainability_text": "",
         "ownline": false
       }
