@@ -99,9 +99,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
-            "title_image": "Type 1",
+            "title_image": "STRAIGHT",
             "description": "",
-            "block_url": "shopify:\/\/products\/choker-with-bead",
+            "block_url": "shopify:\/\/collections\/straight",
             "colour": "black",
             "header_tag": "h3"
           }
@@ -110,9 +110,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.png",
-            "title_image": "Type 2",
+            "title_image": "CURVED",
             "description": "",
-            "block_url": "shopify:\/\/pages\/contact",
+            "block_url": "shopify:\/\/collections\/curved",
             "colour": "black",
             "header_tag": "h3"
           }
@@ -121,9 +121,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2.png",
-            "title_image": "Type 3",
+            "title_image": "RING",
             "description": "",
-            "block_url": "shopify:\/\/products\/choker-with-gold-pendant",
+            "block_url": "shopify:\/\/collections\/ring",
             "colour": "black",
             "header_tag": "h3"
           }
