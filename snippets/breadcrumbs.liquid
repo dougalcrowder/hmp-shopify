@@ -37,6 +37,14 @@
         
         {%- endfor -%}
         
+        {% for collection in product.collections %}
+          {% if collection.title contains 'Teardrop' or collection.title contains 'Pearls' or collection.title contains 'Diamonds' or collection.title contains 'Barbells' or collection.title contains 'Captive Rings' or collection.title contains 'Hinged Rings' or collection.title contains 'Ends' or collection.title contains 'Hangers' %}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        
         {%- endif -%}
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>

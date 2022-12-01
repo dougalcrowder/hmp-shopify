@@ -397,6 +397,7 @@
 .hover .hasmega:hover, .nohover .hasmega.active {
     .level1_parent {
         position: relative;
+        display: block;
         span .navarrow {
           transform: rotate(0deg);
           margin-bottom: -1px;
