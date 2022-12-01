@@ -1,11 +1,11 @@
 {{ 'styles-accounts.css' | asset_url | stylesheet_tag }}
-<div class="container account_area">
-  <div class="constrain account_header">
+<div class="container account_area inner">
+  <div class="constrain account_header text-center">
     <h1>{{ 'customer.account.title' | t }}</h1>
-    <a href="/account/logout" class="button nude">{{ 'layout.customer.log_out' | t }}</a>
+    <a href="/account/logout" class="button nude">{{ 'customer.log_out' | t }}</a>
   </div>
 
-  <div class="myaccount constrain flex">
+  <div class="myaccount flex">
     <div class="order_history">
       <h2>{{ 'customer.orders.title' | t }}</h2>
       

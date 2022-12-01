@@ -14,9 +14,6 @@
   }
   p {
     color: var(--color-midgrey);
-    a {
-      color: var(--color-black);
-    }
   }
   .grey_link {
     font-size: 81.25%;
@@ -296,7 +293,15 @@
         flex: 1 1 33.33333%;
       }
       &.add_new {
-        background-color: var(--color-white);
+        border:1px solid var(--color-white);
+      }
+      input:not([type="checkbox"]):not(.btn), select {
+        height: 40px;
+      }
+      input[type="checkbox"] {
+        &+ label {
+          display: inline;
+        }
       }
     }
   }
