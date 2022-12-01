@@ -110,9 +110,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.png",
-            "title_image": "Type 2",
+            "title_image": "CURVED",
             "description": "",
-            "block_url": "shopify:\/\/pages\/contact",
+            "block_url": "shopify:\/\/collections\/curved",
             "colour": "black",
             "header_tag": "h3"
           }
