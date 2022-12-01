@@ -63,7 +63,7 @@
       {%- endif -%}
     {% if collection.products_count == 0 %}
       <div class="nuffin">
-        <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+        <p class="text-center">Sorry, there are no products that match</p>
       </div>
     {% endif %}
     
@@ -75,6 +75,7 @@
 
 
 <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+
 
 </div>
 

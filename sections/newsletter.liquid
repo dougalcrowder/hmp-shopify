@@ -14,7 +14,7 @@
         </p>
       {%- endif -%}
       <input type="hidden" name="contact[tags]" value="newsletter">
-      <div class="input-group flex{% if form.errors %} input-group--error{% endif %}">
+      <div class="input-group flex nowrap{% if form.errors %} input-group--error{% endif %}">
         <div class="email_fields">
         <input type="email"
           name="contact[email]"

@@ -62,7 +62,7 @@
           
           productSuggestions.forEach((item, index) => {
               let ogImage = item.image;
-              let imageSized = ogImage.replace(".jpg", "_96x128.jpg");
+              let imageSized = ogImage.replace(".jpg", "_96x128_crop_center.jpg");
               const singleProduct = '<a href="' + item.url + '"><img src="' + imageSized + '" /><span><p>' + item.title + '</p><span></a>';
               // predictiveSearchResults.append('<div>' + singleProduct + '</div>');
               searchProducts.insertAdjacentHTML( 'beforeend', singleProduct );

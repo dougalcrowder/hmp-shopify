@@ -29,7 +29,7 @@
                     <a href="{{ navProduct.url }}" class="link{% if childlink.title == 'hidden' %} hide_this{% endif %}">
                     {% assign image =  childlink.object.featured_image %}
                     <picture>
-                      <source srcset="{{ image | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+                      <source srcset="{{ image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
                       <source srcset="{{ image | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
                       <source srcset="{{ image | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ image | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
                       <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navProduct.title }}" width="300" height="400" />
@@ -45,7 +45,7 @@
                     <a href="{{ navCollection.url }}" class="link">
                     {% assign nav_image =  navCollection.image %}
                     <picture>
-                      <source srcset="{{ nav_image | img_url: '440x587', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
+                      <source srcset="{{ nav_image | img_url: '440x587', crop: 'center' }} 1x" media="(min-width: 768px)" />
                       <source srcset="{{ nav_image | img_url: '304x405', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '304x405', crop: 'center' }} 1x" media="(min-width: 375px)" />
                       <source srcset="{{ nav_image | img_url: '174x232', crop: 'center', scale: 2 }} 2x, {{ nav_image | img_url: '174x232', crop: 'center' }} 1x" media="(min-width: 200px)" />
                       <img loading="lazy" class="lazyloadthisatsomepoint" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image of {{ navCollection.title }}" width="300" height="400" />
