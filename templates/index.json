@@ -99,9 +99,9 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
-            "title_image": "Type 1",
+            "title_image": "STRAIGHT",
             "description": "",
-            "block_url": "shopify:\/\/products\/choker-with-bead",
+            "block_url": "shopify:\/\/collections\/straight",
             "colour": "black",
             "header_tag": "h3"
           }
