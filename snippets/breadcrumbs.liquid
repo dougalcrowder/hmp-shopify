@@ -18,19 +18,25 @@
           </li>
         {%- endif -%}
         {%- if product.tags != blank -%}
+        
         {%- for tag in product.tags -%}
+        
         {%- if tag contains 'component' -%}
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="/collections/components" aria-current="page">Components</a>
         </li>
         {%- break -%}
-        {%- if tag contains 'readymade' -%}
+        {%- endif -%}
+        
+        {%- if tag = 'Readymade' -%}
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="/collections/ready-to-be-pierced" aria-current="page">Ready Made</a>
         </li>
         {%- break -%}
         {%- endif -%}
+        
         {%- endfor -%}
+        
         {%- endif -%}
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
