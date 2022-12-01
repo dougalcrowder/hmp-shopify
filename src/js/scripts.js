@@ -407,7 +407,28 @@ function footNavStates() {
   
 }
 
-
+function toggleAddress() {
+  if(document.querySelector('.address-edit-toggle')) {
+    document.querySelectorAll('.address .account_address_outer .address > .address-edit-toggle').forEach( function(toggler) {
+      console.log("just click");
+      toggler.addEventListener('click', function() {
+        let addressBelow = getNextSibling(toggler, '.address_edit');
+        let buttonBeside = getNextSibling(toggler, '.address-delete');
+        let addressAbove = getPreviousSibling(toggler, '.active_address');
+        toggler.classList.toggle("active");
+        addressBelow.classList.toggle("hide");
+        buttonBeside.classList.toggle("hide");
+        addressAbove.classList.toggle("inactive");
+        if (toggler.classList.contains("active")) {
+          toggler.innerHtml = "Edit";
+        } else {
+          toggler.innerHtml = "Cancel";
+        }
+      });
+    });
+    
+  }
+}
 // Swup *****************************************************
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -416,7 +437,7 @@ function init() {
   console.log("scripts init");
   if(document.querySelector('.account_area')) {
     accounts();
-   //  toggleAddress();
+    toggleAddress();
   }
   viewport();
   distanceScrolled();
