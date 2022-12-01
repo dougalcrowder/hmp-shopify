@@ -280,7 +280,7 @@
 
 // Addresses
 .myaccount {
-  .flex {
+  > .flex {
     gap: 16px;
     .item {
       margin-bottom: 24px;;
@@ -299,6 +299,10 @@
       }
       input:not([type="checkbox"]):not(.btn), select {
         height: 40px;
+      }
+      select {
+        padding-top: 3px;
+        padding-bottom: 3px;
       }
       input[type="checkbox"] {
         width: auto;
