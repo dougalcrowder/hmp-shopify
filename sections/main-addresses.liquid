@@ -6,7 +6,7 @@
     <h1>{{ 'customer.addresses.title' | t }}</h1>
     <p><a class="button nude" href="{{ routes.account_url }}"><< {{ 'customer.account.return' | t }}</a></p>
   </header>
-</div>
+
 
 <div class="myaccount constrain">
   <div class="flex">
@@ -177,7 +177,7 @@
           <input type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}" autocomplete="phone">
             </div>
           </div>
-          <div class="address_item flex">
+          <div class="address_item flex items-center content-center">
             <div class="half">
               {{ form.set_as_default_checkbox }}
               <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
@@ -193,6 +193,7 @@
     </div>
   </div>
 
+</div>
 </div>
 {% endpaginate %}
 {% schema %}
