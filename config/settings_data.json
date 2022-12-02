@@ -57,7 +57,7 @@
           "41add3d2-3725-4e34-a252-c32b90d8f8e1"
         ],
         "settings": {
-          "show_payment_icons": true
+          "show_payment_icons": false
         }
       },
       "mailchimp": {
