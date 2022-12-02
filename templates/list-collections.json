@@ -1,8 +1,9 @@
 {
-  "name": "List Collections",
   "sections": {
     "main": {
-      "type": "main-list-collections-template"
+      "type": "main-list-collections-template",
+      "settings": {
+      }
     }
   },
   "order": [
