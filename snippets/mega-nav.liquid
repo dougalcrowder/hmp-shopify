@@ -74,7 +74,7 @@
                       {% if childlink.links != blank %}
                         <ul class="level3">
                         {% for grandchildlink in childlink.links %}
-                          <li class="level3_item">
+                          <li class="level3_item{% if grandchildlink.title == 'Shop All…' or grandchildlink.title == 'See All…' %} dropstar{% endif %}">
                             <a href="{{ grandchildlink.url }}"
                             class="link{% if grandchildlink.active %} link_active{% endif %}"
                             {% if grandchildlink.current %} aria-current="page"{% endif %}

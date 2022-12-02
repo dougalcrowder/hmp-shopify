@@ -30,6 +30,13 @@
   li a span {
     transition: all 0.3s ease;
   }
+  ul.level3 {
+    li.dropstar {
+      @media screen and (min-width: 960px) {
+        margin-top: 24px;
+      }
+    }
+  }
   // hover effects
   &.over {
     ul li {

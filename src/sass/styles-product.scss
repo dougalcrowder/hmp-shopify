@@ -57,6 +57,33 @@
     align-items: stretch; 
     align-content: stretch;
     gap: 8px;
+    button.wk-button {
+      svg {
+        path {
+          transition: all 0.3s ease;
+        }
+      }
+      &:not([disabled]):hover {
+        background-color: transparent;
+        color: var(--color-grey);
+        svg {
+          path {
+            fill: var(--color-lightgrey);
+          }
+        }
+      }
+      &.wk-button--remove {
+        &:not([disabled]):hover {
+          background-color: transparent;
+          color: var(--color-black);
+          svg {
+            path.filler {
+              fill: transparent;
+            }
+          }
+        }
+      }
+    }
     @media screen and (min-width: 960px) {
       max-width: 310px;
     }
