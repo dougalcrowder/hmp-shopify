@@ -66,10 +66,10 @@
             <label class="custom_box">
               <input type="checkbox" name="customer[accepts_marketing]" />
               <span class="checkmark"></span>
-              <span>Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.</span>
+              <span>{{ section.settings.checkbox_text }}</span>
             </label> 
           </div>
-          <div class="terms"><p>By signing up you agree to <a href="/pages/terms-and-conditions">Terms of Service</a> and <a href="/pages/privacy-policy">Privacy Policy</a></p></div>
+          <div class="terms">{{ section.settings.smallprint }}</div>
           <p class="text-center recover_pass">
             <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
           </p>
@@ -90,7 +90,7 @@
       "label": "Checkbox text"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "smallprint",
       "label": "Small Print"
     }
