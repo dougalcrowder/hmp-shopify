@@ -1,7 +1,11 @@
 {
   "sections": {
     "main": {
-      "type": "main-register"
+      "type": "main-register",
+      "settings": {
+        "checkbox_text": "Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.",
+        "smallprint": "<p>By signing up you agree to our <a href=\"https:\/\/hm-pierced.myshopify.com\/pages\/terms-and-conditions\">Terms of Service <\/a>and <a href=\"https:\/\/hm-pierced.myshopify.com\/pages\/privacy-policy\">Privacy Policy<\/a><\/p>"
+      }
     }
   },
   "order": [
