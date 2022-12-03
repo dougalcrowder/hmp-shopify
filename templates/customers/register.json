@@ -1,7 +1,11 @@
 {
   "sections": {
     "main": {
-      "type": "main-register"
+      "type": "main-register",
+      "settings": {
+        "checkbox_text": "Let's get personal! We'll send you only the good stuff: Exclusive early access to Sale, new arrivals and promotions. No nasties.",
+        "smallprint": ""
+      }
     }
   },
   "order": [
