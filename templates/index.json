@@ -16,6 +16,15 @@
         "notlazy": true
       }
     },
+    "bb386705-e11f-4d44-a176-b860b833fbb9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "collection": "ring",
+        "margin_top": "m",
+        "margin_bot": "m"
+      }
+    },
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9": {
       "type": "manual-blocks",
       "blocks": {
@@ -64,15 +73,6 @@
         "gap": true,
         "titles_down": false,
         "margin_top": "s",
-        "margin_bot": "m"
-      }
-    },
-    "bb386705-e11f-4d44-a176-b860b833fbb9": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Arrivals",
-        "collection": "shop",
-        "margin_top": "m",
         "margin_bot": "m"
       }
     },
@@ -377,8 +377,8 @@
   },
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
-    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "bb386705-e11f-4d44-a176-b860b833fbb9",
+    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
     "ce4db669-7e9c-4025-90c1-3e79944c0301",
     "829022b1-793e-45d9-bbf8-37458d13e2ab",
