@@ -70,7 +70,7 @@
       }
       &.mainhover {
         > a > span {
-          opacity: 1;
+          color: var(--color-nav-over);
         }
       }
     }
