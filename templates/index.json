@@ -146,15 +146,15 @@
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_1533-1.jpg",
-        "mobimage": "shopify:\/\/shop_images\/Rectangle_1557.jpg",
+        "image": "shopify:\/\/shop_images\/Showroom_Desktop.jpg",
+        "mobimage": "shopify:\/\/shop_images\/Showroom_mobile_791c6227-8dc6-47dd-8782-de1d6c7a98f3.jpg",
         "title": "THE HMp STUDIO",
-        "text": "<p>An intimate, inclusive space to nourish your senses and connect. HMp studios offer the best piercing artists, piercing consultation and curation, as well as education and aftercare. (Hand-holding optional)<\/p>",
+        "text": "<p>An intimate & inclusive space to nourish your senses. HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. <br\/>Hand-holding optional<\/p>",
         "button_label": "BOOK AN APPOINTMENT",
         "button_link": "shopify:\/\/pages\/appointment",
         "header_tag": "h2",
         "text_color": "white",
-        "border": true,
+        "border": false,
         "lightheader": false,
         "notlazy": false
       }
