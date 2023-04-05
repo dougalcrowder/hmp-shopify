@@ -98,7 +98,7 @@
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT_9c5d5e9e-d06e-48ed-a0c4-7e9f5a099187.jpg",
             "title_image": "STRAIGHT",
             "description": "",
             "block_url": "shopify:\/\/collections\/straight",
@@ -109,7 +109,7 @@
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.png",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1_3c8896ea-4edb-4277-82e1-6f9061322f29.jpg",
             "title_image": "CURVED",
             "description": "",
             "block_url": "shopify:\/\/collections\/curved",
@@ -120,7 +120,7 @@
         "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HMP16YG1214.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2_3c2fba64-bd15-4599-b089-1d7b76feb8bc.jpg",
             "title_image": "RING",
             "description": "",
             "block_url": "shopify:\/\/collections\/ring",
@@ -138,9 +138,9 @@
         "title": "Shop by Type",
         "constrain": true,
         "gap": false,
-        "titles_down": true,
-        "margin_top": "m",
-        "margin_bot": "m"
+        "titles_down": false,
+        "margin_top": "l",
+        "margin_bot": "l"
       }
     },
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
