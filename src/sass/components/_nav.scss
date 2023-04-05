@@ -461,6 +461,18 @@
               animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.8s both;
             }
           }
+          &:nth-child(6){
+            animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
+            @media screen and (min-width: 960px) {
+              animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.9s both;
+            }
+          }
+          &:nth-child(7){
+            animation: fade-in-left 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+            @media screen and (min-width: 960px) {
+              animation: fade-in-bottom 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+            }
+          }
         }
           
         }
