@@ -6,7 +6,7 @@
         "image": "shopify:\/\/shop_images\/HMp_-_Homepage_Desktop_7902ad43-2281-48d9-a886-207c342e7789.jpg",
         "mobimage": "shopify:\/\/shop_images\/HMp_-_Homepage_mobile_a42f80e8-2c90-4efc-ba33-c1d7b6ceaff5.jpg",
         "title": "GET PIERCED. NOW!",
-        "text": "<p><\/p><p><\/p><p>This is about a love of feeling, of sensation. This is about a love of what it means to be human. This is HMp. We welcome you.<\/p>",
+        "text": "<p><\/p><p><\/p><p>This is about a love of feeling, of sensation. <br\/>This is about a love of what it means to be human. <br\/>This is HMp. We welcome you.<\/p>",
         "button_label": "See our catalogue",
         "button_link": "shopify:\/\/collections\/shop",
         "header_tag": "h2",
@@ -79,8 +79,8 @@
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ready-to-be-pierced_destkop.jpg",
-        "mobimage": "shopify:\/\/shop_images\/Ready-to-be-pierced_mobile_f224dd1e-262d-4324-815e-ca81320e0d4b.jpg",
+        "image": "shopify:\/\/shop_images\/Ready-to-be-pierced_destkop_eeda3669-fae9-4628-bcc0-a286ae729c09.jpg",
+        "mobimage": "shopify:\/\/shop_images\/Ready-to-be-pierced_mobile_a52370e9-bea9-4e78-b0da-701a6cca5108.jpg",
         "title": "ready-to-be-pierced",
         "text": "<p>Expertly crafted pieces of 18ct gold jewellery ready to be pierced with. Gold is for life, not just for ‘healing time’.<\/p>",
         "button_label": "View Collection",
@@ -149,7 +149,7 @@
         "image": "shopify:\/\/shop_images\/Showroom_Desktop.jpg",
         "mobimage": "shopify:\/\/shop_images\/Showroom_mobile_5965f0f5-758b-4b72-b6ec-da7a24779fd9.jpg",
         "title": "THE HMp STUDIO",
-        "text": "<p>An intimate & inclusive space to nourish your senses. HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. <br\/>Hand-holding optional<\/p>",
+        "text": "<p>An intimate & inclusive space to nourish your senses. <br\/>HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. <\/p>",
         "button_label": "BOOK AN APPOINTMENT",
         "button_link": "shopify:\/\/pages\/appointment",
         "header_tag": "h2",
