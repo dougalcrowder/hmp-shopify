@@ -3,14 +3,14 @@
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/HMp_-_Homepage_Desktop.jpg",
-        "mobimage": "shopify:\/\/shop_images\/HMp_-_Homepage_mobile.jpg",
-        "title": "PIERCING FOR LOVERS",
+        "image": "shopify:\/\/shop_images\/HMp_-_Homepage_Desktop_22a77852-06b9-438b-a603-9c0b5054c673.jpg",
+        "mobimage": "shopify:\/\/shop_images\/HMp_-_Homepage_mobile_6fd1d24e-d331-4b8d-8629-e002349757a1.jpg",
+        "title": "GET PIERCED. NOW!",
         "text": "<p><\/p><p><\/p><p>This is the new concept from London’s jewellery provocateur, Hannah Martin. This is about a love of feeling, of sensation. This is about a love of what it means to be human. This is HMp. We welcome you.<\/p>",
         "button_label": "Explore our catalogue",
         "button_link": "shopify:\/\/collections\/shop",
         "header_tag": "h2",
-        "text_color": "white",
+        "text_color": "black",
         "border": false,
         "lightheader": false,
         "notlazy": true
