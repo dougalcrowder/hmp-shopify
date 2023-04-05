@@ -72,8 +72,8 @@
         "constrain": false,
         "gap": true,
         "titles_down": false,
-        "margin_top": "s",
-        "margin_bot": "m"
+        "margin_top": "none",
+        "margin_bot": "none"
       }
     },
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
