@@ -79,15 +79,15 @@
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/hmp-banner-02_bc259151-0038-4a93-a5f3-a09e4f7c7866.jpg",
-        "mobimage": "shopify:\/\/shop_images\/Rectangle_1559_d7f939ca-72fb-4a57-9b33-ffb1417a133d.jpg",
+        "image": "shopify:\/\/shop_images\/Ready-to-be-pierced_destkop.jpg",
+        "mobimage": "shopify:\/\/shop_images\/Ready-to-be-pierced_mobile.jpg",
         "title": "ready-to-be-pierced",
         "text": "<p>Expertly crafted pieces of 18ct gold jewellery ready to be pierced with. Gold is for life, not just for ‘healing time’.<\/p>",
         "button_label": "View Collection",
         "button_link": "shopify:\/\/collections\/ready-to-be-pierced",
         "header_tag": "h2",
-        "text_color": "white",
-        "border": false,
+        "text_color": "black",
+        "border": true,
         "lightheader": false,
         "notlazy": false
       }
