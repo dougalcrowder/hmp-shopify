@@ -3,17 +3,26 @@
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/HMp_-_Homepage_Desktop.jpg",
-        "mobimage": "shopify:\/\/shop_images\/HMp_-_Homepage_mobile.jpg",
-        "title": "PIERCING FOR LOVERS",
-        "text": "<p><\/p><p><\/p><p>This is the new concept from London’s jewellery provocateur, Hannah Martin. This is about a love of feeling, of sensation. This is about a love of what it means to be human. This is HMp. We welcome you.<\/p>",
-        "button_label": "Explore our catalogue",
+        "image": "shopify:\/\/shop_images\/HMp_-_Homepage_Desktop_7902ad43-2281-48d9-a886-207c342e7789.jpg",
+        "mobimage": "shopify:\/\/shop_images\/HMp_-_Homepage_mobile_a42f80e8-2c90-4efc-ba33-c1d7b6ceaff5.jpg",
+        "title": "GET PIERCED. NOW!",
+        "text": "<p><\/p><p><\/p><p>This is about a love of feeling, of sensation. This is about a love of what it means to be human. This is HMp. We welcome you.<\/p>",
+        "button_label": "See our catalogue",
         "button_link": "shopify:\/\/collections\/shop",
         "header_tag": "h2",
-        "text_color": "white",
+        "text_color": "black",
         "border": false,
         "lightheader": false,
         "notlazy": true
+      }
+    },
+    "bb386705-e11f-4d44-a176-b860b833fbb9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "collection": "ring",
+        "margin_top": "m",
+        "margin_bot": "m"
       }
     },
     "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9": {
@@ -22,7 +31,7 @@
         "8a91ec81-a07a-424c-89f7-d28d42062501": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-01.jpg",
+            "image": "shopify:\/\/shop_images\/hmp-cat-01_df3eff04-2a8a-488c-93f3-c24bb51538ac.jpg",
             "title_image": "NOSE",
             "description": "",
             "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Septum&filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
@@ -33,7 +42,7 @@
         "140da9bc-722d-470d-becb-20fc0b3eb80f": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-02.jpg",
+            "image": "shopify:\/\/shop_images\/hmp-cat-02_fca5fdd0-38a4-454f-81f1-cc1b271179b7.jpg",
             "title_image": "LOBES",
             "description": "",
             "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
@@ -44,7 +53,7 @@
         "8c7b080c-5635-4761-bed0-699e548d1fbe": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-03.jpg",
+            "image": "shopify:\/\/shop_images\/hmp-cat-03_f296327b-c1c8-4189-a685-15fd3294f1ae.jpg",
             "title_image": "CARTILAGE",
             "description": "",
             "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Helix&filter.p.m.custom.body_placement=Conch&filter.p.m.custom.body_placement=Tragus&filter.p.m.custom.body_placement=Daith&filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
@@ -63,17 +72,8 @@
         "constrain": false,
         "gap": true,
         "titles_down": false,
-        "margin_top": "s",
-        "margin_bot": "m"
-      }
-    },
-    "bb386705-e11f-4d44-a176-b860b833fbb9": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Arrivals",
-        "collection": "shop",
-        "margin_top": "m",
-        "margin_bot": "m"
+        "margin_top": "none",
+        "margin_bot": "none"
       }
     },
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
@@ -82,7 +82,7 @@
         "image": "shopify:\/\/shop_images\/hmp-banner-02_bc259151-0038-4a93-a5f3-a09e4f7c7866.jpg",
         "mobimage": "shopify:\/\/shop_images\/Rectangle_1559_d7f939ca-72fb-4a57-9b33-ffb1417a133d.jpg",
         "title": "ready-to-be-pierced",
-        "text": "<p>Beautifully designed, expertly crafted pieces of 18 ct gold jewellery to be pierced with. Gold is for life, not just for ‘healing time’.<\/p>",
+        "text": "<p>Expertly crafted pieces of 18ct gold jewellery ready to be pierced with. Gold is for life, not just for ‘healing time’.<\/p>",
         "button_label": "View Collection",
         "button_link": "shopify:\/\/collections\/ready-to-be-pierced",
         "header_tag": "h2",
@@ -98,7 +98,7 @@
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT_9c5d5e9e-d06e-48ed-a0c4-7e9f5a099187.jpg",
             "title_image": "STRAIGHT",
             "description": "",
             "block_url": "shopify:\/\/collections\/straight",
@@ -109,7 +109,7 @@
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1.png",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1_3c8896ea-4edb-4277-82e1-6f9061322f29.jpg",
             "title_image": "CURVED",
             "description": "",
             "block_url": "shopify:\/\/collections\/curved",
@@ -120,7 +120,7 @@
         "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HMP16YG1214.jpg",
+            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2_3c2fba64-bd15-4599-b089-1d7b76feb8bc.jpg",
             "title_image": "RING",
             "description": "",
             "block_url": "shopify:\/\/collections\/ring",
@@ -138,9 +138,9 @@
         "title": "Shop by Type",
         "constrain": true,
         "gap": false,
-        "titles_down": true,
-        "margin_top": "m",
-        "margin_bot": "m"
+        "titles_down": false,
+        "margin_top": "l",
+        "margin_bot": "l"
       }
     },
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
@@ -377,8 +377,8 @@
   },
   "order": [
     "3921e21b-29ac-4941-a207-9e55233e99cf",
-    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "bb386705-e11f-4d44-a176-b860b833fbb9",
+    "b1fe83d1-dbe5-4c9c-a4e3-4f69edb51ea9",
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6",
     "ce4db669-7e9c-4025-90c1-3e79944c0301",
     "829022b1-793e-45d9-bbf8-37458d13e2ab",
