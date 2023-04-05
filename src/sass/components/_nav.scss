@@ -4,13 +4,13 @@
     font-family: var(--font-heading-family);
     font-size: 81.25%;
     font-style: normal;
-    color: var(--color-black);
+    color: var(--color-nav);
     position: relative;
     font-weight: 700;
     transition: all 0.3s ease;
     @media screen and (min-width: 960px) {
       font-size: 87.5%;
-      color: var(--color-lightgrey);
+      color: var(--color-nav);
       font-weight: 400;
     }
     > span {
@@ -42,11 +42,11 @@
     ul li {
       a:not(.nogo) {
         span {
-          color: var(--color-lightgrey);
+          color: var(--color-nav);
         }
         &.hover {
           span {
-            color: var(--color-black);
+            color: var(--color-nav-over);
           }
         }
       }
@@ -55,7 +55,7 @@
   > li {
     &:hover {
       div a:not(.nogo) {
-        color: var(--color-black);
+        color: var(--color-nav-over);
       }
       div a.nogo {
         cursor: default;
@@ -66,7 +66,7 @@
     li.level1_item {
       > a > span {
         color: var(--color-lightgrey);
-        opacity: 0.4;
+        // opacity: 0.4;
       }
       &.mainhover {
         > a > span {
