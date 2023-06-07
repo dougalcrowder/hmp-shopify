@@ -10,9 +10,9 @@
         "button_label": "See our catalogue",
         "button_link": "shopify:\/\/collections\/shop",
         "header_tag": "h2",
-        "text_color": "black",
-        "border": false,
-        "lightheader": false,
+        "text_color": "white",
+        "border": true,
+        "lightheader": true,
         "notlazy": true
       }
     },
