@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
-    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-  
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0584/9533/6495/files/favicon.svg?v=1669979167" type="image/svg+xml" />
+    <link rel="alternate icon" href="https://cdn.shopify.com/s/files/1/0584/9533/6495/files/favicon.ico?v=1669979167" type="image/png" sizes="48x48" />
+    <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/0584/9533/6495/files/apple-touch-icon.png?v=1669979167" sizes="192x192" />
+    <link rel="mask-icon" href="https://cdn.shopify.com/s/files/1/0584/9533/6495/files/favicon.svg?v=1669979167" color="#4a5568" />
+    
+    <meta name="theme-color" content="#4a5568" />
   {%- if canonical_url != blank  -%}
     <link rel="canonical" href="{{ canonical_url }}">
   {%- endif -%}
@@ -39,9 +41,11 @@
   {%- if page_description -%}
     <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
-  {%- if request.page_type contains 'customers/' -%}
-    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
-  {%- endif -%}
+  
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preload" href="//cdn.shopify.com/s/files/1/0584/9533/6495/t/4/assets/MarrSans-Regular-Web.woff2?v=50633817073756614141665572172" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="//cdn.shopify.com/s/files/1/0584/9533/6495/t/4/assets/MarrSans-LightItalic-Web.woff2?v=93570896854908201691665572180" as="font" type="font/woff2" crossorigin>
   
   <link rel="preconnect" href="https://stats.g.doubleclick.net">
   <link rel="preconnect" href="https://www.facebook.com">
@@ -59,8 +63,14 @@
   <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
   
   <link rel="stylesheet" href="https://use.typekit.net/yhj4zca.css" />
+  
   {{ 'styles-top.css' | asset_url | stylesheet_tag }}
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  
   {{ content_for_header }}
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" defer>
 </head>
 
 <body class="template-{{ request.page_type | handle }} template-{{ template | handleize }} loading">
@@ -74,8 +84,15 @@
     <main class="main-content container transition-fade" role="main">
       {{ content_for_layout }}
     </main>
-
-  {% section 'footer' %}
+    {% render 'app_wishlist-king' %}
+    {% section 'newsletter' %}
+    {% section 'footer' %}
+    {% include 'search' %}
+    {% section 'sidecart' %}
+    
+    
+{{ 'styles-swiffy.css' | asset_url | stylesheet_tag }}
+{{ 'nav_images.css' | asset_url | stylesheet_tag }} 
  {{ 'styles-bot.css' | asset_url | stylesheet_tag }} 
 <script src="{{ 'scripts.js' | asset_url }}" async="async"></script>
 
@@ -90,10 +107,35 @@ if (Shopify.designMode) {
 </script>
  
 <script type="module">
-  import '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+  import { subscribeToCartAjaxRequests } from '{{ "liquid-ajax-cart-v1.10.3.js" | asset_url }}';
+  
+  subscribeToCartAjaxRequests(( requestState, subscribeToResult ) => {
+  
+    // If the request is 'Add to cart'
+    if ( requestState.requestType === 'add' ) {
+      
+      // Define a callback that will be called after the request is finished
+      subscribeToResult( requestState => {
+  
+        // If the request is successful 
+        if ( requestState.responseData?.ok ) {
+        
+        let sideCart= document.getElementById('sidecart');
+        
+        document.body.classList.add("sidecart-active");
+        sideCart.classList.add('alive');
+        setTimeout(function() {
+          sideCart.classList.add('active');
+        }, 50);
+          
+        }
+      });
+    }
+  });
+  
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.1.0/quicklink.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
 <script>
   window.addEventListener('load', () => {
     quicklink.listen({
@@ -106,6 +148,11 @@ if (Shopify.designMode) {
     });
   });
 </script>
-
+  {% comment %}
+    <div> reg web woff2:{{ 'MarrSans-Regular-Web.woff2' | asset_url }} </div>
+    <div> reg web:{{ 'MarrSans-Regular-Web.woff' | asset_url }} </div>
+    <div> lightitalic web woff2:{{ 'MarrSans-LightItalic-Web.woff2' | asset_url }} </div>
+    <div> lightitalic web:{{ 'MarrSans-LightItalic-Web.woff' | asset_url }} </div>
+  {% endcomment %}
 </body>
 </html>
