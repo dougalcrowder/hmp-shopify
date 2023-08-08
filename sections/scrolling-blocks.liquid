@@ -1,15 +1,19 @@
  <div class="grid scrolling pt-{{ section.settings.margin_top }} pb-{{ section.settings.margin_bot }}">
-    <ul class="collection_list-scroller">  
+   <div class="scrolling_blocks">
+   {%- if section.settings.title != blank -%}
+   <h2>{{ section.settings.title | escape }}</h2>
+   {%- endif -%}
+   <div class="swiffy-slider slider-item-show5 slider-item-snapstart slider-nav-autohide slider-item-first-visible slider-nav-animation slider-nav-animation-appear">
+    <ul class="slider-container">  
       {% for block in section.blocks limit: section.blocks.size %}
-        <li class="collection_item">
+        <li class="collection_item text-{{ block.settings.colour }}">
           
           {% if block.settings.image != blank %}
             {%- assign collection_image = block.settings.image -%}
           {% else %}
             {% assign collection_image = blank %}
           {% endif %}
-          
-          <div class="collection-grid-item text-{{ block.settings.colour }}">
+
             {% if block.settings.block_url != blank %}
             <a href="{{ block.settings.block_url }}">
               {% endif %}
@@ -78,17 +82,19 @@
               {% if block.settings.block_url != blank %}
             </a>
             {% endif %}
-          </div>
         </li>
       {% endfor %}
     </ul>
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
+   </div>
   </div>
 
   {% if section.blocks.size == 0 %}
     {% include 'no-blocks' %}
   {% endif %}
 
-
+  </div>
 
 
 {% schema %}
@@ -97,7 +103,7 @@
     "en": "Scrolling Blocks"
   },
   "class": "index-section",
-  "max_blocks": 8,
+  "max_blocks": 24,
   "settings": [
     {
       "type": "text",
