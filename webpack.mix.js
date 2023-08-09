@@ -23,7 +23,7 @@ mix.js('src/js/scripts.js', 'assets')
     .sass('src/sass/styles-accounts.scss', 'assets')
     .sass('src/sass/styles-collection-list.scss', 'assets')
     //.setPublicPath('assets')
-    .browserSync({
-      proxy: 'http://127.0.0.1:9292',
-      reloadDelay: 3000
-    });
+    // .browserSync({
+    //   proxy: 'http://127.0.0.1:9292',
+    //   reloadDelay: 3000
+    // });
