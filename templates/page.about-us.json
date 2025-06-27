@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "78820d97-6b83-49b4-8843-efd335b633d9": {
       "type": "banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/hmp-banner-02.jpg",
-        "mobimage": "shopify:\/\/shop_images\/hmp-banner-02.jpg"
+        "image": "shopify://shop_images/HMP_202506_-_Homepage_-_HMp_Experience_Mobile_7014a15a-effc-4862-8c7c-0475a4bcda23.jpg",
+        "mobimage": "shopify://shop_images/HMP_202506_-_Homepage_-_HMp_Experience_Mobile-1.jpg"
       }
     },
     "main": {
@@ -14,14 +23,14 @@
           "type": "text_and_title",
           "settings": {
             "title": "HMp: THE HEART AND SOUL OF IT",
-            "description": "<p>“I’ve spent 15 years creating pieces of jewellery that excite people, that connect worlds and cross genres, that make you feel alive. Body piercing is simply the next step in this journey of the senses” – Hannah Martin<\/p><p>HMp is brought to you by London’s jewellery provocateur Hannah Martin.<\/p><p>A collection of jewellery to be pierced with. Gold that goes beneath the surface. Gold to wake up your senses.<\/p><p>HMp is expertly crafted 18 ct gold body piercing jewellery, for the pierced and the (as yet) unpierced. Sculptural designs with an instantly recognisable Hannah Martin edge that can be worn alone, customised and added to through time.<\/p><p>Our mission is to transcend the act of piercing - elevating the experience by engaging an individual’s senses and awakening them. Piercing becomes a ritual, a space for reflection and nourishment.<\/p><p>Underneath it all, this is about a connection to your self, to a purity of feeling and a deep love of what it means to be human.<\/p><p>Welcome to the HMp family.<\/p><p><\/p>"
+            "description": "<p>“I’ve spent 15 years creating pieces of jewellery that excite people, that connect worlds and cross genres, that make you feel alive. Body piercing is simply the next step in this journey of the senses” – Hannah Martin</p><p>HMp is brought to you by London’s jewellery provocateur Hannah Martin.</p><p>A collection of jewellery to be pierced with. Gold that goes beneath the surface. Gold to wake up your senses.</p><p>HMp is expertly crafted 18 ct gold body piercing jewellery, for the pierced and the (as yet) unpierced. Sculptural designs with an instantly recognisable Hannah Martin edge that can be worn alone, customised and added to through time.</p><p>Our mission is to transcend the act of piercing - elevating the experience by engaging an individual’s senses and awakening them. Piercing becomes a ritual, a space for reflection and nourishment.</p><p>Underneath it all, this is about a connection to your self, to a purity of feeling and a deep love of what it means to be human.</p><p>Welcome to the HMp family.</p><p></p>"
           }
         },
         "48243eee-ec09-4b05-8857-d76ae5c31bee": {
           "type": "text_and_title",
           "settings": {
             "title": "ABOUT HANNAH MARTIN",
-            "description": "<p>Hannah Martin was born in the UK in 1980, at a time when England was being convulsed by a social, cultural and political counter-revolution and new wave music emerged in the wake of post-punk.<\/p><p>After two decades of feeling the volatile pulses of the country’s heartbeat, Hannah moved to London to study jewellery design at Central Saint Martins and immerse herself in its cultural and sonic riches. She cut her teeth in Paris at the jewellery studios of Cartier.<\/p><p>Empowered with finely tuned, high jewellery skills and a taste for luxury, she returned to her cultural home of London and founded the eponymous Hannah Martin brand in 2006.<\/p><p>The references found in Hannah Martin jewellery come from an insatiable appetite to experience, from the atmosphere in the rooms of live music venues and the youth culture soaking it up. Feelings of elation, excitement, pleasure, restraint, awe and revelation, all feed her imagination and inform her work.<\/p><p>Hannah’s designs are characterised by fluid, gender nonspecific sculptural forms of emotion, bathed in an unapologetic undertone.<\/p>"
+            "description": "<p>Hannah Martin was born in the UK in 1980, at a time when England was being convulsed by a social, cultural and political counter-revolution and new wave music emerged in the wake of post-punk.</p><p>After two decades of feeling the volatile pulses of the country’s heartbeat, Hannah moved to London to study jewellery design at Central Saint Martins and immerse herself in its cultural and sonic riches. She cut her teeth in Paris at the jewellery studios of Cartier.</p><p>Empowered with finely tuned, high jewellery skills and a taste for luxury, she returned to her cultural home of London and founded the eponymous Hannah Martin brand in 2006.</p><p>The references found in Hannah Martin jewellery come from an insatiable appetite to experience, from the atmosphere in the rooms of live music venues and the youth culture soaking it up. Feelings of elation, excitement, pleasure, restraint, awe and revelation, all feed her imagination and inform her work.</p><p>Hannah’s designs are characterised by fluid, gender nonspecific sculptural forms of emotion, bathed in an unapologetic undertone.</p>"
           }
         }
       },
