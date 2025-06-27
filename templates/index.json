@@ -40,8 +40,8 @@
         "8a91ec81-a07a-424c-89f7-d28d42062501": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify://shop_images/hmp-cat-01_df3eff04-2a8a-488c-93f3-c24bb51538ac.jpg",
-            "title_image": "NOSE",
+            "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Ear.jpg",
+            "title_image": "Ear",
             "description": "",
             "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Septum&filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
             "colour": "white",
@@ -51,7 +51,7 @@
         "140da9bc-722d-470d-becb-20fc0b3eb80f": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify://shop_images/hmp-cat-02_fca5fdd0-38a4-454f-81f1-cc1b271179b7.jpg",
+            "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Body.jpg",
             "title_image": "LOBES",
             "description": "",
             "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
