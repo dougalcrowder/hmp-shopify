@@ -52,7 +52,7 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Body.jpg",
-            "title_image": "LOBES",
+            "title_image": "Body",
             "description": "",
             "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
             "colour": "white",
@@ -63,7 +63,7 @@
           "type": "manual_block",
           "settings": {
             "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Septum.jpg",
-            "title_image": "CARTILAGE",
+            "title_image": "Septum",
             "description": "",
             "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Helix&filter.p.m.custom.body_placement=Conch&filter.p.m.custom.body_placement=Tragus&filter.p.m.custom.body_placement=Daith&filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
             "colour": "white",
@@ -108,7 +108,7 @@
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT_9c5d5e9e-d06e-48ed-a0c4-7e9f5a099187.jpg",
+            "image": "shopify://shop_images/HMP_202506_-_Homepage_-_Shape_-_Straight.jpg",
             "title_image": "STRAIGHT",
             "description": "",
             "block_url": "shopify://collections/straight",
@@ -119,7 +119,7 @@
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT-1_3c8896ea-4edb-4277-82e1-6f9061322f29.jpg",
+            "image": "shopify://shop_images/HMP_202506_-_Homepage_-_Shape_-_Curve.jpg",
             "title_image": "CURVED",
             "description": "",
             "block_url": "shopify://collections/curved",
@@ -130,7 +130,7 @@
         "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT-2_3c2fba64-bd15-4599-b089-1d7b76feb8bc.jpg",
+            "image": "shopify://shop_images/HMP_202506_-_Homepage_-_Shape_-_Ring.jpg",
             "title_image": "RING",
             "description": "",
             "block_url": "shopify://collections/ring",
@@ -156,8 +156,8 @@
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
       "type": "hero",
       "settings": {
-        "image": "shopify://shop_images/Showroom_Desktop.jpg",
-        "mobimage": "shopify://shop_images/Showroom_mobile_5965f0f5-758b-4b72-b6ec-da7a24779fd9.jpg",
+        "image": "shopify://shop_images/HMP_202506_-_Homepage_-_HMp_Experience.jpg",
+        "mobimage": "shopify://shop_images/HMP_202506_-_Homepage_-_HMp_Experience_Mobile.jpg",
         "title": "THE HMp Experience",
         "text": "<p>An intimate & inclusive space to nourish your senses. <br/>HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. </p>",
         "button_label": "BOOK AN APPOINTMENT",
