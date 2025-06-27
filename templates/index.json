@@ -12,15 +12,15 @@
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify://shop_images/HMp_202506_-_Hero.jpg",
-        "mobimage": "shopify://shop_images/HMp_202506_-_Hero_Mobile.jpg",
+        "image": "shopify://shop_images/HMp_202506_-_Hero_2.jpg",
+        "mobimage": "shopify://shop_images/HMp_202506_-_Hero_Mobile_d0592141-a721-461d-8780-977d6139900c.jpg",
         "title": "",
         "text": "",
         "button_label": "",
         "button_link": "shopify://collections/shop",
         "header_tag": "h2",
         "text_color": "white",
-        "border": true,
+        "border": false,
         "lightheader": true,
         "notlazy": true
       }
