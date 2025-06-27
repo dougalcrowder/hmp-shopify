@@ -43,7 +43,7 @@
             "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Ear.jpg",
             "title_image": "Ear",
             "description": "",
-            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Septum&filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
+            "block_url": "",
             "colour": "white",
             "header_tag": "h2"
           }
@@ -54,7 +54,7 @@
             "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Body.jpg",
             "title_image": "Body",
             "description": "",
-            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
+            "block_url": "",
             "colour": "white",
             "header_tag": "h3"
           }
@@ -65,7 +65,7 @@
             "image": "shopify://shop_images/HMp_202506_Homepage_Hero_Body_Type_-_Septum.jpg",
             "title_image": "Septum",
             "description": "",
-            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Helix&filter.p.m.custom.body_placement=Conch&filter.p.m.custom.body_placement=Tragus&filter.p.m.custom.body_placement=Daith&filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
+            "block_url": "",
             "colour": "white",
             "header_tag": "h2"
           }
