@@ -20,7 +20,7 @@
         "button_link": "shopify://collections/shop",
         "header_tag": "h2",
         "text_color": "white",
-        "border": false,
+        "border": true,
         "lightheader": true,
         "notlazy": true
       }
