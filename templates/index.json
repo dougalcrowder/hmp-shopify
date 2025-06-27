@@ -1,14 +1,23 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/HMp_Homepage_Desktop_d75b9834-5b80-4807-9809-d5e4698b9844.jpg",
-        "mobimage": "shopify:\/\/shop_images\/HMp_Homepage_Mobile.jpg",
+        "image": "shopify://shop_images/HMp_Homepage_Desktop_d75b9834-5b80-4807-9809-d5e4698b9844.jpg",
+        "mobimage": "shopify://shop_images/HMp_Homepage_Mobile.jpg",
         "title": "GET PIERCED. NOW!",
-        "text": "<p><\/p><p><\/p><p>This is about a love of feeling, of sensation. <br\/>This is about a love of what it means to be human.<\/p>",
+        "text": "<p></p><p></p><p>This is about a love of feeling, of sensation. <br/>This is about a love of what it means to be human.</p>",
         "button_label": "See our catalogue",
-        "button_link": "shopify:\/\/collections\/shop",
+        "button_link": "shopify://collections/shop",
         "header_tag": "h2",
         "text_color": "white",
         "border": true,
@@ -31,10 +40,10 @@
         "8a91ec81-a07a-424c-89f7-d28d42062501": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-01_df3eff04-2a8a-488c-93f3-c24bb51538ac.jpg",
+            "image": "shopify://shop_images/hmp-cat-01_df3eff04-2a8a-488c-93f3-c24bb51538ac.jpg",
             "title_image": "NOSE",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Septum&filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Septum&filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
             "colour": "white",
             "header_tag": "h2"
           }
@@ -42,10 +51,10 @@
         "140da9bc-722d-470d-becb-20fc0b3eb80f": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-02_fca5fdd0-38a4-454f-81f1-cc1b271179b7.jpg",
+            "image": "shopify://shop_images/hmp-cat-02_fca5fdd0-38a4-454f-81f1-cc1b271179b7.jpg",
             "title_image": "LOBES",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
             "colour": "white",
             "header_tag": "h3"
           }
@@ -53,10 +62,10 @@
         "8c7b080c-5635-4761-bed0-699e548d1fbe": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hmp-cat-03_f296327b-c1c8-4189-a685-15fd3294f1ae.jpg",
+            "image": "shopify://shop_images/hmp-cat-03_f296327b-c1c8-4189-a685-15fd3294f1ae.jpg",
             "title_image": "CARTILAGE",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Helix&filter.p.m.custom.body_placement=Conch&filter.p.m.custom.body_placement=Tragus&filter.p.m.custom.body_placement=Daith&filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Helix&filter.p.m.custom.body_placement=Conch&filter.p.m.custom.body_placement=Tragus&filter.p.m.custom.body_placement=Daith&filter.p.m.custom.body_placement=Nostril&filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
             "colour": "white",
             "header_tag": "h2"
           }
@@ -79,12 +88,12 @@
     "4463f34e-eb99-4329-bfbd-ed23dc9160f6": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ready_to_be_pierced-destkop.jpg",
-        "mobimage": "shopify:\/\/shop_images\/Ready_to_be_pierced-mobile.jpg",
+        "image": "shopify://shop_images/Ready_to_be_pierced-destkop.jpg",
+        "mobimage": "shopify://shop_images/Ready_to_be_pierced-mobile.jpg",
         "title": "ready-to-be-pierced",
-        "text": "<p>Expertly crafted pieces of 18ct gold jewellery ready to be pierced with. Gold is for life, not just for ‘healing time’.<\/p>",
+        "text": "<p>Expertly crafted pieces of 18ct gold jewellery ready to be pierced with. Gold is for life, not just for ‘healing time’.</p>",
         "button_label": "View Collection",
-        "button_link": "shopify:\/\/collections\/ready-to-be-pierced",
+        "button_link": "shopify://collections/ready-to-be-pierced",
         "header_tag": "h3",
         "text_color": "white",
         "border": false,
@@ -98,10 +107,10 @@
         "bc8f4b82-1798-4fed-9a0d-76476a7d6101": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT_9c5d5e9e-d06e-48ed-a0c4-7e9f5a099187.jpg",
+            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT_9c5d5e9e-d06e-48ed-a0c4-7e9f5a099187.jpg",
             "title_image": "STRAIGHT",
             "description": "",
-            "block_url": "shopify:\/\/collections\/straight",
+            "block_url": "shopify://collections/straight",
             "colour": "black",
             "header_tag": "h3"
           }
@@ -109,10 +118,10 @@
         "72dc5433-a7c9-419f-9ffb-f3b5c312ef06": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-1_3c8896ea-4edb-4277-82e1-6f9061322f29.jpg",
+            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT-1_3c8896ea-4edb-4277-82e1-6f9061322f29.jpg",
             "title_image": "CURVED",
             "description": "",
-            "block_url": "shopify:\/\/collections\/curved",
+            "block_url": "shopify://collections/curved",
             "colour": "black",
             "header_tag": "h3"
           }
@@ -120,10 +129,10 @@
         "99c0ea24-f7b4-42e2-8aeb-4abf8eb38165": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/LARGE_CHAMPAGE_TIP_FRONT-2_3c2fba64-bd15-4599-b089-1d7b76feb8bc.jpg",
+            "image": "shopify://shop_images/LARGE_CHAMPAGE_TIP_FRONT-2_3c2fba64-bd15-4599-b089-1d7b76feb8bc.jpg",
             "title_image": "RING",
             "description": "",
-            "block_url": "shopify:\/\/collections\/ring",
+            "block_url": "shopify://collections/ring",
             "colour": "black",
             "header_tag": "h3"
           }
@@ -146,12 +155,12 @@
     "829022b1-793e-45d9-bbf8-37458d13e2ab": {
       "type": "hero",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Showroom_Desktop.jpg",
-        "mobimage": "shopify:\/\/shop_images\/Showroom_mobile_5965f0f5-758b-4b72-b6ec-da7a24779fd9.jpg",
+        "image": "shopify://shop_images/Showroom_Desktop.jpg",
+        "mobimage": "shopify://shop_images/Showroom_mobile_5965f0f5-758b-4b72-b6ec-da7a24779fd9.jpg",
         "title": "THE HMp STUDIO",
-        "text": "<p>An intimate & inclusive space to nourish your senses. <br\/>HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. <\/p>",
+        "text": "<p>An intimate & inclusive space to nourish your senses. <br/>HMp studios offer the best piercing artists, consultation, curation as well as education and aftercare. </p>",
         "button_label": "BOOK AN APPOINTMENT",
-        "button_link": "shopify:\/\/pages\/appointment",
+        "button_link": "shopify://pages/appointment",
         "header_tag": "h2",
         "text_color": "white",
         "border": false,
@@ -165,10 +174,10 @@
         "461b246f-1e06-4405-a8b8-113f4ff85ab0": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Lobe.jpg",
+            "image": "shopify://shop_images/Lobe.jpg",
             "title_image": "Lobe",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Lobe&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -176,10 +185,10 @@
         "6b811507-83c9-4c99-ad42-d9e2bd628d2a": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Helix.jpg",
+            "image": "shopify://shop_images/Helix.jpg",
             "title_image": "Helix",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Helix&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Helix&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -187,10 +196,10 @@
         "2b593da8-46d0-4a69-8004-13f7ff6d8925": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Conch.jpg",
+            "image": "shopify://shop_images/Conch.jpg",
             "title_image": "Conch",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Conch&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Conch&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -198,10 +207,10 @@
         "3bfac53a-3162-4e05-bd79-891519a1357b": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Daith.jpg",
+            "image": "shopify://shop_images/Daith.jpg",
             "title_image": "Daith",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Daith&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Daith&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -209,10 +218,10 @@
         "3a8aa97c-ad36-4ec1-a68e-88c5ff693a25": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rook.jpg",
+            "image": "shopify://shop_images/Rook.jpg",
             "title_image": "Rook",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Rook&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -220,10 +229,10 @@
         "9abd98d4-9d30-4162-a5b1-b278cd439bfb": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Tragus.jpg",
+            "image": "shopify://shop_images/Tragus.jpg",
             "title_image": "Tragus",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Tragus&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Tragus&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -231,10 +240,10 @@
         "35114a9c-32c9-4b19-ae06-ec6db5fa97ce": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Nostril.jpg",
+            "image": "shopify://shop_images/Nostril.jpg",
             "title_image": "Nostril",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Nostril&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Nostril&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -242,10 +251,10 @@
         "f408ad75-ca60-4686-994d-93c15826e8b2": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Septum.jpg",
+            "image": "shopify://shop_images/Septum.jpg",
             "title_image": "Septum",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Septum&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Septum&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -253,10 +262,10 @@
         "cd33c54a-526f-4410-b707-9231e76ca256": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Bridge.jpg",
+            "image": "shopify://shop_images/Bridge.jpg",
             "title_image": "Bridge",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Bridge&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -265,7 +274,7 @@
           "type": "manual_block",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Belly_Button.jpg",
+            "image": "shopify://shop_images/Belly_Button.jpg",
             "title_image": "Belly Button",
             "description": "",
             "block_url": "",
@@ -276,10 +285,10 @@
         "d402fadb-d7d2-48f2-9a87-a56ab1f16892": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Eyebrow.jpg",
+            "image": "shopify://shop_images/Eyebrow.jpg",
             "title_image": "Eyebrow",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Eyebrow&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Eyebrow&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -287,10 +296,10 @@
         "69a61d03-2418-427a-a70a-f1d8b695d0d8": {
           "type": "manual_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Nipple.jpg",
+            "image": "shopify://shop_images/Nipple.jpg",
             "title_image": "Nipple",
             "description": "",
-            "block_url": "https:\/\/hm-pierced.myshopify.com\/collections\/shop?filter.p.m.custom.body_placement=Nipple&sort_by=best-selling",
+            "block_url": "https://hm-pierced.myshopify.com/collections/shop?filter.p.m.custom.body_placement=Nipple&sort_by=best-selling",
             "colour": "black",
             "header_tag": "h2"
           }
@@ -324,41 +333,41 @@
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-4": {
           "type": "Instalink",
           "settings": {
-            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-1.jpg",
+            "insta_image": "shopify://shop_images/instagram-image-placeholder-1.jpg",
             "author": "@hannahmartinpierced",
-            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+            "link": "https://instagram.com/hannahmartinpierced"
           }
         },
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-0": {
           "type": "Instalink",
           "settings": {
-            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-5.jpg",
+            "insta_image": "shopify://shop_images/instagram-image-placeholder-5.jpg",
             "author": "@hannahmartinpierced",
-            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+            "link": "https://instagram.com/hannahmartinpierced"
           }
         },
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-1": {
           "type": "Instalink",
           "settings": {
-            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-4.jpg",
+            "insta_image": "shopify://shop_images/instagram-image-placeholder-4.jpg",
             "author": "@hannahmartinpierced",
-            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+            "link": "https://instagram.com/hannahmartinpierced"
           }
         },
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-2": {
           "type": "Instalink",
           "settings": {
-            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-3.jpg",
+            "insta_image": "shopify://shop_images/instagram-image-placeholder-3.jpg",
             "author": "@hannahmartinpierced",
-            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+            "link": "https://instagram.com/hannahmartinpierced"
           }
         },
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-3": {
           "type": "Instalink",
           "settings": {
-            "insta_image": "shopify:\/\/shop_images\/instagram-image-placeholder-2.jpg",
+            "insta_image": "shopify://shop_images/instagram-image-placeholder-2.jpg",
             "author": "@hannahmartinpierced",
-            "link": "https:\/\/instagram.com\/hannahmartinpierced"
+            "link": "https://instagram.com/hannahmartinpierced"
           }
         }
       },
@@ -369,6 +378,7 @@
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-2",
         "template--15484737093679__8995934a-6537-42d5-b421-3b5b32204b3a-166568949069e93279-3"
       ],
+      "disabled": true,
       "settings": {
         "title": "Instagram",
         "subtitle": "#HMPIERCED"
