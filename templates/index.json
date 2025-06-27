@@ -12,11 +12,11 @@
     "3921e21b-29ac-4941-a207-9e55233e99cf": {
       "type": "hero",
       "settings": {
-        "image": "shopify://shop_images/HMp_Homepage_Desktop_d75b9834-5b80-4807-9809-d5e4698b9844.jpg",
-        "mobimage": "shopify://shop_images/HMp_Homepage_Mobile.jpg",
-        "title": "GET PIERCED. NOW!",
-        "text": "<p></p><p></p><p>This is about a love of feeling, of sensation. <br/>This is about a love of what it means to be human.</p>",
-        "button_label": "See our catalogue",
+        "image": "shopify://shop_images/HMp_202506_-_Hero.jpg",
+        "mobimage": "shopify://shop_images/HMp_202506_-_Hero_Mobile.jpg",
+        "title": "",
+        "text": "",
+        "button_label": "",
         "button_link": "shopify://collections/shop",
         "header_tag": "h2",
         "text_color": "white",
