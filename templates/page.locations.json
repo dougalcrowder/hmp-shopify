@@ -19,18 +19,18 @@
     "main": {
       "type": "main-page",
       "blocks": {
-        "41ed2659-9d89-49ef-b9c1-bd543d440343": {
+        "text_and_title_tXMzYC": {
           "type": "text_and_title",
           "settings": {
-            "title": "Locations",
-            "description": "<p><strong>Hannah Martin Showroom London</strong></p><p>74a Clerkenwell Road, London EC1M 5QA</p><p> </p><p><strong>Body Electric Tattoo Los Angeles</strong></p><p>7274 Melrose Ave, Los Angeles, CA 90046, United States</p><p></p>"
+            "title": "Europe",
+            "description": "<h2>United Kingdom</h2><h4>Hannah Martin Showroom </h4><p>Every thursday, from 2pm till late.</p><p>74A Clerkenwell Road<br/>London<br/>EC1M 5QA<br/>England</p><h4>Dover Street Market </h4><p>18-22 Haymarket<br/>London<br/>SW1Y 4DG<br/>England</p>"
           }
         },
-        "48243eee-ec09-4b05-8857-d76ae5c31bee": {
+        "text_and_title_wPPXhY": {
           "type": "text_and_title",
           "settings": {
-            "title": "HMp",
-            "description": "<h3>Hannah Martin Showroom</h3><p>Open every thursday</p><p>2 to 8PM</p><p>74a Clerkenwell Road, </p><p>London EC1M 5QA</p><p></p>"
+            "title": "U.S.A.",
+            "description": "<h2>Los ANgeles</h2><h4>Body Electric Tattoo</h4><p>7274 Melrose Ave<br/>Los Angeles, CA 90046<br/>United States</p><h4>Maxfield</h4><p>8825 Melrose Ave<br/>Los Angeles, CA 90069<br/>United States</p><h4>Dover Street Market</h4><p>606-608 Imperial Street<br/>Los Angeles, CA 90021<br/>United States</p><h2>New York</h2><h2>Dover Street Market</h2><p>160 Lexington Ave<br/>New York, NY 10016<br/>United States</p>"
           }
         },
         "972ab4fe-548c-47da-ae04-fc603597ece3": {
@@ -43,16 +43,16 @@
         }
       },
       "block_order": [
-        "41ed2659-9d89-49ef-b9c1-bd543d440343",
-        "48243eee-ec09-4b05-8857-d76ae5c31bee",
+        "text_and_title_tXMzYC",
+        "text_and_title_wPPXhY",
         "972ab4fe-548c-47da-ae04-fc603597ece3"
       ],
       "settings": {
-        "sidenav": "about-us-pages",
-        "hidetitle": true,
+        "sidenav": "",
+        "hidetitle": false,
         "hidetext": false,
         "margin_top": "m",
-        "margin_bot": "l"
+        "margin_bot": "m"
       }
     }
   },
