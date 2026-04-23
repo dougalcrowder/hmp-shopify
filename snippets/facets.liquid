@@ -463,9 +463,8 @@
           {%- if enable_sorting -%}
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
-                <h2 class="facet-filters__label caption-large text-body">
-                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-                </h2>
+                <h2 class="facets__summary caption-large h3">SORT</h2>
+<label for="SortBy" class="visually-hidden">{{ 'products.facets.sort_by_label' | t }}</label>
                 <div class="select">
                   {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
                   <select
@@ -906,9 +905,8 @@
       <form id="FacetSortDrawerForm" class="facets__form">
         <div class="facet-filters sorting caption small-hide">
           <div class="facet-filters__field">
-            <h2 class="facet-filters__label caption-large text-body">
-              <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-            </h2>
+            <h2 class="facets__summary caption-large h3">SORT</h2>
+<label for="SortBy" class="visually-hidden">{{ 'products.facets.sort_by_label' | t }}</label>
             <div class="select">
               {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
               <select
